@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KeibaAI V7 - 3着以内予測</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0a; color: #e0e0e0; padding: 12px; max-width: 600px; margin: 0 auto; }
+h1 { font-size: 1.3em; color: #fff; margin-bottom: 4px; }
+.updated { font-size: 0.75em; color: #888; margin-bottom: 16px; }
+.card { background: #1a1a1a; border-radius: 10px; padding: 14px; margin-bottom: 12px; border: 1px solid #2a2a2a; }
+.card-title { font-size: 1em; font-weight: 700; margin-bottom: 8px; color: #fff; }
+.grade { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; font-weight: 700; margin-left: 6px; }
+.grade-G1 { background: #c41e3a; color: #fff; }
+.grade-G2 { background: #1e5cc4; color: #fff; }
+.grade-G3 { background: #2a8a2a; color: #fff; }
+.stats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+.stat { text-align: center; }
+.stat-value { font-size: 1.4em; font-weight: 700; }
+.stat-label { font-size: 0.7em; color: #888; }
+.roi-positive { color: #4caf50; }
+.roi-negative { color: #f44336; }
+table { width: 100%; border-collapse: collapse; font-size: 0.8em; }
+th { text-align: left; padding: 6px 4px; border-bottom: 1px solid #333; color: #888; font-weight: 400; }
+td { padding: 6px 4px; border-bottom: 1px solid #1e1e1e; }
+.prob-bar { display: inline-block; height: 10px; background: linear-gradient(90deg, #1e88e5, #42a5f5); border-radius: 3px; vertical-align: middle; margin-left: 4px; }
+.result-top3 { color: #ffb300; font-weight: 700; }
+.edge-pos { color: #4caf50; font-weight: 600; }
+.section-title { font-size: 0.9em; color: #aaa; margin: 16px 0 8px; padding-bottom: 4px; border-bottom: 1px solid #333; }
+.no-data { color: #666; font-style: italic; padding: 20px; text-align: center; }
+.bias-info { font-size: 0.8em; color: #888; margin-bottom: 8px; padding: 6px 10px; background: #111; border-radius: 6px; }
+.bias-inner { color: #42a5f5; }
+.bias-outer { color: #ef5350; }
+.accordion-header { cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+.accordion-header::after { content: "\25BC"; font-size: 0.7em; color: #666; transition: transform 0.2s; }
+.accordion-header.collapsed::after { transform: rotate(-90deg); }
+.accordion-body { overflow: hidden; transition: max-height 0.3s ease; }
+.accordion-body.collapsed { max-height: 0 !important; padding: 0; }
+.hero { background: linear-gradient(135deg, #0a1a2a, #0a0a1a); border: 1px solid #1e3a5a; border-radius: 12px; padding: 16px; margin-bottom: 12px; }
+.hero-label { font-size: 0.7em; color: #42a5f5; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+.hero-horse { font-size: 1.3em; font-weight: 700; color: #fff; }
+.hero-detail { font-size: 0.85em; color: #aaa; margin-top: 4px; }
+.hero-detail span { color: #fff; font-weight: 600; }
+.cov-ok { border-color: #2a4a2a; background: linear-gradient(135deg, #1a2a1a, #0a1a0a); }
+.cov-ng { border-color: #4a2a2a; }
+</style>
+<script>
+function toggleAccordion(el) {
+  el.classList.toggle('collapsed');
+  el.nextElementSibling.classList.toggle('collapsed');
+}
+</script>
+</head>
+<body>
+<h1>KeibaAI V7</h1>
+<div class="updated">3着以内予測 / 更新: 2026-06-26 00:16</div>
+
+<div class="card">
+<div class="card-title">カバー率</div>
+<div class="stats">
+<div class="stat"><div class="stat-value">91%</div><div class="stat-label">1頭以上</div></div>
+<div class="stat"><div class="stat-value roi-negative">64%</div><div class="stat-label">2頭以上</div></div>
+<div class="stat"><div class="stat-value">18%</div><div class="stat-label">3頭全部</div></div>
+</div>
+<div style="font-size:0.75em;color:#888;text-align:center">11レース確定済</div>
+</div>
+<div class="section-title">予測</div><div class="card"><div class="no-data">未確定レースなし</div></div><div class="section-title">結果</div>
+<div class="card cov-ng">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-06-21 第2回しらさぎステークス<span class="grade grade-G3">G3</span> <span style="font-size:0.8em">1/3的中</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:400px">
+<table>
+<tr><th>#</th><th>馬名</th><th>3着内確率</th><th>オッズ</th><th>人気</th><th>着</th></tr>
+<tr><td>1</td><td>エコロアルバ</td><td>7.7%<span class="prob-bar" style="width:30px"></span></td><td>3.1</td><td>1</td><td class="result-top3">3</td></tr>
+<tr><td>2</td><td>ミニトランザット</td><td>7.0%<span class="prob-bar" style="width:27px"></span></td><td>6.3</td><td>3</td><td class="">6</td></tr>
+<tr><td>3</td><td>ファーヴェント</td><td>6.8%<span class="prob-bar" style="width:27px"></span></td><td>6.3</td><td>2</td><td class="">9</td></tr>
+<tr><td>4</td><td>サイルーン</td><td>6.0%<span class="prob-bar" style="width:23px"></span></td><td>11.8</td><td>4</td><td class="">14</td></tr>
+<tr><td>5</td><td>ファンダム</td><td>6.0%<span class="prob-bar" style="width:23px"></span></td><td>12.3</td><td>5</td><td class="">4</td></tr>
+</table>
+</div></div>
+
+<div class="card cov-ok">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-06-14 第67回宝塚記念<span class="grade grade-G1">G1</span> <span style="font-size:0.8em">3/3的中</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:400px">
+<table>
+<tr><th>#</th><th>馬名</th><th>3着内確率</th><th>オッズ</th><th>人気</th><th>着</th></tr>
+<tr><td>1</td><td>クロワデュノール</td><td>8.7%<span class="prob-bar" style="width:34px"></span></td><td>2.5</td><td>1</td><td class="result-top3">2</td></tr>
+<tr><td>2</td><td>メイショウタバル</td><td>7.7%<span class="prob-bar" style="width:30px"></span></td><td>3.9</td><td>2</td><td class="result-top3">1</td></tr>
+<tr><td>3</td><td>ダノンデサイル</td><td>7.4%<span class="prob-bar" style="width:29px"></span></td><td>7.0</td><td>3</td><td class="result-top3">3</td></tr>
+<tr><td>4</td><td>ミュージアムマイ</td><td>7.1%<span class="prob-bar" style="width:28px"></span></td><td>7.1</td><td>4</td><td class="">9</td></tr>
+<tr><td>5</td><td>レガレイラ</td><td>6.9%<span class="prob-bar" style="width:27px"></span></td><td>7.8</td><td>5</td><td class="">7</td></tr>
+</table>
+</div></div>
+
+<div class="card cov-ok">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-06-13 第33回函館スプリントS<span class="grade grade-G3">G3</span> <span style="font-size:0.8em">2/3的中</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:400px">
+<table>
+<tr><th>#</th><th>馬名</th><th>3着内確率</th><th>オッズ</th><th>人気</th><th>着</th></tr>
+<tr><td>1</td><td>レイピア</td><td>10.5%<span class="prob-bar" style="width:42px"></span></td><td>4.1</td><td>1</td><td class="result-top3">3</td></tr>
+<tr><td>2</td><td>カルプスペルシュ</td><td>10.2%<span class="prob-bar" style="width:40px"></span></td><td>4.6</td><td>2</td><td class="">5</td></tr>
+<tr><td>3</td><td>ルシード</td><td>9.7%<span class="prob-bar" style="width:38px"></span></td><td>4.9</td><td>3</td><td class="">12</td></tr>
+<tr><td>4</td><td>エーティーマクフ</td><td>9.3%<span class="prob-bar" style="width:37px"></span></td><td>6.9</td><td>4</td><td class="result-top3">2</td></tr>
+<tr><td>5</td><td>インビンシブルパ</td><td>8.6%<span class="prob-bar" style="width:34px"></span></td><td>7.8</td><td>5</td><td class="">10</td></tr>
+</table>
+</div></div>
+
+<div class="card cov-ng">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-06-07 第76回安田記念<span class="grade grade-G1">G1</span> <span style="font-size:0.8em">1/3的中</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:400px">
+<table>
+<tr><th>#</th><th>馬名</th><th>3着内確率</th><th>オッズ</th><th>人気</th><th>着</th></tr>
+<tr><td>1</td><td>ガイアフォース</td><td>7.9%<span class="prob-bar" style="width:31px"></span></td><td>2.9</td><td>1</td><td class="result-top3">2</td></tr>
+<tr><td>2</td><td>トロヴァトーレ</td><td>7.5%<span class="prob-bar" style="width:30px"></span></td><td>4.9</td><td>2</td><td class="">9</td></tr>
+<tr><td>3</td><td>レーベンスティー</td><td>6.9%<span class="prob-bar" style="width:27px"></span></td><td>7.9</td><td>3</td><td class="">7</td></tr>
+<tr><td>4</td><td>パンジャタワー</td><td>6.7%<span class="prob-bar" style="width:26px"></span></td><td>8.3</td><td>4</td><td class="">5</td></tr>
+<tr><td>5</td><td>ステレンボッシュ</td><td>6.5%<span class="prob-bar" style="width:25px"></span></td><td>9.5</td><td>5</td><td class="">10</td></tr>
+</table>
+</div></div>
+
+<div class="card cov-ok">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-05-31 第93回東京優駿<span class="grade grade-G1">G1</span> <span style="font-size:0.8em">2/3的中</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:400px">
+<table>
+<tr><th>#</th><th>馬名</th><th>3着内確率</th><th>オッズ</th><th>人気</th><th>着</th></tr>
+<tr><td>1</td><td>ロブチェン</td><td>8.2%<span class="prob-bar" style="width:32px"></span></td><td>2.7</td><td>1</td><td class="result-top3">1</td></tr>
+<tr><td>2</td><td>リアライズシリウ</td><td>7.1%<span class="prob-bar" style="width:28px"></span></td><td>5.7</td><td>2</td><td class="">7</td></tr>
+<tr><td>3</td><td>ゴーイントゥスカ</td><td>6.7%<span class="prob-bar" style="width:26px"></span></td><td>6.6</td><td>3</td><td class="">4</td></tr>
+<tr><td>4</td><td>ライヒスアドラー</td><td>6.1%<span class="prob-bar" style="width:24px"></span></td><td>11.7</td><td>5</td><td class="">8</td></tr>
+<tr><td>5</td><td>パントルナイーフ</td><td>5.8%<span class="prob-bar" style="width:23px"></span></td><td>9.1</td><td>4</td><td class="result-top3">2</td></tr>
+</table>
+</div></div>
+
+<div class="card cov-ok">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-05-30 第9回葵ステークス<span class="grade grade-G3">G3</span> <span style="font-size:0.8em">2/3的中</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:400px">
+<table>
+<tr><th>#</th><th>馬名</th><th>3着内確率</th><th>オッズ</th><th>人気</th><th>着</th></tr>
+<tr><td>1</td><td>タガノアラリア</td><td>8.3%<span class="prob-bar" style="width:33px"></span></td><td>3.8</td><td>1</td><td class="">7</td></tr>
+<tr><td>2</td><td>エイシンディード</td><td>7.9%<span class="prob-bar" style="width:31px"></span></td><td>4.7</td><td>2</td><td class="">6</td></tr>
+<tr><td>3</td><td>タマモイカロス</td><td>7.4%<span class="prob-bar" style="width:29px"></span></td><td>6.9</td><td>3</td><td class="result-top3">3</td></tr>
+<tr><td>4</td><td>フォーゲル</td><td>6.9%<span class="prob-bar" style="width:27px"></span></td><td>7.7</td><td>4</td><td class="">11</td></tr>
+<tr><td>5</td><td>デアヴェローチェ</td><td>6.9%<span class="prob-bar" style="width:27px"></span></td><td>8.7</td><td>5</td><td class="result-top3">1</td></tr>
+</table>
+</div></div>
+
+<div class="card cov-ok">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-05-24 第87回優駿牝馬<span class="grade grade-G1">G1</span> <span style="font-size:0.8em">3/3的中</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:400px">
+<table>
+<tr><th>#</th><th>馬名</th><th>3着内確率</th><th>オッズ</th><th>人気</th><th>着</th></tr>
+<tr><td>1</td><td>スターアニス</td><td>8.2%<span class="prob-bar" style="width:32px"></span></td><td>3.0</td><td>1</td><td class="">12</td></tr>
+<tr><td>2</td><td>ラフターラインズ</td><td>7.8%<span class="prob-bar" style="width:31px"></span></td><td>3.2</td><td>2</td><td class="result-top3">3</td></tr>
+<tr><td>3</td><td>ドリームコア</td><td>7.2%<span class="prob-bar" style="width:28px"></span></td><td>5.2</td><td>3</td><td class="result-top3">2</td></tr>
+<tr><td>4</td><td>エンネ</td><td>6.5%<span class="prob-bar" style="width:25px"></span></td><td>7.6</td><td>4</td><td class="">7</td></tr>
+<tr><td>5</td><td>ジュウリョクピエ</td><td>5.9%<span class="prob-bar" style="width:23px"></span></td><td>10.9</td><td>5</td><td class="result-top3">1</td></tr>
+</table>
+</div></div>
+
+<div class="card cov-ok">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-05-23 第33回平安ステークス<span class="grade grade-G3">G3</span> <span style="font-size:0.8em">2/3的中</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:400px">
+<table>
+<tr><th>#</th><th>馬名</th><th>3着内確率</th><th>オッズ</th><th>人気</th><th>着</th></tr>
+<tr><td>1</td><td>ロードクロンヌ</td><td>8.9%<span class="prob-bar" style="width:35px"></span></td><td>2.5</td><td>1</td><td class="result-top3">1</td></tr>
+<tr><td>2</td><td>ナルカミ</td><td>8.0%<span class="prob-bar" style="width:32px"></span></td><td>4.4</td><td>2</td><td class="">8</td></tr>
+<tr><td>3</td><td>リアライズカミオ</td><td>7.6%<span class="prob-bar" style="width:30px"></span></td><td>6.2</td><td>3</td><td class="">12</td></tr>
+<tr><td>4</td><td>タイトニット</td><td>7.1%<span class="prob-bar" style="width:28px"></span></td><td>11.3</td><td>4</td><td class="result-top3">3</td></tr>
+<tr><td>5</td><td>アクションプラン</td><td>6.0%<span class="prob-bar" style="width:24px"></span></td><td>20.1</td><td>6</td><td class="">14</td></tr>
+</table>
+</div></div>
+
+<div class="card cov-ng">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-05-16 第48回新潟大賞典<span class="grade grade-G3">G3</span> <span style="font-size:0.8em">0/3的中</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:400px">
+<table>
+<tr><th>#</th><th>馬名</th><th>3着内確率</th><th>オッズ</th><th>人気</th><th>着</th></tr>
+<tr><td>1</td><td>ドゥラドーレス</td><td>9.7%<span class="prob-bar" style="width:38px"></span></td><td>2.5</td><td>1</td><td class="">4</td></tr>
+<tr><td>2</td><td>シュガークン</td><td>7.7%<span class="prob-bar" style="width:30px"></span></td><td>7.0</td><td>2</td><td class="">15</td></tr>
+<tr><td>3</td><td>アンゴラブラック</td><td>7.5%<span class="prob-bar" style="width:30px"></span></td><td>7.9</td><td>3</td><td class="">10</td></tr>
+<tr><td>4</td><td>シンハナーダ</td><td>7.4%<span class="prob-bar" style="width:29px"></span></td><td>8.6</td><td>4</td><td class="">14</td></tr>
+<tr><td>5</td><td>セキトバイースト</td><td>7.0%<span class="prob-bar" style="width:27px"></span></td><td>10.2</td><td>5</td><td class="">7</td></tr>
+</table>
+</div></div>
+
+<div class="card cov-ok">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-05-10 第31回NHKマイルカップ<span class="grade grade-G1">G1</span> <span style="font-size:0.8em">2/3的中</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:400px">
+<table>
+<tr><th>#</th><th>馬名</th><th>3着内確率</th><th>オッズ</th><th>人気</th><th>着</th></tr>
+<tr><td>1</td><td>ロデオドライブ</td><td>7.2%<span class="prob-bar" style="width:28px"></span></td><td>4.6</td><td>1</td><td class="result-top3">1</td></tr>
+<tr><td>2</td><td>ダイヤモンドノッ</td><td>7.2%<span class="prob-bar" style="width:28px"></span></td><td>5.5</td><td>3</td><td class="">5</td></tr>
+<tr><td>3</td><td>エコロアルバ</td><td>7.1%<span class="prob-bar" style="width:28px"></span></td><td>4.9</td><td>2</td><td class="">9</td></tr>
+<tr><td>4</td><td>アスクイキゴミ</td><td>6.2%<span class="prob-bar" style="width:24px"></span></td><td>8.4</td><td>4</td><td class="result-top3">2</td></tr>
+<tr><td>5</td><td>カヴァレリッツォ</td><td>6.1%<span class="prob-bar" style="width:24px"></span></td><td>9.3</td><td>5</td><td class="">12</td></tr>
+</table>
+</div></div>
+
+<div class="card cov-ng">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-05-09 第74回京都新聞杯<span class="grade grade-G2">G2</span> <span style="font-size:0.8em">1/3的中</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:400px">
+<table>
+<tr><th>#</th><th>馬名</th><th>3着内確率</th><th>オッズ</th><th>人気</th><th>着</th></tr>
+<tr><td>1</td><td>ベレシート</td><td>8.8%<span class="prob-bar" style="width:35px"></span></td><td>2.1</td><td>1</td><td class="result-top3">2</td></tr>
+<tr><td>2</td><td>エムズビギン</td><td>8.3%<span class="prob-bar" style="width:33px"></span></td><td>4.6</td><td>2</td><td class="">7</td></tr>
+<tr><td>3</td><td>サヴォアフェール</td><td>6.9%<span class="prob-bar" style="width:27px"></span></td><td>9.7</td><td>4</td><td class="">4</td></tr>
+<tr><td>4</td><td>アーレムアレス</td><td>6.9%<span class="prob-bar" style="width:27px"></span></td><td>9.3</td><td>3</td><td class="">14</td></tr>
+<tr><td>5</td><td>アクセス</td><td>6.5%<span class="prob-bar" style="width:25px"></span></td><td>12.4</td><td>5</td><td class="">10</td></tr>
+</table>
+</div></div>
+</body></html>
