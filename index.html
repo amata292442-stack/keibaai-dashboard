@@ -65,6 +65,7 @@ function toggleAccordion(el) {
   header.classList.toggle('collapsed');
   body.classList.toggle('collapsed');
 }
+var betData = [];
 function filterRaces() {
   var yr = document.getElementById('filter-year').value;
   var mo = document.getElementById('filter-month').value;
@@ -79,26 +80,111 @@ function filterRaces() {
     else if (gr && g !== gr) show = false;
     card.style.display = show ? '' : 'none';
   });
+  updateStats(yr, mo, gr);
+}
+function updateStats(yr, mo, gr) {
+  var filtered = betData.filter(function(b) {
+    if (yr && b.d.substring(0,4) !== yr) return false;
+    if (mo && b.d.substring(5,7) !== mo) return false;
+    if (gr === 'G1G2') { if (b.g !== 'G1' && b.g !== 'G2') return false; }
+    else if (gr && b.g !== gr) return false;
+    return true;
+  });
+  var n = filtered.length;
+  if (n === 0) {
+    document.getElementById('s-roi').textContent = '-';
+    document.getElementById('s-roi').className = 'stat-value';
+    document.getElementById('s-hits').textContent = '0/0';
+    document.getElementById('s-pnl').textContent = '0';
+    document.getElementById('s-pnl').className = 'stat-value';
+    document.getElementById('s-hitrate').textContent = '-';
+    document.getElementById('s-dd').textContent = '0';
+    document.getElementById('s-streak').textContent = '0';
+    document.getElementById('pnl-chart').innerHTML = '';
+    return;
+  }
+  var hits = 0, invest = n * 100, ret = 0;
+  var streak = 0, maxStreak = 0;
+  var cumProfits = [], cumDates = [], cum = 0, peak = 0, maxDD = 0;
+  filtered.sort(function(a,b) { return a.d < b.d ? -1 : a.d > b.d ? 1 : 0; });
+  for (var i = 0; i < n; i++) {
+    var p = filtered[i].p;
+    if (filtered[i].w) { hits++; streak = 0; }
+    else { streak++; if (streak > maxStreak) maxStreak = streak; }
+    cum += p;
+    cumProfits.push(cum);
+    cumDates.push(filtered[i].d);
+    if (cum > peak) peak = cum;
+    var dd = cum - peak;
+    if (dd < maxDD) maxDD = dd;
+  }
+  var roi = ret > 0 || invest > 0 ? (invest + cum) / invest : 0;
+  var roiEl = document.getElementById('s-roi');
+  roiEl.textContent = roi.toFixed(2);
+  roiEl.className = 'stat-value ' + (roi >= 1 ? 'roi-positive' : 'roi-negative');
+  document.getElementById('s-hits').textContent = hits + '/' + n;
+  var pnlEl = document.getElementById('s-pnl');
+  pnlEl.textContent = (cum >= 0 ? '+' : '') + cum.toLocaleString();
+  pnlEl.className = 'stat-value ' + (cum >= 0 ? 'pnl-plus' : 'pnl-minus');
+  document.getElementById('s-hitrate').textContent = (hits / n * 100).toFixed(0) + '%';
+  document.getElementById('s-dd').textContent = maxDD.toLocaleString();
+  document.getElementById('s-streak').textContent = maxStreak;
+  drawChart(cumProfits, cumDates);
+}
+function drawChart(vals, dates) {
+  var el = document.getElementById('pnl-chart');
+  if (vals.length < 2) { el.innerHTML = ''; return; }
+  var w = 560, h = 120, px = 10, pt = 10, pb = 24;
+  var mn = Math.min(0, Math.min.apply(null, vals));
+  var mx = Math.max(0, Math.max.apply(null, vals));
+  var rng = mx - mn || 1;
+  function xp(i) { return px + i / (vals.length - 1) * (w - 2 * px); }
+  function yp(v) { return pt + (1 - (v - mn) / rng) * (h - pt - pb); }
+  var zy = yp(0);
+  var pts = vals.map(function(v, i) { return xp(i).toFixed(1) + ',' + yp(v).toFixed(1); }).join(' ');
+  var fill = xp(0).toFixed(1) + ',' + zy.toFixed(1) + ' ' + pts + ' ' + xp(vals.length - 1).toFixed(1) + ',' + zy.toFixed(1);
+  var last = vals[vals.length - 1];
+  var lc = last >= 0 ? '#4caf50' : '#f44336';
+  var fc = last >= 0 ? '#4caf5020' : '#f4433620';
+  var svg = '<svg viewBox="0 0 ' + w + ' ' + h + '" style="width:100%;height:' + h + 'px;display:block;margin:8px 0">';
+  svg += '<polygon points="' + fill + '" fill="' + fc + '"/>';
+  svg += '<line x1="' + px + '" y1="' + zy.toFixed(1) + '" x2="' + (w - px) + '" y2="' + zy.toFixed(1) + '" stroke="#444" stroke-width="0.5" stroke-dasharray="4"/>';
+  svg += '<polyline points="' + pts + '" fill="none" stroke="' + lc + '" stroke-width="2"/>';
+  svg += '<circle cx="' + xp(vals.length - 1).toFixed(1) + '" cy="' + yp(last).toFixed(1) + '" r="3" fill="' + lc + '"/>';
+  var seen = {};
+  for (var i = 0; i < dates.length; i++) {
+    var ym = dates[i].substring(0, 7);
+    if (!seen[ym]) {
+      seen[ym] = true;
+      var ml = parseInt(dates[i].substring(5, 7)) + '月';
+      svg += '<line x1="' + xp(i).toFixed(1) + '" y1="' + pt + '" x2="' + xp(i).toFixed(1) + '" y2="' + (h - pb) + '" stroke="#333" stroke-width="0.5"/>';
+      svg += '<text x="' + xp(i).toFixed(1) + '" y="' + (h - 4) + '" fill="#666" font-size="10" text-anchor="middle">' + ml + '</text>';
+    }
+  }
+  svg += '</svg>';
+  el.innerHTML = svg;
 }
 </script>
 </head>
 <body>
 <h1>KeibaAI v1.0</h1>
-<div class="updated">更新: 2026-06-25 17:36</div>
+<div class="updated">更新: 2026-06-25 17:39</div>
+
+<script>betData=[{d:"2025-01-19",g:"G2",w:0,p:-100},{d:"2025-01-26",g:"G2",w:0,p:-100},{d:"2025-02-23",g:"G1",w:0,p:-100},{d:"2025-03-02",g:"G2",w:0,p:-100},{d:"2025-03-02",g:"G2",w:1,p:210},{d:"2025-03-08",g:"G2",w:0,p:-100},{d:"2025-03-16",g:"G2",w:1,p:719},{d:"2025-03-16",g:"G2",w:0,p:-100},{d:"2025-03-23",g:"G2",w:0,p:-100},{d:"2025-03-30",g:"G1",w:0,p:-100},{d:"2025-04-06",g:"G1",w:1,p:409},{d:"2025-04-12",g:"G2",w:0,p:-100},{d:"2025-04-13",g:"G1",w:0,p:-100},{d:"2025-04-20",g:"G1",w:0,p:-100},{d:"2025-04-27",g:"G2",w:0,p:-100},{d:"2025-04-27",g:"G2",w:1,p:919},{d:"2025-05-04",g:"G1",w:1,p:210},{d:"2025-05-11",g:"G1",w:0,p:-100},{d:"2025-05-25",g:"G1",w:0,p:-100},{d:"2025-06-01",g:"G2",w:1,p:230},{d:"2025-06-01",g:"G1",w:0,p:-100},{d:"2025-06-08",g:"G1",w:1,p:330},{d:"2025-06-15",g:"G1",w:0,p:-100},{d:"2025-08-17",g:"G2",w:0,p:-100},{d:"2025-09-07",g:"G2",w:0,p:-100},{d:"2025-09-21",g:"G2",w:0,p:-100},{d:"2025-10-05",g:"G2",w:0,p:-100},{d:"2025-10-05",g:"G2",w:0,p:-100},{d:"2025-10-12",g:"G2",w:0,p:-100},{d:"2025-10-13",g:"G2",w:0,p:-100},{d:"2025-10-19",g:"G1",w:1,p:450},{d:"2025-10-26",g:"G1",w:0,p:-100},{d:"2025-11-02",g:"G1",w:0,p:-100},{d:"2025-11-09",g:"G2",w:0,p:-100},{d:"2025-11-16",g:"G1",w:0,p:-100},{d:"2025-11-23",g:"G1",w:0,p:-100},{d:"2025-11-24",g:"G2",w:1,p:630},{d:"2025-12-06",g:"G2",w:1,p:340},{d:"2025-12-07",g:"G1",w:1,p:630},{d:"2025-12-14",g:"G1",w:0,p:-100},{d:"2025-12-21",g:"G1",w:0,p:-100},{d:"2025-12-27",g:"G2",w:1,p:610},{d:"2025-12-27",g:"G1",w:0,p:-100},{d:"2025-12-28",g:"G1",w:0,p:-100},{d:"2026-04-19",g:"G1",w:0,p:-100},{d:"2026-04-26",g:"G2",w:0,p:-100},{d:"2026-05-02",g:"G2",w:0,p:-100},{d:"2026-05-09",g:"G2",w:0,p:-100},{d:"2026-05-10",g:"G1",w:0,p:-100},{d:"2026-05-24",g:"G1",w:0,p:-100},{d:"2026-06-07",g:"G1",w:0,p:-100}];</script>
 
 <div class="card">
 <div class="card-title">運用成績</div>
 <div class="stats">
-<div class="stat"><div class="stat-value roi-positive">1.35</div><div class="stat-label">ROI</div></div>
-<div class="stat"><div class="stat-value">12/51</div><div class="stat-label">的中</div></div>
-<div class="stat"><div class="stat-value pnl-plus">+1,790</div><div class="stat-label">損益(円)</div></div>
+<div class="stat"><div id="s-roi" class="stat-value roi-positive">1.35</div><div class="stat-label">ROI</div></div>
+<div class="stat"><div id="s-hits" class="stat-value">12/51</div><div class="stat-label">的中</div></div>
+<div class="stat"><div id="s-pnl" class="stat-value pnl-plus">+1,790</div><div class="stat-label">損益(円)</div></div>
 </div>
 <div class="stats">
-<div class="stat"><div class="stat-value">24%</div><div class="stat-label">的中率</div></div>
-<div class="stat"><div class="stat-value">-900</div><div class="stat-label">最大DD</div></div>
-<div class="stat"><div class="stat-value">9</div><div class="stat-label">最大連敗</div></div>
+<div class="stat"><div id="s-hitrate" class="stat-value">24%</div><div class="stat-label">的中率</div></div>
+<div class="stat"><div id="s-dd" class="stat-value">-900</div><div class="stat-label">最大DD</div></div>
+<div class="stat"><div id="s-streak" class="stat-value">9</div><div class="stat-label">最大連敗</div></div>
 </div>
-<svg viewBox="0 0 560 120" style="width:100%;height:120px;display:block;margin:8px 0">
+<div id="pnl-chart"><svg viewBox="0 0 560 120" style="width:100%;height:120px;display:block;margin:8px 0">
 <polygon points="10.0,84.9 10.0,87.7 20.8,90.4 31.6,93.2 42.4,96.0 53.2,90.2 64.0,92.9 74.8,72.9 85.6,75.7 96.4,78.5 107.2,81.2 118.0,69.8 128.8,72.6 139.6,75.4 150.4,78.2 161.2,81.0 172.0,55.4 182.8,49.5 193.6,52.3 204.4,55.1 215.2,48.7 226.0,51.5 236.8,42.3 247.6,45.1 258.4,47.9 269.2,50.6 280.0,53.4 290.8,56.2 301.6,59.0 312.4,61.8 323.2,64.6 334.0,52.0 344.8,54.8 355.6,57.6 366.4,60.4 377.2,63.2 388.0,65.9 398.8,48.4 409.6,38.9 420.4,21.4 431.2,24.2 442.0,27.0 452.8,10.0 463.6,12.8 474.4,15.6 485.2,18.3 496.0,21.1 506.8,23.9 517.6,26.7 528.4,29.5 539.2,32.3 550.0,35.0 550.0,84.9" fill="#4caf5020"/>
 <line x1="10" y1="84.9" x2="550" y2="84.9" stroke="#444" stroke-width="0.5" stroke-dasharray="4"/>
 <polyline points="10.0,87.7 20.8,90.4 31.6,93.2 42.4,96.0 53.2,90.2 64.0,92.9 74.8,72.9 85.6,75.7 96.4,78.5 107.2,81.2 118.0,69.8 128.8,72.6 139.6,75.4 150.4,78.2 161.2,81.0 172.0,55.4 182.8,49.5 193.6,52.3 204.4,55.1 215.2,48.7 226.0,51.5 236.8,42.3 247.6,45.1 258.4,47.9 269.2,50.6 280.0,53.4 290.8,56.2 301.6,59.0 312.4,61.8 323.2,64.6 334.0,52.0 344.8,54.8 355.6,57.6 366.4,60.4 377.2,63.2 388.0,65.9 398.8,48.4 409.6,38.9 420.4,21.4 431.2,24.2 442.0,27.0 452.8,10.0 463.6,12.8 474.4,15.6 485.2,18.3 496.0,21.1 506.8,23.9 517.6,26.7 528.4,29.5 539.2,32.3 550.0,35.0" fill="none" stroke="#4caf50" stroke-width="2"/>
@@ -131,7 +217,7 @@ function filterRaces() {
 <text x="506.8" y="116" fill="#666" font-size="10" text-anchor="middle">5月</text>
 <line x1="550.0" y1="10" x2="550.0" y2="96" stroke="#333" stroke-width="0.5"/>
 <text x="550.0" y="116" fill="#666" font-size="10" text-anchor="middle">6月</text>
-</svg>
+</svg></div>
 </div>
 <div class="section-title">予測</div><div class="card"><div class="no-data">未確定レースなし</div></div><div class="section-title">結果</div><div class="filter-bar"><select id="filter-year" onchange="filterRaces()"><option value="">全年</option><option value="2026">2026年</option><option value="2025">2025年</option></select><select id="filter-month" onchange="filterRaces()"><option value="">全月</option><option value="01">1月</option><option value="02">2月</option><option value="03">3月</option><option value="04">4月</option><option value="05">5月</option><option value="06">6月</option><option value="07">7月</option><option value="08">8月</option><option value="09">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option></select><select id="filter-grade" onchange="filterRaces()"><option value="">全グレード</option><option value="G1">G1</option><option value="G2">G2</option><option value="G3">G3</option><option value="G1G2">G1+G2</option></select></div>
 
