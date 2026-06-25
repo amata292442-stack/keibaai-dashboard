@@ -168,58 +168,104 @@ function drawChart(vals, dates) {
 </head>
 <body>
 <h1>KeibaAI v1.0</h1>
-<div class="updated">更新: 2026-06-25 17:39</div>
+<div class="updated">更新: 2026-06-25 17:49</div>
 
-<script>betData=[{d:"2025-01-19",g:"G2",w:0,p:-100},{d:"2025-01-26",g:"G2",w:0,p:-100},{d:"2025-02-23",g:"G1",w:0,p:-100},{d:"2025-03-02",g:"G2",w:0,p:-100},{d:"2025-03-02",g:"G2",w:1,p:210},{d:"2025-03-08",g:"G2",w:0,p:-100},{d:"2025-03-16",g:"G2",w:1,p:719},{d:"2025-03-16",g:"G2",w:0,p:-100},{d:"2025-03-23",g:"G2",w:0,p:-100},{d:"2025-03-30",g:"G1",w:0,p:-100},{d:"2025-04-06",g:"G1",w:1,p:409},{d:"2025-04-12",g:"G2",w:0,p:-100},{d:"2025-04-13",g:"G1",w:0,p:-100},{d:"2025-04-20",g:"G1",w:0,p:-100},{d:"2025-04-27",g:"G2",w:0,p:-100},{d:"2025-04-27",g:"G2",w:1,p:919},{d:"2025-05-04",g:"G1",w:1,p:210},{d:"2025-05-11",g:"G1",w:0,p:-100},{d:"2025-05-25",g:"G1",w:0,p:-100},{d:"2025-06-01",g:"G2",w:1,p:230},{d:"2025-06-01",g:"G1",w:0,p:-100},{d:"2025-06-08",g:"G1",w:1,p:330},{d:"2025-06-15",g:"G1",w:0,p:-100},{d:"2025-08-17",g:"G2",w:0,p:-100},{d:"2025-09-07",g:"G2",w:0,p:-100},{d:"2025-09-21",g:"G2",w:0,p:-100},{d:"2025-10-05",g:"G2",w:0,p:-100},{d:"2025-10-05",g:"G2",w:0,p:-100},{d:"2025-10-12",g:"G2",w:0,p:-100},{d:"2025-10-13",g:"G2",w:0,p:-100},{d:"2025-10-19",g:"G1",w:1,p:450},{d:"2025-10-26",g:"G1",w:0,p:-100},{d:"2025-11-02",g:"G1",w:0,p:-100},{d:"2025-11-09",g:"G2",w:0,p:-100},{d:"2025-11-16",g:"G1",w:0,p:-100},{d:"2025-11-23",g:"G1",w:0,p:-100},{d:"2025-11-24",g:"G2",w:1,p:630},{d:"2025-12-06",g:"G2",w:1,p:340},{d:"2025-12-07",g:"G1",w:1,p:630},{d:"2025-12-14",g:"G1",w:0,p:-100},{d:"2025-12-21",g:"G1",w:0,p:-100},{d:"2025-12-27",g:"G2",w:1,p:610},{d:"2025-12-27",g:"G1",w:0,p:-100},{d:"2025-12-28",g:"G1",w:0,p:-100},{d:"2026-04-19",g:"G1",w:0,p:-100},{d:"2026-04-26",g:"G2",w:0,p:-100},{d:"2026-05-02",g:"G2",w:0,p:-100},{d:"2026-05-09",g:"G2",w:0,p:-100},{d:"2026-05-10",g:"G1",w:0,p:-100},{d:"2026-05-24",g:"G1",w:0,p:-100},{d:"2026-06-07",g:"G1",w:0,p:-100}];</script>
+<script>betData=[{d:"2025-01-19",g:"G2",w:0,p:-100},{d:"2025-01-26",g:"G2",w:0,p:-100},{d:"2025-02-23",g:"G1",w:0,p:-100},{d:"2025-03-02",g:"G2",w:0,p:-100},{d:"2025-03-02",g:"G2",w:1,p:210},{d:"2025-03-08",g:"G2",w:0,p:-100},{d:"2025-03-16",g:"G2",w:1,p:719},{d:"2025-03-16",g:"G2",w:0,p:-100},{d:"2025-03-23",g:"G2",w:0,p:-100},{d:"2025-03-30",g:"G1",w:0,p:-100},{d:"2025-04-06",g:"G1",w:1,p:409},{d:"2025-04-12",g:"G2",w:0,p:-100},{d:"2025-04-13",g:"G1",w:0,p:-100},{d:"2025-04-20",g:"G1",w:0,p:-100},{d:"2025-04-27",g:"G2",w:0,p:-100},{d:"2025-04-27",g:"G2",w:1,p:919},{d:"2025-05-04",g:"G1",w:1,p:210},{d:"2025-05-11",g:"G1",w:0,p:-100},{d:"2025-05-25",g:"G1",w:0,p:-100},{d:"2025-06-01",g:"G2",w:1,p:230},{d:"2025-06-01",g:"G1",w:0,p:-100},{d:"2025-06-08",g:"G1",w:1,p:330},{d:"2025-06-15",g:"G1",w:0,p:-100},{d:"2025-08-17",g:"G2",w:0,p:-100},{d:"2025-09-07",g:"G2",w:0,p:-100},{d:"2025-09-21",g:"G2",w:0,p:-100},{d:"2025-10-05",g:"G2",w:0,p:-100},{d:"2025-10-05",g:"G2",w:0,p:-100},{d:"2025-10-12",g:"G2",w:0,p:-100},{d:"2025-10-13",g:"G2",w:0,p:-100},{d:"2025-10-19",g:"G1",w:1,p:450},{d:"2025-10-26",g:"G1",w:0,p:-100},{d:"2025-11-02",g:"G1",w:0,p:-100},{d:"2025-11-09",g:"G2",w:0,p:-100},{d:"2025-11-16",g:"G1",w:0,p:-100},{d:"2025-11-23",g:"G1",w:0,p:-100},{d:"2025-11-24",g:"G2",w:1,p:630},{d:"2025-12-06",g:"G2",w:1,p:340},{d:"2025-12-07",g:"G1",w:1,p:630},{d:"2025-12-14",g:"G1",w:0,p:-100},{d:"2025-12-21",g:"G1",w:0,p:-100},{d:"2025-12-27",g:"G2",w:1,p:610},{d:"2025-12-27",g:"G1",w:0,p:-100},{d:"2025-12-28",g:"G1",w:0,p:-100},{d:"2026-01-18",g:"G2",w:0,p:-100},{d:"2026-01-25",g:"G2",w:0,p:-100},{d:"2026-01-25",g:"G2",w:0,p:-100},{d:"2026-02-15",g:"G2",w:0,p:-100},{d:"2026-02-22",g:"G1",w:0,p:-100},{d:"2026-03-01",g:"G2",w:0,p:-100},{d:"2026-03-15",g:"G2",w:0,p:-100},{d:"2026-03-15",g:"G2",w:0,p:-100},{d:"2026-03-22",g:"G2",w:0,p:-100},{d:"2026-03-28",g:"G2",w:0,p:-100},{d:"2026-04-19",g:"G1",w:0,p:-100},{d:"2026-04-26",g:"G2",w:0,p:-100},{d:"2026-05-02",g:"G2",w:0,p:-100},{d:"2026-05-09",g:"G2",w:0,p:-100},{d:"2026-05-10",g:"G1",w:0,p:-100},{d:"2026-05-24",g:"G1",w:0,p:-100},{d:"2026-06-07",g:"G1",w:0,p:-100}];</script>
 
 <div class="card">
 <div class="card-title">運用成績</div>
 <div class="stats">
-<div class="stat"><div id="s-roi" class="stat-value roi-positive">1.35</div><div class="stat-label">ROI</div></div>
-<div class="stat"><div id="s-hits" class="stat-value">12/51</div><div class="stat-label">的中</div></div>
-<div class="stat"><div id="s-pnl" class="stat-value pnl-plus">+1,790</div><div class="stat-label">損益(円)</div></div>
+<div class="stat"><div id="s-roi" class="stat-value roi-positive">1.13</div><div class="stat-label">ROI</div></div>
+<div class="stat"><div id="s-hits" class="stat-value">12/61</div><div class="stat-label">的中</div></div>
+<div class="stat"><div id="s-pnl" class="stat-value pnl-plus">+790</div><div class="stat-label">損益(円)</div></div>
 </div>
 <div class="stats">
-<div class="stat"><div id="s-hitrate" class="stat-value">24%</div><div class="stat-label">的中率</div></div>
-<div class="stat"><div id="s-dd" class="stat-value">-900</div><div class="stat-label">最大DD</div></div>
-<div class="stat"><div id="s-streak" class="stat-value">9</div><div class="stat-label">最大連敗</div></div>
+<div class="stat"><div id="s-hitrate" class="stat-value">20%</div><div class="stat-label">的中率</div></div>
+<div class="stat"><div id="s-dd" class="stat-value">-1,900</div><div class="stat-label">最大DD</div></div>
+<div class="stat"><div id="s-streak" class="stat-value">19</div><div class="stat-label">最大連敗</div></div>
 </div>
 <div id="pnl-chart"><svg viewBox="0 0 560 120" style="width:100%;height:120px;display:block;margin:8px 0">
-<polygon points="10.0,84.9 10.0,87.7 20.8,90.4 31.6,93.2 42.4,96.0 53.2,90.2 64.0,92.9 74.8,72.9 85.6,75.7 96.4,78.5 107.2,81.2 118.0,69.8 128.8,72.6 139.6,75.4 150.4,78.2 161.2,81.0 172.0,55.4 182.8,49.5 193.6,52.3 204.4,55.1 215.2,48.7 226.0,51.5 236.8,42.3 247.6,45.1 258.4,47.9 269.2,50.6 280.0,53.4 290.8,56.2 301.6,59.0 312.4,61.8 323.2,64.6 334.0,52.0 344.8,54.8 355.6,57.6 366.4,60.4 377.2,63.2 388.0,65.9 398.8,48.4 409.6,38.9 420.4,21.4 431.2,24.2 442.0,27.0 452.8,10.0 463.6,12.8 474.4,15.6 485.2,18.3 496.0,21.1 506.8,23.9 517.6,26.7 528.4,29.5 539.2,32.3 550.0,35.0 550.0,84.9" fill="#4caf5020"/>
+<polygon points="10.0,84.9 10.0,87.7 19.0,90.4 28.0,93.2 37.0,96.0 46.0,90.2 55.0,92.9 64.0,72.9 73.0,75.7 82.0,78.5 91.0,81.2 100.0,69.8 109.0,72.6 118.0,75.4 127.0,78.2 136.0,81.0 145.0,55.4 154.0,49.5 163.0,52.3 172.0,55.1 181.0,48.7 190.0,51.5 199.0,42.3 208.0,45.1 217.0,47.9 226.0,50.6 235.0,53.4 244.0,56.2 253.0,59.0 262.0,61.8 271.0,64.6 280.0,52.0 289.0,54.8 298.0,57.6 307.0,60.4 316.0,63.2 325.0,65.9 334.0,48.4 343.0,38.9 352.0,21.4 361.0,24.2 370.0,27.0 379.0,10.0 388.0,12.8 397.0,15.6 406.0,18.3 415.0,21.1 424.0,23.9 433.0,26.7 442.0,29.5 451.0,32.3 460.0,35.0 469.0,37.8 478.0,40.6 487.0,43.4 496.0,46.2 505.0,49.0 514.0,51.7 523.0,54.5 532.0,57.3 541.0,60.1 550.0,62.9 550.0,84.9" fill="#4caf5020"/>
 <line x1="10" y1="84.9" x2="550" y2="84.9" stroke="#444" stroke-width="0.5" stroke-dasharray="4"/>
-<polyline points="10.0,87.7 20.8,90.4 31.6,93.2 42.4,96.0 53.2,90.2 64.0,92.9 74.8,72.9 85.6,75.7 96.4,78.5 107.2,81.2 118.0,69.8 128.8,72.6 139.6,75.4 150.4,78.2 161.2,81.0 172.0,55.4 182.8,49.5 193.6,52.3 204.4,55.1 215.2,48.7 226.0,51.5 236.8,42.3 247.6,45.1 258.4,47.9 269.2,50.6 280.0,53.4 290.8,56.2 301.6,59.0 312.4,61.8 323.2,64.6 334.0,52.0 344.8,54.8 355.6,57.6 366.4,60.4 377.2,63.2 388.0,65.9 398.8,48.4 409.6,38.9 420.4,21.4 431.2,24.2 442.0,27.0 452.8,10.0 463.6,12.8 474.4,15.6 485.2,18.3 496.0,21.1 506.8,23.9 517.6,26.7 528.4,29.5 539.2,32.3 550.0,35.0" fill="none" stroke="#4caf50" stroke-width="2"/>
-<circle cx="550.0" cy="35.0" r="3" fill="#4caf50"/>
+<polyline points="10.0,87.7 19.0,90.4 28.0,93.2 37.0,96.0 46.0,90.2 55.0,92.9 64.0,72.9 73.0,75.7 82.0,78.5 91.0,81.2 100.0,69.8 109.0,72.6 118.0,75.4 127.0,78.2 136.0,81.0 145.0,55.4 154.0,49.5 163.0,52.3 172.0,55.1 181.0,48.7 190.0,51.5 199.0,42.3 208.0,45.1 217.0,47.9 226.0,50.6 235.0,53.4 244.0,56.2 253.0,59.0 262.0,61.8 271.0,64.6 280.0,52.0 289.0,54.8 298.0,57.6 307.0,60.4 316.0,63.2 325.0,65.9 334.0,48.4 343.0,38.9 352.0,21.4 361.0,24.2 370.0,27.0 379.0,10.0 388.0,12.8 397.0,15.6 406.0,18.3 415.0,21.1 424.0,23.9 433.0,26.7 442.0,29.5 451.0,32.3 460.0,35.0 469.0,37.8 478.0,40.6 487.0,43.4 496.0,46.2 505.0,49.0 514.0,51.7 523.0,54.5 532.0,57.3 541.0,60.1 550.0,62.9" fill="none" stroke="#4caf50" stroke-width="2"/>
+<circle cx="550.0" cy="62.9" r="3" fill="#4caf50"/>
 <line x1="10.0" y1="10" x2="10.0" y2="96" stroke="#333" stroke-width="0.5"/>
 <text x="10.0" y="116" fill="#666" font-size="10" text-anchor="middle">1月</text>
-<line x1="31.6" y1="10" x2="31.6" y2="96" stroke="#333" stroke-width="0.5"/>
-<text x="31.6" y="116" fill="#666" font-size="10" text-anchor="middle">2月</text>
-<line x1="42.4" y1="10" x2="42.4" y2="96" stroke="#333" stroke-width="0.5"/>
-<text x="42.4" y="116" fill="#666" font-size="10" text-anchor="middle">3月</text>
-<line x1="118.0" y1="10" x2="118.0" y2="96" stroke="#333" stroke-width="0.5"/>
-<text x="118.0" y="116" fill="#666" font-size="10" text-anchor="middle">4月</text>
-<line x1="182.8" y1="10" x2="182.8" y2="96" stroke="#333" stroke-width="0.5"/>
-<text x="182.8" y="116" fill="#666" font-size="10" text-anchor="middle">5月</text>
-<line x1="215.2" y1="10" x2="215.2" y2="96" stroke="#333" stroke-width="0.5"/>
-<text x="215.2" y="116" fill="#666" font-size="10" text-anchor="middle">6月</text>
-<line x1="258.4" y1="10" x2="258.4" y2="96" stroke="#333" stroke-width="0.5"/>
-<text x="258.4" y="116" fill="#666" font-size="10" text-anchor="middle">8月</text>
-<line x1="269.2" y1="10" x2="269.2" y2="96" stroke="#333" stroke-width="0.5"/>
-<text x="269.2" y="116" fill="#666" font-size="10" text-anchor="middle">9月</text>
-<line x1="290.8" y1="10" x2="290.8" y2="96" stroke="#333" stroke-width="0.5"/>
-<text x="290.8" y="116" fill="#666" font-size="10" text-anchor="middle">10月</text>
-<line x1="355.6" y1="10" x2="355.6" y2="96" stroke="#333" stroke-width="0.5"/>
-<text x="355.6" y="116" fill="#666" font-size="10" text-anchor="middle">11月</text>
-<line x1="409.6" y1="10" x2="409.6" y2="96" stroke="#333" stroke-width="0.5"/>
-<text x="409.6" y="116" fill="#666" font-size="10" text-anchor="middle">12月</text>
-<line x1="485.2" y1="10" x2="485.2" y2="96" stroke="#333" stroke-width="0.5"/>
-<text x="485.2" y="116" fill="#666" font-size="10" text-anchor="middle">4月</text>
-<line x1="506.8" y1="10" x2="506.8" y2="96" stroke="#333" stroke-width="0.5"/>
-<text x="506.8" y="116" fill="#666" font-size="10" text-anchor="middle">5月</text>
+<line x1="28.0" y1="10" x2="28.0" y2="96" stroke="#333" stroke-width="0.5"/>
+<text x="28.0" y="116" fill="#666" font-size="10" text-anchor="middle">2月</text>
+<line x1="37.0" y1="10" x2="37.0" y2="96" stroke="#333" stroke-width="0.5"/>
+<text x="37.0" y="116" fill="#666" font-size="10" text-anchor="middle">3月</text>
+<line x1="100.0" y1="10" x2="100.0" y2="96" stroke="#333" stroke-width="0.5"/>
+<text x="100.0" y="116" fill="#666" font-size="10" text-anchor="middle">4月</text>
+<line x1="154.0" y1="10" x2="154.0" y2="96" stroke="#333" stroke-width="0.5"/>
+<text x="154.0" y="116" fill="#666" font-size="10" text-anchor="middle">5月</text>
+<line x1="181.0" y1="10" x2="181.0" y2="96" stroke="#333" stroke-width="0.5"/>
+<text x="181.0" y="116" fill="#666" font-size="10" text-anchor="middle">6月</text>
+<line x1="217.0" y1="10" x2="217.0" y2="96" stroke="#333" stroke-width="0.5"/>
+<text x="217.0" y="116" fill="#666" font-size="10" text-anchor="middle">8月</text>
+<line x1="226.0" y1="10" x2="226.0" y2="96" stroke="#333" stroke-width="0.5"/>
+<text x="226.0" y="116" fill="#666" font-size="10" text-anchor="middle">9月</text>
+<line x1="244.0" y1="10" x2="244.0" y2="96" stroke="#333" stroke-width="0.5"/>
+<text x="244.0" y="116" fill="#666" font-size="10" text-anchor="middle">10月</text>
+<line x1="298.0" y1="10" x2="298.0" y2="96" stroke="#333" stroke-width="0.5"/>
+<text x="298.0" y="116" fill="#666" font-size="10" text-anchor="middle">11月</text>
+<line x1="343.0" y1="10" x2="343.0" y2="96" stroke="#333" stroke-width="0.5"/>
+<text x="343.0" y="116" fill="#666" font-size="10" text-anchor="middle">12月</text>
+<line x1="406.0" y1="10" x2="406.0" y2="96" stroke="#333" stroke-width="0.5"/>
+<text x="406.0" y="116" fill="#666" font-size="10" text-anchor="middle">1月</text>
+<line x1="433.0" y1="10" x2="433.0" y2="96" stroke="#333" stroke-width="0.5"/>
+<text x="433.0" y="116" fill="#666" font-size="10" text-anchor="middle">2月</text>
+<line x1="451.0" y1="10" x2="451.0" y2="96" stroke="#333" stroke-width="0.5"/>
+<text x="451.0" y="116" fill="#666" font-size="10" text-anchor="middle">3月</text>
+<line x1="496.0" y1="10" x2="496.0" y2="96" stroke="#333" stroke-width="0.5"/>
+<text x="496.0" y="116" fill="#666" font-size="10" text-anchor="middle">4月</text>
+<line x1="514.0" y1="10" x2="514.0" y2="96" stroke="#333" stroke-width="0.5"/>
+<text x="514.0" y="116" fill="#666" font-size="10" text-anchor="middle">5月</text>
 <line x1="550.0" y1="10" x2="550.0" y2="96" stroke="#333" stroke-width="0.5"/>
 <text x="550.0" y="116" fill="#666" font-size="10" text-anchor="middle">6月</text>
 </svg></div>
 </div>
-<div class="section-title">予測</div><div class="card"><div class="no-data">未確定レースなし</div></div><div class="section-title">結果</div><div class="filter-bar"><select id="filter-year" onchange="filterRaces()"><option value="">全年</option><option value="2026">2026年</option><option value="2025">2025年</option></select><select id="filter-month" onchange="filterRaces()"><option value="">全月</option><option value="01">1月</option><option value="02">2月</option><option value="03">3月</option><option value="04">4月</option><option value="05">5月</option><option value="06">6月</option><option value="07">7月</option><option value="08">8月</option><option value="09">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option></select><select id="filter-grade" onchange="filterRaces()"><option value="">全グレード</option><option value="G1">G1</option><option value="G2">G2</option><option value="G3">G3</option><option value="G1G2">G1+G2</option></select></div>
+<div class="section-title">予測</div>
+<div class="card" data-race="202606030311">
+<div class="card-title">2026-04-04 第58回ダービー卿チャレンジ<span class="grade grade-G3">G3</span></div>
+<div class="tabs">
+<div class="tab tab-prob active" onclick="switchTab('202606030311','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202606030311','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th></tr>
+<tr ><td>1</td><td>タイムトゥヘヴン</td><td>4.3%<span class="prob-bar" style="width:12px"></span></td><td>0.0</td><td>0.00</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th></tr>
+<tr ><td>1</td><td>タイムトゥヘヴン</td><td>4.3%<span class="prob-bar" style="width:12px"></span></td><td>0.0</td><td>0.00</td></tr>
+</table>
+</div>
+</div>
+
+<div class="card" data-race="202606030211">
+<div class="card-title">2026-03-29 第33回マーチステークス<span class="grade grade-G3">G3</span></div>
+<div class="tabs">
+<div class="tab tab-prob active" onclick="switchTab('202606030211','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202606030211','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th></tr>
+<tr ><td>1</td><td>ハピ</td><td>6.0%<span class="prob-bar" style="width:17px"></span></td><td>0.0</td><td>0.00</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th></tr>
+<tr ><td>1</td><td>ハピ</td><td>6.0%<span class="prob-bar" style="width:17px"></span></td><td>0.0</td><td>0.00</td></tr>
+</table>
+</div>
+</div>
+<div class="section-title">結果</div><div class="filter-bar"><select id="filter-year" onchange="filterRaces()"><option value="">全年</option><option value="2026">2026年</option><option value="2025">2025年</option></select><select id="filter-month" onchange="filterRaces()"><option value="">全月</option><option value="01">1月</option><option value="02">2月</option><option value="03">3月</option><option value="04">4月</option><option value="05">5月</option><option value="06">6月</option><option value="07">7月</option><option value="08">8月</option><option value="09">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option></select><select id="filter-grade" onchange="filterRaces()"><option value="">全グレード</option><option value="G1">G1</option><option value="G2">G2</option><option value="G3">G3</option><option value="G1G2">G1+G2</option></select></div>
 
 <div class="card race-card-past" data-race="202609030611_done" data-date="2026-06-21" data-grade="G3" style="">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
@@ -921,6 +967,1301 @@ function drawChart(vals, dates) {
 </div>
 </div></div>
 
+<div class="card race-card-past" data-race="202609020511_done" data-date="2026-04-11" data-grade="G2" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-04-11 第69回サンスポ杯阪神牝馬S<span class="grade grade-G2">G2</span> <span style="font-size:0.8em;color:#888">&#x2705; エンブロイダ</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202609020511_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202609020511_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>エンブロイダリー</td><td>12.1%<span class="prob-bar" style="width:36px"></span></td><td>2.8</td><td>0.34</td><td class="result-win">1</td></tr>
+<tr ><td>2</td><td>カムニャック</td><td>10.8%<span class="prob-bar" style="width:32px"></span></td><td>7.8</td><td>0.84</td><td class="result-lose">2</td></tr>
+<tr ><td>3</td><td>アスコリピチェー</td><td>8.3%<span class="prob-bar" style="width:25px"></span></td><td>3.3</td><td>0.28</td><td class="result-lose">10</td></tr>
+<tr ><td>4</td><td>ラヴァンダ</td><td>7.0%<span class="prob-bar" style="width:21px"></span></td><td>4.2</td><td>0.30</td><td class="result-lose">8</td></tr>
+<tr ><td>5</td><td>カナテープ</td><td>6.9%<span class="prob-bar" style="width:20px"></span></td><td>33.9</td><td class="ev-high">2.33</td><td class="result-lose">6</td></tr>
+<tr ><td>6</td><td>クランフォード</td><td>6.9%<span class="prob-bar" style="width:20px"></span></td><td>35.2</td><td class="ev-high">2.41</td><td class="result-lose">4</td></tr>
+<tr ><td>7</td><td>カピリナ</td><td>5.9%<span class="prob-bar" style="width:17px"></span></td><td>14.1</td><td>0.84</td><td class="result-lose">9</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>エポックヴィーナ</td><td>4.9%<span class="prob-bar" style="width:14px"></span></td><td>241.3</td><td class="ev-high">11.72</td><td class="result-lose">7</td></tr>
+<tr ><td>2</td><td>ビップデイジー</td><td>5.6%<span class="prob-bar" style="width:16px"></span></td><td>73.4</td><td class="ev-high">4.08</td><td class="result-lose">5</td></tr>
+<tr ><td>3</td><td>クランフォード</td><td>6.9%<span class="prob-bar" style="width:20px"></span></td><td>35.2</td><td class="ev-high">2.41</td><td class="result-lose">4</td></tr>
+<tr ><td>4</td><td>カナテープ</td><td>6.9%<span class="prob-bar" style="width:20px"></span></td><td>33.9</td><td class="ev-high">2.33</td><td class="result-lose">6</td></tr>
+<tr ><td>5</td><td>カムニャック</td><td>10.8%<span class="prob-bar" style="width:32px"></span></td><td>7.8</td><td>0.84</td><td class="result-lose">2</td></tr>
+<tr ><td>6</td><td>カピリナ</td><td>5.9%<span class="prob-bar" style="width:17px"></span></td><td>14.1</td><td>0.84</td><td class="result-lose">9</td></tr>
+<tr ><td>7</td><td>ルージュソリテー</td><td>5.4%<span class="prob-bar" style="width:16px"></span></td><td>11.3</td><td>0.61</td><td class="result-lose">3</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202606030511_done" data-date="2026-04-11" data-grade="G2" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-04-11 第44回ニュージーランドT<span class="grade grade-G2">G2</span> <span style="font-size:0.8em;color:#888">シュペルリン 13着</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202606030511_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202606030511_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>シュペルリング</td><td>7.4%<span class="prob-bar" style="width:22px"></span></td><td>53.2</td><td class="ev-high">3.95</td><td class="result-lose">13</td></tr>
+<tr ><td>2</td><td>ディールメーカー</td><td>6.9%<span class="prob-bar" style="width:20px"></span></td><td>7.8</td><td>0.54</td><td class="result-lose">4</td></tr>
+<tr ><td>3</td><td>マダックス</td><td>6.3%<span class="prob-bar" style="width:18px"></span></td><td>217.9</td><td class="ev-high">13.62</td><td class="result-lose">14</td></tr>
+<tr ><td>4</td><td>レザベーション</td><td>6.3%<span class="prob-bar" style="width:18px"></span></td><td>43.5</td><td class="ev-high">2.72</td><td class="result-win">1</td></tr>
+<tr ><td>5</td><td>ハノハノ</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>69.1</td><td class="ev-high">4.32</td><td class="result-lose">15</td></tr>
+<tr ><td>6</td><td>ゴーラッキー</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>3.7</td><td>0.23</td><td class="result-lose">6</td></tr>
+<tr ><td>7</td><td>ロデオドライブ</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>1.7</td><td>0.11</td><td class="result-lose">2</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ブルズアイプリン</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>369.7</td><td class="ev-high">21.23</td><td class="result-lose">12</td></tr>
+<tr ><td>2</td><td>ミリオンクラウン</td><td>4.8%<span class="prob-bar" style="width:14px"></span></td><td>437.6</td><td class="ev-high">21.21</td><td class="result-lose">10</td></tr>
+<tr ><td>3</td><td>マダックス</td><td>6.3%<span class="prob-bar" style="width:18px"></span></td><td>217.9</td><td class="ev-high">13.62</td><td class="result-lose">14</td></tr>
+<tr ><td>4</td><td>ガリレア</td><td>5.0%<span class="prob-bar" style="width:15px"></span></td><td>161.6</td><td class="ev-high">8.15</td><td class="result-lose">11</td></tr>
+<tr ><td>5</td><td>スマイルカーブ</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>114.5</td><td class="ev-high">6.93</td><td class="result-lose">8</td></tr>
+<tr ><td>6</td><td>ハノハノ</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>69.1</td><td class="ev-high">4.32</td><td class="result-lose">15</td></tr>
+<tr ><td>7</td><td>シュペルリング</td><td>7.4%<span class="prob-bar" style="width:22px"></span></td><td>53.2</td><td class="ev-high">3.95</td><td class="result-lose">13</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202609020411_done" data-date="2026-04-05" data-grade="G1" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-04-05 第70回大阪杯<span class="grade grade-G1">G1</span> <span style="font-size:0.8em;color:#888">&#x2705; クロワデュノ</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202609020411_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202609020411_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>クロワデュノール</td><td>12.2%<span class="prob-bar" style="width:36px"></span></td><td>2.5</td><td>0.30</td><td class="result-win">1</td></tr>
+<tr ><td>2</td><td>ダノンデサイル</td><td>12.0%<span class="prob-bar" style="width:36px"></span></td><td>3.9</td><td>0.47</td><td class="result-lose">3</td></tr>
+<tr ><td>3</td><td>ショウヘイ</td><td>8.8%<span class="prob-bar" style="width:26px"></span></td><td>6.1</td><td>0.54</td><td class="result-lose">10</td></tr>
+<tr ><td>4</td><td>デビットバローズ</td><td>7.8%<span class="prob-bar" style="width:23px"></span></td><td>58.9</td><td class="ev-high">4.58</td><td class="result-lose">8</td></tr>
+<tr ><td>5</td><td>エコロヴァルツ</td><td>7.6%<span class="prob-bar" style="width:22px"></span></td><td>45.4</td><td class="ev-high">3.46</td><td class="result-lose">14</td></tr>
+<tr ><td>6</td><td>レーベンスティー</td><td>7.4%<span class="prob-bar" style="width:22px"></span></td><td>9.9</td><td>0.73</td><td class="result-lose">6</td></tr>
+<tr ><td>7</td><td>セイウンハーデス</td><td>7.1%<span class="prob-bar" style="width:21px"></span></td><td>64.9</td><td class="ev-high">4.59</td><td class="result-lose">5</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>サンストックトン</td><td>4.7%<span class="prob-bar" style="width:14px"></span></td><td>336.7</td><td class="ev-high">15.82</td><td class="result-lose">12</td></tr>
+<tr ><td>2</td><td>ボルドグフーシュ</td><td>5.1%<span class="prob-bar" style="width:15px"></span></td><td>162.1</td><td class="ev-high">8.32</td><td class="result-lose">9</td></tr>
+<tr ><td>3</td><td>ファウストラーゼ</td><td>5.4%<span class="prob-bar" style="width:16px"></span></td><td>102.1</td><td class="ev-high">5.51</td><td class="result-lose">13</td></tr>
+<tr ><td>4</td><td>タガノデュード</td><td>4.7%<span class="prob-bar" style="width:14px"></span></td><td>113.2</td><td class="ev-high">5.34</td><td class="result-lose">4</td></tr>
+<tr ><td>5</td><td>セイウンハーデス</td><td>7.1%<span class="prob-bar" style="width:21px"></span></td><td>64.9</td><td class="ev-high">4.59</td><td class="result-lose">5</td></tr>
+<tr ><td>6</td><td>デビットバローズ</td><td>7.8%<span class="prob-bar" style="width:23px"></span></td><td>58.9</td><td class="ev-high">4.58</td><td class="result-lose">8</td></tr>
+<tr ><td>7</td><td>ヨーホーレイク</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>68.0</td><td class="ev-high">4.16</td><td class="result-lose">7</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202606030311_done" data-date="2026-04-04" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-04-04 第58回ダービー卿チャレンジ<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">ファーヴェン 3着</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202606030311_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202606030311_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ファーヴェント</td><td>7.3%<span class="prob-bar" style="width:21px"></span></td><td>5.7</td><td>0.41</td><td class="result-lose">3</td></tr>
+<tr ><td>2</td><td>ジュンブロッサム</td><td>6.7%<span class="prob-bar" style="width:20px"></span></td><td>17.0</td><td class="ev-high">1.14</td><td class="result-lose">11</td></tr>
+<tr ><td>3</td><td>ブエナオンダ</td><td>6.3%<span class="prob-bar" style="width:18px"></span></td><td>13.1</td><td>0.82</td><td class="result-lose">6</td></tr>
+<tr ><td>4</td><td>イミグラントソン</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>13.3</td><td>0.81</td><td class="result-lose">5</td></tr>
+<tr ><td>5</td><td>エエヤン</td><td>6.0%<span class="prob-bar" style="width:17px"></span></td><td>115.1</td><td class="ev-high">6.86</td><td class="result-lose">12</td></tr>
+<tr ><td>6</td><td>ケイアイセナ</td><td>5.9%<span class="prob-bar" style="width:17px"></span></td><td>6.8</td><td>0.40</td><td class="result-lose">10</td></tr>
+<tr ><td>7</td><td>ミニトランザット</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>6.0</td><td>0.35</td><td class="result-lose">4</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ダディーズビビッ</td><td>4.8%<span class="prob-bar" style="width:14px"></span></td><td>154.2</td><td class="ev-high">7.36</td><td class="result-lose">14</td></tr>
+<tr ><td>2</td><td>エエヤン</td><td>6.0%<span class="prob-bar" style="width:17px"></span></td><td>115.1</td><td class="ev-high">6.86</td><td class="result-lose">12</td></tr>
+<tr ><td>3</td><td>マテンロウオリオ</td><td>4.8%<span class="prob-bar" style="width:14px"></span></td><td>25.0</td><td class="ev-high">1.20</td><td class="result-lose">15</td></tr>
+<tr ><td>4</td><td>ジュンブロッサム</td><td>6.7%<span class="prob-bar" style="width:20px"></span></td><td>17.0</td><td class="ev-high">1.14</td><td class="result-lose">11</td></tr>
+<tr ><td>5</td><td>エンペラーズソー</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>16.7</td><td>0.95</td><td class="result-lose">8</td></tr>
+<tr ><td>6</td><td>ブエナオンダ</td><td>6.3%<span class="prob-bar" style="width:18px"></span></td><td>13.1</td><td>0.82</td><td class="result-lose">6</td></tr>
+<tr ><td>7</td><td>スズハローム</td><td>5.2%<span class="prob-bar" style="width:15px"></span></td><td>15.9</td><td>0.82</td><td class="result-win">1</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202609020311_done" data-date="2026-04-04" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-04-04 第35回チャーチルダウンズC<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">アンドゥーリ 8着</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202609020311_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202609020311_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>アンドゥーリル</td><td>10.2%<span class="prob-bar" style="width:30px"></span></td><td>2.8</td><td>0.29</td><td class="result-lose">8</td></tr>
+<tr ><td>2</td><td>サンダーストラッ</td><td>9.0%<span class="prob-bar" style="width:27px"></span></td><td>2.8</td><td>0.25</td><td class="result-lose">12</td></tr>
+<tr ><td>3</td><td>バルセシート</td><td>8.8%<span class="prob-bar" style="width:26px"></span></td><td>6.9</td><td>0.61</td><td class="result-lose">3</td></tr>
+<tr ><td>4</td><td>リゾートアイラン</td><td>7.1%<span class="prob-bar" style="width:21px"></span></td><td>9.9</td><td>0.70</td><td class="result-lose">9</td></tr>
+<tr ><td>5</td><td>サトノセプター</td><td>6.7%<span class="prob-bar" style="width:20px"></span></td><td>19.8</td><td class="ev-high">1.34</td><td class="result-lose">13</td></tr>
+<tr ><td>6</td><td>サーディンラン</td><td>6.5%<span class="prob-bar" style="width:19px"></span></td><td>75.7</td><td class="ev-high">4.89</td><td class="result-lose">5</td></tr>
+<tr ><td>7</td><td>エイシンティザー</td><td>6.3%<span class="prob-bar" style="width:19px"></span></td><td>20.8</td><td class="ev-high">1.32</td><td class="result-lose">11</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ユウファラオ</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>243.9</td><td class="ev-high">13.96</td><td class="result-lose">2</td></tr>
+<tr ><td>2</td><td>メイショウソラリ</td><td>6.0%<span class="prob-bar" style="width:17px"></span></td><td>94.5</td><td class="ev-high">5.67</td><td class="result-lose">10</td></tr>
+<tr ><td>3</td><td>サーディンラン</td><td>6.5%<span class="prob-bar" style="width:19px"></span></td><td>75.7</td><td class="ev-high">4.89</td><td class="result-lose">5</td></tr>
+<tr ><td>4</td><td>ストームサンダー</td><td>5.5%<span class="prob-bar" style="width:16px"></span></td><td>75.7</td><td class="ev-high">4.15</td><td class="result-lose">7</td></tr>
+<tr ><td>5</td><td>ファンクション</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>70.7</td><td class="ev-high">4.09</td><td class="result-lose">14</td></tr>
+<tr ><td>6</td><td>クールデイトナ</td><td>5.2%<span class="prob-bar" style="width:15px"></span></td><td>69.5</td><td class="ev-high">3.59</td><td class="result-lose">6</td></tr>
+<tr ><td>7</td><td>サトノセプター</td><td>6.7%<span class="prob-bar" style="width:20px"></span></td><td>19.8</td><td class="ev-high">1.34</td><td class="result-lose">13</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202606030211_done" data-date="2026-03-29" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-03-29 第33回マーチステークス<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">&#x2705; サンデーファ</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202606030211_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202606030211_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>サンデーファンデ</td><td>6.8%<span class="prob-bar" style="width:20px"></span></td><td>12.8</td><td>0.87</td><td class="result-win">1</td></tr>
+<tr ><td>2</td><td>オメガギネス</td><td>6.7%<span class="prob-bar" style="width:20px"></span></td><td>4.9</td><td>0.33</td><td class="result-lose">7</td></tr>
+<tr ><td>3</td><td>アクションプラン</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>9.6</td><td>0.59</td><td class="result-lose">2</td></tr>
+<tr ><td>4</td><td>ブレイクフォース</td><td>5.9%<span class="prob-bar" style="width:17px"></span></td><td>12.7</td><td>0.74</td><td class="result-lose">3</td></tr>
+<tr ><td>5</td><td>バスタードサフラ</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>65.1</td><td class="ev-high">3.76</td><td class="result-lose">9</td></tr>
+<tr ><td>6</td><td>チュウワクリスエ</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>7.3</td><td>0.42</td><td class="result-lose">6</td></tr>
+<tr ><td>7</td><td>マテンロウスカイ</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>13.8</td><td>0.80</td><td class="result-lose">12</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>コレペティトール</td><td>4.9%<span class="prob-bar" style="width:14px"></span></td><td>106.6</td><td class="ev-high">5.24</td><td class="result-lose">13</td></tr>
+<tr ><td>2</td><td>ショウナンライシ</td><td>4.6%<span class="prob-bar" style="width:13px"></span></td><td>109.0</td><td class="ev-high">5.06</td><td class="result-lose">10</td></tr>
+<tr ><td>3</td><td>バスタードサフラ</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>65.1</td><td class="ev-high">3.76</td><td class="result-lose">9</td></tr>
+<tr ><td>4</td><td>ピュアキアン</td><td>5.7%<span class="prob-bar" style="width:16px"></span></td><td>42.5</td><td class="ev-high">2.40</td><td class="result-lose">14</td></tr>
+<tr ><td>5</td><td>ハナウマビーチ</td><td>5.3%<span class="prob-bar" style="width:15px"></span></td><td>30.9</td><td class="ev-high">1.64</td><td class="result-lose">11</td></tr>
+<tr ><td>6</td><td>サンデーファンデ</td><td>6.8%<span class="prob-bar" style="width:20px"></span></td><td>12.8</td><td>0.87</td><td class="result-win">1</td></tr>
+<tr ><td>7</td><td>マテンロウスカイ</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>13.8</td><td>0.80</td><td class="result-lose">12</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202609020111_done" data-date="2026-03-28" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-03-28 第73回毎日杯<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">&#x2705; アルトラムス</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202609020111_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202609020111_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>アルトラムス</td><td>8.1%<span class="prob-bar" style="width:24px"></span></td><td>2.4</td><td>0.19</td><td class="result-win">1</td></tr>
+<tr ><td>2</td><td>カフジエメンター</td><td>6.6%<span class="prob-bar" style="width:19px"></span></td><td>3.0</td><td>0.20</td><td class="result-lose">3</td></tr>
+<tr ><td>3</td><td>ウップヘリーア</td><td>6.4%<span class="prob-bar" style="width:19px"></span></td><td>5.1</td><td>0.33</td><td class="result-lose">4</td></tr>
+<tr ><td>4</td><td>ローベルクランツ</td><td>6.4%<span class="prob-bar" style="width:19px"></span></td><td>5.0</td><td>0.32</td><td class="result-lose">2</td></tr>
+<tr ><td>5</td><td>シーズザスローン</td><td>5.9%<span class="prob-bar" style="width:17px"></span></td><td>16.9</td><td class="ev-high">1.00</td><td class="result-lose">7</td></tr>
+<tr ><td>6</td><td>ブリガンティン</td><td>5.9%<span class="prob-bar" style="width:17px"></span></td><td>25.6</td><td class="ev-high">1.52</td><td class="result-lose">6</td></tr>
+<tr ><td>7</td><td>フレイムスター</td><td>5.3%<span class="prob-bar" style="width:15px"></span></td><td>52.0</td><td class="ev-high">2.75</td><td class="result-lose">5</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>フレイムスター</td><td>5.3%<span class="prob-bar" style="width:15px"></span></td><td>52.0</td><td class="ev-high">2.75</td><td class="result-lose">5</td></tr>
+<tr ><td>2</td><td>ブリガンティン</td><td>5.9%<span class="prob-bar" style="width:17px"></span></td><td>25.6</td><td class="ev-high">1.52</td><td class="result-lose">6</td></tr>
+<tr ><td>3</td><td>シーズザスローン</td><td>5.9%<span class="prob-bar" style="width:17px"></span></td><td>16.9</td><td class="ev-high">1.00</td><td class="result-lose">7</td></tr>
+<tr ><td>4</td><td>ウップヘリーア</td><td>6.4%<span class="prob-bar" style="width:19px"></span></td><td>5.1</td><td>0.33</td><td class="result-lose">4</td></tr>
+<tr ><td>5</td><td>ローベルクランツ</td><td>6.4%<span class="prob-bar" style="width:19px"></span></td><td>5.0</td><td>0.32</td><td class="result-lose">2</td></tr>
+<tr ><td>6</td><td>カフジエメンター</td><td>6.6%<span class="prob-bar" style="width:19px"></span></td><td>3.0</td><td>0.20</td><td class="result-lose">3</td></tr>
+<tr ><td>7</td><td>アルトラムス</td><td>8.1%<span class="prob-bar" style="width:24px"></span></td><td>2.4</td><td>0.19</td><td class="result-win">1</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202606030111_done" data-date="2026-03-28" data-grade="G2" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-03-28 第74回日経賞<span class="grade grade-G2">G2</span> <span style="font-size:0.8em;color:#888">シャイニング 5着 BET</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202606030111_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202606030111_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr class="bet-row"><td>1</td><td>シャイニングソー BET</td><td>9.6%<span class="prob-bar" style="width:28px"></span></td><td>12.4</td><td class="ev-high">1.19</td><td class="result-lose">5</td></tr>
+<tr ><td>2</td><td>ローシャムパーク</td><td>7.5%<span class="prob-bar" style="width:22px"></span></td><td>6.2</td><td>0.47</td><td class="result-lose">3</td></tr>
+<tr ><td>3</td><td>エヒト</td><td>6.6%<span class="prob-bar" style="width:19px"></span></td><td>41.4</td><td class="ev-high">2.72</td><td class="result-lose">4</td></tr>
+<tr ><td>4</td><td>コスモキュランダ</td><td>6.6%<span class="prob-bar" style="width:19px"></span></td><td>2.8</td><td>0.18</td><td class="result-lose">7</td></tr>
+<tr ><td>5</td><td>ミステリーウェイ</td><td>6.3%<span class="prob-bar" style="width:18px"></span></td><td>24.5</td><td class="ev-high">1.54</td><td class="result-lose">14</td></tr>
+<tr ><td>6</td><td>マイユニバース</td><td>6.3%<span class="prob-bar" style="width:18px"></span></td><td>7.0</td><td>0.44</td><td class="result-win">1</td></tr>
+<tr ><td>7</td><td>ホールネス</td><td>5.9%<span class="prob-bar" style="width:17px"></span></td><td>79.4</td><td class="ev-high">4.70</td><td class="result-lose">9</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ホウオウノーサイ</td><td>4.8%<span class="prob-bar" style="width:14px"></span></td><td>352.9</td><td class="ev-high">17.08</td><td class="result-lose">13</td></tr>
+<tr ><td>2</td><td>ホールネス</td><td>5.9%<span class="prob-bar" style="width:17px"></span></td><td>79.4</td><td class="ev-high">4.70</td><td class="result-lose">9</td></tr>
+<tr ><td>3</td><td>ブレイヴロッカー</td><td>5.0%<span class="prob-bar" style="width:15px"></span></td><td>66.8</td><td class="ev-high">3.37</td><td class="result-lose">12</td></tr>
+<tr ><td>4</td><td>エヒト</td><td>6.6%<span class="prob-bar" style="width:19px"></span></td><td>41.4</td><td class="ev-high">2.72</td><td class="result-lose">4</td></tr>
+<tr ><td>5</td><td>リビアングラス</td><td>5.6%<span class="prob-bar" style="width:16px"></span></td><td>46.6</td><td class="ev-high">2.62</td><td class="result-lose">11</td></tr>
+<tr ><td>6</td><td>マイネルケレリウ</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>41.8</td><td class="ev-high">2.38</td><td class="result-lose">6</td></tr>
+<tr ><td>7</td><td>クリスマスパレー</td><td>5.0%<span class="prob-bar" style="width:15px"></span></td><td>38.9</td><td class="ev-high">1.95</td><td class="result-lose">15</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202609011011_done" data-date="2026-03-22" data-grade="G2" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-03-22 第74回阪神大賞典<span class="grade grade-G2">G2</span> <span style="font-size:0.8em;color:#888">ダノンシーマ 3着 BET</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202609011011_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202609011011_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr class="bet-row"><td>1</td><td>ダノンシーマ BET</td><td>9.8%<span class="prob-bar" style="width:29px"></span></td><td>3.3</td><td>0.32</td><td class="result-lose">3</td></tr>
+<tr ><td>2</td><td>アドマイヤテラ</td><td>7.3%<span class="prob-bar" style="width:21px"></span></td><td>3.1</td><td>0.23</td><td class="result-win">1</td></tr>
+<tr ><td>3</td><td>レッドバンデ</td><td>7.2%<span class="prob-bar" style="width:21px"></span></td><td>3.6</td><td>0.26</td><td class="result-lose">7</td></tr>
+<tr ><td>4</td><td>アクアヴァーナル</td><td>7.2%<span class="prob-bar" style="width:21px"></span></td><td>13.6</td><td>0.98</td><td class="result-lose">2</td></tr>
+<tr ><td>5</td><td>ファミリータイム</td><td>6.3%<span class="prob-bar" style="width:19px"></span></td><td>12.6</td><td>0.80</td><td class="result-lose">9</td></tr>
+<tr ><td>6</td><td>マイネルエンペラ</td><td>5.9%<span class="prob-bar" style="width:17px"></span></td><td>7.2</td><td>0.43</td><td class="result-lose">5</td></tr>
+<tr ><td>7</td><td>サンライズソレイ</td><td>5.4%<span class="prob-bar" style="width:16px"></span></td><td>35.6</td><td class="ev-high">1.93</td><td class="result-lose">6</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ダンディズム</td><td>4.4%<span class="prob-bar" style="width:13px"></span></td><td>223.9</td><td class="ev-high">9.94</td><td class="result-lose">10</td></tr>
+<tr ><td>2</td><td>メイショウブレゲ</td><td>4.9%<span class="prob-bar" style="width:14px"></span></td><td>174.1</td><td class="ev-high">8.60</td><td class="result-lose">8</td></tr>
+<tr ><td>3</td><td>サンライズソレイ</td><td>5.4%<span class="prob-bar" style="width:16px"></span></td><td>35.6</td><td class="ev-high">1.93</td><td class="result-lose">6</td></tr>
+<tr ><td>4</td><td>シュヴァリエロー</td><td>5.2%<span class="prob-bar" style="width:15px"></span></td><td>32.8</td><td class="ev-high">1.71</td><td class="result-lose">4</td></tr>
+<tr ><td>5</td><td>アクアヴァーナル</td><td>7.2%<span class="prob-bar" style="width:21px"></span></td><td>13.6</td><td>0.98</td><td class="result-lose">2</td></tr>
+<tr ><td>6</td><td>ファミリータイム</td><td>6.3%<span class="prob-bar" style="width:19px"></span></td><td>12.6</td><td>0.80</td><td class="result-lose">9</td></tr>
+<tr ><td>7</td><td>マイネルエンペラ</td><td>5.9%<span class="prob-bar" style="width:17px"></span></td><td>7.2</td><td>0.43</td><td class="result-lose">5</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202607010311_done" data-date="2026-03-21" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-03-21 第40回中スポ賞ファルコンS<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">&#x2705; ダイヤモンド</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202607010311_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202607010311_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ダイヤモンドノッ</td><td>9.5%<span class="prob-bar" style="width:28px"></span></td><td>1.6</td><td>0.15</td><td class="result-win">1</td></tr>
+<tr ><td>2</td><td>フクチャンショウ</td><td>8.6%<span class="prob-bar" style="width:25px"></span></td><td>12.6</td><td class="ev-high">1.08</td><td class="result-lose">3</td></tr>
+<tr ><td>3</td><td>エイシンディード</td><td>8.0%<span class="prob-bar" style="width:23px"></span></td><td>21.4</td><td class="ev-high">1.70</td><td class="result-lose">2</td></tr>
+<tr ><td>4</td><td>タマモイカロス</td><td>6.8%<span class="prob-bar" style="width:20px"></span></td><td>16.2</td><td class="ev-high">1.10</td><td class="result-lose">6</td></tr>
+<tr ><td>5</td><td>トライアンフパス</td><td>6.8%<span class="prob-bar" style="width:20px"></span></td><td>69.7</td><td class="ev-high">4.72</td><td class="result-lose">7</td></tr>
+<tr ><td>6</td><td>ハッピーエンジェ</td><td>6.6%<span class="prob-bar" style="width:19px"></span></td><td>23.4</td><td class="ev-high">1.54</td><td class="result-lose">9</td></tr>
+<tr ><td>7</td><td>マーゴットブロー</td><td>6.3%<span class="prob-bar" style="width:18px"></span></td><td>86.8</td><td class="ev-high">5.45</td><td class="result-lose">8</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>プルヴォワール</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>422.0</td><td class="ev-high">23.94</td><td class="result-lose">16</td></tr>
+<tr ><td>2</td><td>タヤスロレンヌ</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>367.3</td><td class="ev-high">21.09</td><td class="result-lose">17</td></tr>
+<tr ><td>3</td><td>アスミル</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>97.4</td><td class="ev-high">5.70</td><td class="result-lose">13</td></tr>
+<tr ><td>4</td><td>マーゴットブロー</td><td>6.3%<span class="prob-bar" style="width:18px"></span></td><td>86.8</td><td class="ev-high">5.45</td><td class="result-lose">8</td></tr>
+<tr ><td>5</td><td>フォーゲル</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>83.8</td><td class="ev-high">5.12</td><td class="result-lose">5</td></tr>
+<tr ><td>6</td><td>トライアンフパス</td><td>6.8%<span class="prob-bar" style="width:20px"></span></td><td>69.7</td><td class="ev-high">4.72</td><td class="result-lose">7</td></tr>
+<tr ><td>7</td><td>テルヴィセクス</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>47.9</td><td class="ev-high">2.94</td><td class="result-lose">14</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202606020711_done" data-date="2026-03-21" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-03-21 第40回フラワーカップ<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">イクシード 3着</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202606020711_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202606020711_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>イクシード</td><td>8.7%<span class="prob-bar" style="width:26px"></span></td><td>2.7</td><td>0.23</td><td class="result-lose">3</td></tr>
+<tr ><td>2</td><td>スマートプリエー</td><td>7.8%<span class="prob-bar" style="width:23px"></span></td><td>12.8</td><td>1.00</td><td class="result-win">1</td></tr>
+<tr ><td>3</td><td>カラペルソナ</td><td>6.9%<span class="prob-bar" style="width:20px"></span></td><td>7.5</td><td>0.52</td><td class="result-lose">5</td></tr>
+<tr ><td>4</td><td>エアビーアゲイル</td><td>6.6%<span class="prob-bar" style="width:19px"></span></td><td>10.1</td><td>0.67</td><td class="result-lose">11</td></tr>
+<tr ><td>5</td><td>ナックホワイト</td><td>6.3%<span class="prob-bar" style="width:18px"></span></td><td>136.8</td><td class="ev-high">8.62</td><td class="result-lose">8</td></tr>
+<tr ><td>6</td><td>クリスレジーナ</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>19.0</td><td class="ev-high">1.19</td><td class="result-lose">10</td></tr>
+<tr ><td>7</td><td>アメティスタ</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>6.3</td><td>0.39</td><td class="result-lose">4</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ヒルデグリム</td><td>5.2%<span class="prob-bar" style="width:15px"></span></td><td>402.8</td><td class="ev-high">21.04</td><td class="result-lose">16</td></tr>
+<tr ><td>2</td><td>ナックホワイト</td><td>6.3%<span class="prob-bar" style="width:18px"></span></td><td>136.8</td><td class="ev-high">8.62</td><td class="result-lose">8</td></tr>
+<tr ><td>3</td><td>リュクスパトロー</td><td>5.0%<span class="prob-bar" style="width:14px"></span></td><td>134.1</td><td class="ev-high">6.67</td><td class="result-lose">13</td></tr>
+<tr ><td>4</td><td>バースデイフライ</td><td>6.0%<span class="prob-bar" style="width:18px"></span></td><td>101.8</td><td class="ev-high">6.14</td><td class="result-lose">9</td></tr>
+<tr ><td>5</td><td>アーリーハーベス</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>99.4</td><td class="ev-high">6.13</td><td class="result-lose">6</td></tr>
+<tr ><td>6</td><td>ラコンチャビエン</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>83.8</td><td class="ev-high">4.83</td><td class="result-lose">15</td></tr>
+<tr ><td>7</td><td>コズミックボック</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>67.6</td><td class="ev-high">4.12</td><td class="result-lose">14</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202607010211_done" data-date="2026-03-15" data-grade="G2" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-03-15 第62回東海テレビ杯金鯱賞<span class="grade grade-G2">G2</span> <span style="font-size:0.8em;color:#888">ドゥラドーレ 5着 BET</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202607010211_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202607010211_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr class="bet-row"><td>1</td><td>ドゥラドーレス BET</td><td>12.1%<span class="prob-bar" style="width:36px"></span></td><td>5.6</td><td>0.68</td><td class="result-lose">5</td></tr>
+<tr ><td>2</td><td>ジョバンニ</td><td>10.2%<span class="prob-bar" style="width:30px"></span></td><td>8.7</td><td>0.89</td><td class="result-lose">2</td></tr>
+<tr ><td>3</td><td>クイーンズウォー</td><td>9.6%<span class="prob-bar" style="width:28px"></span></td><td>3.6</td><td>0.35</td><td class="result-lose">3</td></tr>
+<tr ><td>4</td><td>ジューンテイク</td><td>8.8%<span class="prob-bar" style="width:26px"></span></td><td>7.7</td><td>0.68</td><td class="result-lose">4</td></tr>
+<tr ><td>5</td><td>アーバンシック</td><td>7.2%<span class="prob-bar" style="width:21px"></span></td><td>11.9</td><td>0.86</td><td class="result-lose">14</td></tr>
+<tr ><td>6</td><td>シェイクユアハー</td><td>6.8%<span class="prob-bar" style="width:20px"></span></td><td>13.5</td><td>0.91</td><td class="result-win">1</td></tr>
+<tr ><td>7</td><td>キングズパレス</td><td>6.7%<span class="prob-bar" style="width:20px"></span></td><td>73.5</td><td class="ev-high">4.91</td><td class="result-lose">8</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>アラタ</td><td>5.4%<span class="prob-bar" style="width:16px"></span></td><td>142.3</td><td class="ev-high">7.64</td><td class="result-lose">10</td></tr>
+<tr ><td>2</td><td>サフィラ</td><td>6.6%<span class="prob-bar" style="width:19px"></span></td><td>88.9</td><td class="ev-high">5.83</td><td class="result-lose">9</td></tr>
+<tr ><td>3</td><td>ニシノレヴナント</td><td>5.2%<span class="prob-bar" style="width:15px"></span></td><td>102.5</td><td class="ev-high">5.34</td><td class="result-lose">12</td></tr>
+<tr ><td>4</td><td>キングズパレス</td><td>6.7%<span class="prob-bar" style="width:20px"></span></td><td>73.5</td><td class="ev-high">4.91</td><td class="result-lose">8</td></tr>
+<tr ><td>5</td><td>ディマイザキッド</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>35.0</td><td class="ev-high">2.18</td><td class="result-lose">7</td></tr>
+<tr ><td>6</td><td>セキトバイースト</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>24.8</td><td class="ev-high">1.53</td><td class="result-lose">11</td></tr>
+<tr ><td>7</td><td>シェイクユアハー</td><td>6.8%<span class="prob-bar" style="width:20px"></span></td><td>13.5</td><td>0.91</td><td class="result-win">1</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202606020611_done" data-date="2026-03-15" data-grade="G2" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-03-15 第75回フジTVスプリングS<span class="grade grade-G2">G2</span> <span style="font-size:0.8em;color:#888">アスクエジン 2着 BET</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202606020611_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202606020611_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr class="bet-row"><td>1</td><td>アスクエジンバラ BET</td><td>8.0%<span class="prob-bar" style="width:23px"></span></td><td>4.9</td><td>0.39</td><td class="result-lose">2</td></tr>
+<tr ><td>2</td><td>クレパスキュラー</td><td>7.4%<span class="prob-bar" style="width:22px"></span></td><td>2.0</td><td>0.15</td><td class="result-lose">7</td></tr>
+<tr ><td>3</td><td>サウンドムーブ</td><td>7.0%<span class="prob-bar" style="width:20px"></span></td><td>15.0</td><td class="ev-high">1.05</td><td class="result-lose">4</td></tr>
+<tr ><td>4</td><td>テルヒコウ</td><td>6.5%<span class="prob-bar" style="width:19px"></span></td><td>24.4</td><td class="ev-high">1.57</td><td class="result-lose">14</td></tr>
+<tr ><td>5</td><td>タイキルッジェー</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>71.0</td><td class="ev-high">4.44</td><td class="result-lose">11</td></tr>
+<tr ><td>6</td><td>アウダーシア</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>19.4</td><td class="ev-high">1.20</td><td class="result-win">1</td></tr>
+<tr ><td>7</td><td>アクロフェイズ</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>17.0</td><td class="ev-high">1.05</td><td class="result-lose">3</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ロードレイジング</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>426.0</td><td class="ev-high">24.43</td><td class="result-lose">15</td></tr>
+<tr ><td>2</td><td>マカナアネラ</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>385.8</td><td class="ev-high">22.15</td><td class="result-lose">13</td></tr>
+<tr ><td>3</td><td>フレイムスター</td><td>4.9%<span class="prob-bar" style="width:14px"></span></td><td>312.1</td><td class="ev-high">15.25</td><td class="result-lose">16</td></tr>
+<tr ><td>4</td><td>マイネルシンベリ</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>85.3</td><td class="ev-high">4.93</td><td class="result-lose">8</td></tr>
+<tr ><td>5</td><td>タイキルッジェー</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>71.0</td><td class="ev-high">4.44</td><td class="result-lose">11</td></tr>
+<tr ><td>6</td><td>ジーネキング</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>73.5</td><td class="ev-high">4.21</td><td class="result-lose">12</td></tr>
+<tr ><td>7</td><td>ガリレア</td><td>5.1%<span class="prob-bar" style="width:15px"></span></td><td>55.6</td><td class="ev-high">2.82</td><td class="result-lose">10</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202606020411_done" data-date="2026-03-08" data-grade="G2" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-03-08 第63回報知弥生ディープ記念<span class="grade grade-G2">G2</span> <span style="font-size:0.8em;color:#888">ライヒスアド 2着</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202606020411_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202606020411_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ライヒスアドラー</td><td>15.3%<span class="prob-bar" style="width:45px"></span></td><td>2.7</td><td>0.41</td><td class="result-lose">2</td></tr>
+<tr ><td>2</td><td>アドマイヤクワッ</td><td>14.8%<span class="prob-bar" style="width:44px"></span></td><td>2.2</td><td>0.32</td><td class="result-lose">3</td></tr>
+<tr ><td>3</td><td>バステール</td><td>9.3%<span class="prob-bar" style="width:27px"></span></td><td>6.3</td><td>0.59</td><td class="result-win">1</td></tr>
+<tr ><td>4</td><td>コスモギガンティ</td><td>6.0%<span class="prob-bar" style="width:17px"></span></td><td>104.6</td><td class="ev-high">6.23</td><td class="result-lose">6</td></tr>
+<tr ><td>5</td><td>バリオス</td><td>5.9%<span class="prob-bar" style="width:17px"></span></td><td>18.2</td><td class="ev-high">1.08</td><td class="result-lose">8</td></tr>
+<tr ><td>6</td><td>モウエエデショー</td><td>5.9%<span class="prob-bar" style="width:17px"></span></td><td>150.0</td><td class="ev-high">8.89</td><td class="result-lose">5</td></tr>
+<tr ><td>7</td><td>タイダルロック</td><td>5.2%<span class="prob-bar" style="width:15px"></span></td><td>8.5</td><td>0.44</td><td class="result-lose">4</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>モウエエデショー</td><td>5.9%<span class="prob-bar" style="width:17px"></span></td><td>150.0</td><td class="ev-high">8.89</td><td class="result-lose">5</td></tr>
+<tr ><td>2</td><td>コスモギガンティ</td><td>6.0%<span class="prob-bar" style="width:17px"></span></td><td>104.6</td><td class="ev-high">6.23</td><td class="result-lose">6</td></tr>
+<tr ><td>3</td><td>メイショウソラリ</td><td>5.1%<span class="prob-bar" style="width:15px"></span></td><td>61.5</td><td class="ev-high">3.11</td><td class="result-lose">10</td></tr>
+<tr ><td>4</td><td>アメテュストス</td><td>5.0%<span class="prob-bar" style="width:15px"></span></td><td>37.5</td><td class="ev-high">1.89</td><td class="result-lose">9</td></tr>
+<tr ><td>5</td><td>バリオス</td><td>5.9%<span class="prob-bar" style="width:17px"></span></td><td>18.2</td><td class="ev-high">1.08</td><td class="result-lose">8</td></tr>
+<tr ><td>6</td><td>ステラスペース</td><td>5.0%<span class="prob-bar" style="width:14px"></span></td><td>17.9</td><td>0.89</td><td class="result-lose">7</td></tr>
+<tr ><td>7</td><td>バステール</td><td>9.3%<span class="prob-bar" style="width:27px"></span></td><td>6.3</td><td>0.59</td><td class="result-win">1</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202609010511_done" data-date="2026-03-07" data-grade="G2" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-03-07 第60回フィリーズレビュー<span class="grade grade-G2">G2</span> <span style="font-size:0.8em;color:#888">&#x2705; ギリーズボー</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202609010511_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202609010511_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ギリーズボール</td><td>8.3%<span class="prob-bar" style="width:25px"></span></td><td>24.5</td><td class="ev-high">2.04</td><td class="result-win">1</td></tr>
+<tr ><td>2</td><td>アイニードユー</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>6.9</td><td>0.42</td><td class="result-lose">3</td></tr>
+<tr ><td>3</td><td>デアヴェローチェ</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>8.8</td><td>0.54</td><td class="result-lose">4</td></tr>
+<tr ><td>4</td><td>タイニーワンダー</td><td>6.0%<span class="prob-bar" style="width:18px"></span></td><td>57.7</td><td class="ev-high">3.49</td><td class="result-lose">13</td></tr>
+<tr ><td>5</td><td>トワニ</td><td>6.0%<span class="prob-bar" style="width:18px"></span></td><td>32.8</td><td class="ev-high">1.98</td><td class="result-lose">7</td></tr>
+<tr ><td>6</td><td>ショウナンカリス</td><td>5.9%<span class="prob-bar" style="width:17px"></span></td><td>5.3</td><td>0.31</td><td class="result-lose">8</td></tr>
+<tr ><td>7</td><td>プレセピオ</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>16.4</td><td>0.95</td><td class="result-lose">5</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>タイセイフレッサ</td><td>5.4%<span class="prob-bar" style="width:16px"></span></td><td>118.2</td><td class="ev-high">6.38</td><td class="result-lose">12</td></tr>
+<tr ><td>2</td><td>フルールジェンヌ</td><td>5.0%<span class="prob-bar" style="width:15px"></span></td><td>92.3</td><td class="ev-high">4.65</td><td class="result-lose">6</td></tr>
+<tr ><td>3</td><td>タイニーワンダー</td><td>6.0%<span class="prob-bar" style="width:18px"></span></td><td>57.7</td><td class="ev-high">3.49</td><td class="result-lose">13</td></tr>
+<tr ><td>4</td><td>クリエープキー</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>38.9</td><td class="ev-high">2.24</td><td class="result-lose">18</td></tr>
+<tr ><td>5</td><td>ギリーズボール</td><td>8.3%<span class="prob-bar" style="width:25px"></span></td><td>24.5</td><td class="ev-high">2.04</td><td class="result-win">1</td></tr>
+<tr ><td>6</td><td>ラスティングスノ</td><td>5.3%<span class="prob-bar" style="width:15px"></span></td><td>37.8</td><td class="ev-high">2.01</td><td class="result-lose">17</td></tr>
+<tr ><td>7</td><td>トワニ</td><td>6.0%<span class="prob-bar" style="width:18px"></span></td><td>32.8</td><td class="ev-high">1.98</td><td class="result-lose">7</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202606020311_done" data-date="2026-03-07" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-03-07 第44回中山牝馬ステークス<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">アンゴラブラ 13着</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202606020311_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202606020311_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>アンゴラブラック</td><td>15.3%<span class="prob-bar" style="width:45px"></span></td><td>4.2</td><td>0.64</td><td class="result-lose">13</td></tr>
+<tr ><td>2</td><td>ニシノティアモ</td><td>9.8%<span class="prob-bar" style="width:29px"></span></td><td>4.8</td><td>0.47</td><td class="result-lose">5</td></tr>
+<tr ><td>3</td><td>ステレンボッシュ</td><td>8.0%<span class="prob-bar" style="width:24px"></span></td><td>23.4</td><td class="ev-high">1.88</td><td class="result-lose">7</td></tr>
+<tr ><td>4</td><td>パラディレーヌ</td><td>7.3%<span class="prob-bar" style="width:21px"></span></td><td>5.3</td><td>0.39</td><td class="result-lose">3</td></tr>
+<tr ><td>5</td><td>フレミングフープ</td><td>7.0%<span class="prob-bar" style="width:20px"></span></td><td>17.2</td><td class="ev-high">1.20</td><td class="result-lose">12</td></tr>
+<tr ><td>6</td><td>エリカエクスプレ</td><td>6.9%<span class="prob-bar" style="width:20px"></span></td><td>5.5</td><td>0.38</td><td class="result-lose">4</td></tr>
+<tr ><td>7</td><td>ボンドガール</td><td>6.8%<span class="prob-bar" style="width:20px"></span></td><td>13.0</td><td>0.88</td><td class="result-lose">10</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>アンリーロード</td><td>5.0%<span class="prob-bar" style="width:15px"></span></td><td>218.9</td><td class="ev-high">11.04</td><td class="result-lose">11</td></tr>
+<tr ><td>2</td><td>フィールシンパシ</td><td>4.7%<span class="prob-bar" style="width:14px"></span></td><td>136.2</td><td class="ev-high">6.46</td><td class="result-lose">14</td></tr>
+<tr ><td>3</td><td>レディーヴァリュ</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>77.9</td><td class="ev-high">4.80</td><td class="result-lose">16</td></tr>
+<tr ><td>4</td><td>ケリフレッドアス</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>61.4</td><td class="ev-high">3.50</td><td class="result-lose">8</td></tr>
+<tr ><td>5</td><td>クリノメイ</td><td>5.5%<span class="prob-bar" style="width:16px"></span></td><td>36.7</td><td class="ev-high">2.01</td><td class="result-lose">15</td></tr>
+<tr ><td>6</td><td>ステレンボッシュ</td><td>8.0%<span class="prob-bar" style="width:24px"></span></td><td>23.4</td><td class="ev-high">1.88</td><td class="result-lose">7</td></tr>
+<tr ><td>7</td><td>ビヨンドザヴァレ</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>28.8</td><td class="ev-high">1.76</td><td class="result-lose">2</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202606020211_done" data-date="2026-03-01" data-grade="G2" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-03-01 第100回中山記念<span class="grade grade-G2">G2</span> <span style="font-size:0.8em;color:#888">エコロヴァル 3着 BET</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202606020211_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202606020211_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr class="bet-row"><td>1</td><td>エコロヴァルツ BET</td><td>9.7%<span class="prob-bar" style="width:28px"></span></td><td>3.6</td><td>0.35</td><td class="result-lose">3</td></tr>
+<tr ><td>2</td><td>チェルヴィニア</td><td>8.1%<span class="prob-bar" style="width:24px"></span></td><td>7.7</td><td>0.62</td><td class="result-lose">5</td></tr>
+<tr ><td>3</td><td>レーベンスティー</td><td>6.8%<span class="prob-bar" style="width:20px"></span></td><td>4.2</td><td>0.28</td><td class="result-win">1</td></tr>
+<tr ><td>4</td><td>カラマティアノス</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>7.6</td><td>0.47</td><td class="result-lose">2</td></tr>
+<tr ><td>5</td><td>スパークリシャー</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>303.5</td><td class="ev-high">17.38</td><td class="result-lose">8</td></tr>
+<tr ><td>6</td><td>サンストックトン</td><td>5.5%<span class="prob-bar" style="width:16px"></span></td><td>194.4</td><td class="ev-high">10.67</td><td class="result-lose">9</td></tr>
+<tr ><td>7</td><td>マジックサンズ</td><td>5.4%<span class="prob-bar" style="width:16px"></span></td><td>14.7</td><td>0.80</td><td class="result-lose">6</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>スパークリシャー</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>303.5</td><td class="ev-high">17.38</td><td class="result-lose">8</td></tr>
+<tr ><td>2</td><td>サンストックトン</td><td>5.5%<span class="prob-bar" style="width:16px"></span></td><td>194.4</td><td class="ev-high">10.67</td><td class="result-lose">9</td></tr>
+<tr ><td>3</td><td>サイルーン</td><td>5.1%<span class="prob-bar" style="width:15px"></span></td><td>152.6</td><td class="ev-high">7.74</td><td class="result-lose">7</td></tr>
+<tr ><td>4</td><td>ニシノエージェン</td><td>5.2%<span class="prob-bar" style="width:15px"></span></td><td>106.0</td><td class="ev-high">5.48</td><td class="result-lose">14</td></tr>
+<tr ><td>5</td><td>オニャンコポン</td><td>4.7%<span class="prob-bar" style="width:14px"></span></td><td>72.2</td><td class="ev-high">3.38</td><td class="result-lose">11</td></tr>
+<tr ><td>6</td><td>マイネルモーント</td><td>4.8%<span class="prob-bar" style="width:14px"></span></td><td>58.8</td><td class="ev-high">2.84</td><td class="result-lose">4</td></tr>
+<tr ><td>7</td><td>ショウナンマグマ</td><td>4.5%<span class="prob-bar" style="width:13px"></span></td><td>49.0</td><td class="ev-high">2.21</td><td class="result-lose">13</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202606020111_done" data-date="2026-02-28" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-02-28 第21回オーシャンステークス<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">ママコチャ 4着</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202606020111_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202606020111_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ママコチャ</td><td>10.3%<span class="prob-bar" style="width:30px"></span></td><td>5.6</td><td>0.58</td><td class="result-lose">4</td></tr>
+<tr ><td>2</td><td>ルガル</td><td>9.1%<span class="prob-bar" style="width:27px"></span></td><td>2.9</td><td>0.27</td><td class="result-lose">3</td></tr>
+<tr ><td>3</td><td>ファンダム</td><td>8.4%<span class="prob-bar" style="width:25px"></span></td><td>3.9</td><td>0.33</td><td class="result-lose">12</td></tr>
+<tr ><td>4</td><td>フリームファクシ</td><td>7.9%<span class="prob-bar" style="width:23px"></span></td><td>147.4</td><td class="ev-high">11.72</td><td class="result-lose">13</td></tr>
+<tr ><td>5</td><td>インビンシブルパ</td><td>7.2%<span class="prob-bar" style="width:21px"></span></td><td>14.6</td><td class="ev-high">1.06</td><td class="result-lose">15</td></tr>
+<tr ><td>6</td><td>ヨシノイースター</td><td>6.7%<span class="prob-bar" style="width:20px"></span></td><td>45.2</td><td class="ev-high">3.04</td><td class="result-lose">5</td></tr>
+<tr ><td>7</td><td>レイピア</td><td>6.7%<span class="prob-bar" style="width:20px"></span></td><td>14.5</td><td>0.97</td><td class="result-lose">2</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>オタルエバー</td><td>4.9%<span class="prob-bar" style="width:14px"></span></td><td>423.3</td><td class="ev-high">20.80</td><td class="result-lose">14</td></tr>
+<tr ><td>2</td><td>カリボール</td><td>4.4%<span class="prob-bar" style="width:13px"></span></td><td>329.3</td><td class="ev-high">14.48</td><td class="result-lose">10</td></tr>
+<tr ><td>3</td><td>フリームファクシ</td><td>7.9%<span class="prob-bar" style="width:23px"></span></td><td>147.4</td><td class="ev-high">11.72</td><td class="result-lose">13</td></tr>
+<tr ><td>4</td><td>フィオライア</td><td>6.4%<span class="prob-bar" style="width:19px"></span></td><td>86.2</td><td class="ev-high">5.56</td><td class="result-lose">10</td></tr>
+<tr ><td>5</td><td>ルージュラナキラ</td><td>6.6%<span class="prob-bar" style="width:19px"></span></td><td>50.2</td><td class="ev-high">3.33</td><td class="result-lose">8</td></tr>
+<tr ><td>6</td><td>ヨシノイースター</td><td>6.7%<span class="prob-bar" style="width:20px"></span></td><td>45.2</td><td class="ev-high">3.04</td><td class="result-lose">5</td></tr>
+<tr ><td>7</td><td>ウイングレイテス</td><td>5.5%<span class="prob-bar" style="width:16px"></span></td><td>37.5</td><td class="ev-high">2.08</td><td class="result-lose">7</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202605010811_done" data-date="2026-02-22" data-grade="G1" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-02-22 第43回フェブラリーS<span class="grade grade-G1">G1</span> <span style="font-size:0.8em;color:#888">ロードクロン 11着 BET</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202605010811_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202605010811_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr class="bet-row"><td>1</td><td>ロードクロンヌ BET</td><td>11.0%<span class="prob-bar" style="width:32px"></span></td><td>14.7</td><td class="ev-high">1.61</td><td class="result-lose">11</td></tr>
+<tr ><td>2</td><td>コスタノヴァ</td><td>10.8%<span class="prob-bar" style="width:32px"></span></td><td>3.4</td><td>0.37</td><td class="result-win">1</td></tr>
+<tr ><td>3</td><td>ウィルソンテソー</td><td>10.7%<span class="prob-bar" style="width:32px"></span></td><td>5.4</td><td>0.58</td><td class="result-lose">2</td></tr>
+<tr ><td>4</td><td>ダブルハートボン</td><td>9.0%<span class="prob-bar" style="width:26px"></span></td><td>3.0</td><td>0.27</td><td class="result-lose">3</td></tr>
+<tr ><td>5</td><td>ブライアンセンス</td><td>7.4%<span class="prob-bar" style="width:22px"></span></td><td>40.6</td><td class="ev-high">3.00</td><td class="result-lose">4</td></tr>
+<tr ><td>6</td><td>ラムジェット</td><td>7.0%<span class="prob-bar" style="width:21px"></span></td><td>7.8</td><td>0.55</td><td class="result-lose">8</td></tr>
+<tr ><td>7</td><td>シックスペンス</td><td>6.7%<span class="prob-bar" style="width:20px"></span></td><td>17.4</td><td class="ev-high">1.16</td><td class="result-lose">9</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>サンライズホーク</td><td>4.5%<span class="prob-bar" style="width:13px"></span></td><td>346.3</td><td class="ev-high">15.69</td><td class="result-lose">12</td></tr>
+<tr ><td>2</td><td>ロングラン</td><td>5.1%<span class="prob-bar" style="width:15px"></span></td><td>235.1</td><td class="ev-high">12.02</td><td class="result-lose">14</td></tr>
+<tr ><td>3</td><td>ハッピーマン</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>98.1</td><td class="ev-high">5.72</td><td class="result-lose">16</td></tr>
+<tr ><td>4</td><td>サイモンザナドゥ</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>66.6</td><td class="ev-high">3.83</td><td class="result-lose">15</td></tr>
+<tr ><td>5</td><td>サクラトゥジュー</td><td>5.0%<span class="prob-bar" style="width:14px"></span></td><td>74.1</td><td class="ev-high">3.70</td><td class="result-lose">13</td></tr>
+<tr ><td>6</td><td>ブライアンセンス</td><td>7.4%<span class="prob-bar" style="width:22px"></span></td><td>40.6</td><td class="ev-high">3.00</td><td class="result-lose">4</td></tr>
+<tr ><td>7</td><td>ペプチドナイル</td><td>4.9%<span class="prob-bar" style="width:14px"></span></td><td>53.6</td><td class="ev-high">2.63</td><td class="result-lose">6</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202609010111_done" data-date="2026-02-21" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-02-21 第70回阪急杯<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">&#x2705; ソンシ</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202609010111_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202609010111_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ソンシ</td><td>10.5%<span class="prob-bar" style="width:31px"></span></td><td>4.2</td><td>0.44</td><td class="result-win">1</td></tr>
+<tr ><td>2</td><td>ヤンキーバローズ</td><td>7.2%<span class="prob-bar" style="width:21px"></span></td><td>7.1</td><td>0.51</td><td class="result-lose">7</td></tr>
+<tr ><td>3</td><td>ドロップオブライ</td><td>7.1%<span class="prob-bar" style="width:21px"></span></td><td>8.8</td><td>0.63</td><td class="result-lose">3</td></tr>
+<tr ><td>4</td><td>マイネルチケット</td><td>6.3%<span class="prob-bar" style="width:18px"></span></td><td>4.7</td><td>0.30</td><td class="result-lose">9</td></tr>
+<tr ><td>5</td><td>グレイイングリー</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>36.8</td><td class="ev-high">2.30</td><td class="result-lose">11</td></tr>
+<tr ><td>6</td><td>ディアナザール</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>6.8</td><td>0.42</td><td class="result-lose">4</td></tr>
+<tr ><td>7</td><td>メイショウソラフ</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>78.8</td><td class="ev-high">4.78</td><td class="result-lose">18</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ダディーズビビッ</td><td>5.3%<span class="prob-bar" style="width:15px"></span></td><td>171.0</td><td class="ev-high">9.05</td><td class="result-lose">14</td></tr>
+<tr ><td>2</td><td>メイショウチタン</td><td>5.0%<span class="prob-bar" style="width:15px"></span></td><td>155.5</td><td class="ev-high">7.81</td><td class="result-lose">13</td></tr>
+<tr ><td>3</td><td>アルテヴェローチ</td><td>5.3%<span class="prob-bar" style="width:16px"></span></td><td>118.2</td><td class="ev-high">6.31</td><td class="result-lose">6</td></tr>
+<tr ><td>4</td><td>メイショウソラフ</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>78.8</td><td class="ev-high">4.78</td><td class="result-lose">18</td></tr>
+<tr ><td>5</td><td>ララマセラシオン</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>53.1</td><td class="ev-high">3.08</td><td class="result-lose">2</td></tr>
+<tr ><td>6</td><td>スリールミニョン</td><td>5.3%<span class="prob-bar" style="width:16px"></span></td><td>48.3</td><td class="ev-high">2.58</td><td class="result-lose">16</td></tr>
+<tr ><td>7</td><td>マサノカナリア</td><td>5.3%<span class="prob-bar" style="width:15px"></span></td><td>47.5</td><td class="ev-high">2.53</td><td class="result-lose">10</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202605010711_done" data-date="2026-02-21" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-02-21 第76回ダイヤモンドS<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">ホーエリート 5着</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202605010711_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202605010711_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ホーエリート</td><td>12.7%<span class="prob-bar" style="width:37px"></span></td><td>6.0</td><td>0.76</td><td class="result-lose">5</td></tr>
+<tr ><td>2</td><td>スティンガーグラ</td><td>10.4%<span class="prob-bar" style="width:31px"></span></td><td>3.0</td><td>0.31</td><td class="result-win">1</td></tr>
+<tr ><td>3</td><td>マイネルカンパー</td><td>7.5%<span class="prob-bar" style="width:22px"></span></td><td>10.3</td><td>0.77</td><td class="result-lose">7</td></tr>
+<tr ><td>4</td><td>ファウストラーゼ</td><td>7.0%<span class="prob-bar" style="width:20px"></span></td><td>12.0</td><td>0.84</td><td class="result-lose">15</td></tr>
+<tr ><td>5</td><td>ブレイヴロッカー</td><td>6.7%<span class="prob-bar" style="width:19px"></span></td><td>30.1</td><td class="ev-high">2.00</td><td class="result-lose">3</td></tr>
+<tr ><td>6</td><td>ファイアンクラン</td><td>6.7%<span class="prob-bar" style="width:19px"></span></td><td>7.8</td><td>0.52</td><td class="result-lose">2</td></tr>
+<tr ><td>7</td><td>レッドバリエンテ</td><td>6.4%<span class="prob-bar" style="width:19px"></span></td><td>13.8</td><td>0.89</td><td class="result-lose">6</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>サスツルギ</td><td>5.2%<span class="prob-bar" style="width:15px"></span></td><td>222.0</td><td class="ev-high">11.46</td><td class="result-lose">12</td></tr>
+<tr ><td>2</td><td>トータルクラリテ</td><td>5.7%<span class="prob-bar" style="width:16px"></span></td><td>170.0</td><td class="ev-high">9.62</td><td class="result-lose">14</td></tr>
+<tr ><td>3</td><td>シルブロン</td><td>5.5%<span class="prob-bar" style="width:16px"></span></td><td>78.2</td><td class="ev-high">4.32</td><td class="result-lose">11</td></tr>
+<tr ><td>4</td><td>ミクソロジー</td><td>5.2%<span class="prob-bar" style="width:15px"></span></td><td>72.2</td><td class="ev-high">3.72</td><td class="result-lose">13</td></tr>
+<tr ><td>5</td><td>ブレイヴロッカー</td><td>6.7%<span class="prob-bar" style="width:19px"></span></td><td>30.1</td><td class="ev-high">2.00</td><td class="result-lose">3</td></tr>
+<tr ><td>6</td><td>ボーンディスウェ</td><td>5.3%<span class="prob-bar" style="width:15px"></span></td><td>23.9</td><td class="ev-high">1.27</td><td class="result-lose">9</td></tr>
+<tr ><td>7</td><td>ローザサンリヴァ</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>16.2</td><td class="ev-high">1.00</td><td class="result-lose">10</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202608020611_done" data-date="2026-02-15" data-grade="G2" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-02-15 第119回京都記念<span class="grade grade-G2">G2</span> <span style="font-size:0.8em;color:#888">ヘデントール 8着 BET</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202608020611_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202608020611_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr class="bet-row"><td>1</td><td>ヘデントール BET</td><td>11.6%<span class="prob-bar" style="width:34px"></span></td><td>3.8</td><td>0.44</td><td class="result-lose">8</td></tr>
+<tr ><td>2</td><td>エリキング</td><td>11.1%<span class="prob-bar" style="width:33px"></span></td><td>1.8</td><td>0.20</td><td class="result-lose">2</td></tr>
+<tr ><td>3</td><td>ヨーホーレイク</td><td>8.0%<span class="prob-bar" style="width:24px"></span></td><td>9.7</td><td>0.78</td><td class="result-lose">7</td></tr>
+<tr ><td>4</td><td>シェイクユアハー</td><td>6.4%<span class="prob-bar" style="width:19px"></span></td><td>15.2</td><td>0.98</td><td class="result-lose">4</td></tr>
+<tr ><td>5</td><td>リビアングラス</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>43.8</td><td class="ev-high">2.66</td><td class="result-lose">6</td></tr>
+<tr ><td>6</td><td>ジューンテイク</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>15.9</td><td>0.96</td><td class="result-win">1</td></tr>
+<tr ><td>7</td><td>サフィラ</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>27.9</td><td class="ev-high">1.59</td><td class="result-lose">5</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>メイショウブレゲ</td><td>5.1%<span class="prob-bar" style="width:15px"></span></td><td>177.8</td><td class="ev-high">9.03</td><td class="result-lose">11</td></tr>
+<tr ><td>2</td><td>ドクタードリトル</td><td>5.5%<span class="prob-bar" style="width:16px"></span></td><td>145.8</td><td class="ev-high">7.97</td><td class="result-lose">9</td></tr>
+<tr ><td>3</td><td>マイネルクリソー</td><td>5.1%<span class="prob-bar" style="width:15px"></span></td><td>82.6</td><td class="ev-high">4.25</td><td class="result-lose">10</td></tr>
+<tr ><td>4</td><td>バビット</td><td>4.6%<span class="prob-bar" style="width:13px"></span></td><td>80.1</td><td class="ev-high">3.72</td><td class="result-lose">12</td></tr>
+<tr ><td>5</td><td>リビアングラス</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>43.8</td><td class="ev-high">2.66</td><td class="result-lose">6</td></tr>
+<tr ><td>6</td><td>サフィラ</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>27.9</td><td class="ev-high">1.59</td><td class="result-lose">5</td></tr>
+<tr ><td>7</td><td>シェイクユアハー</td><td>6.4%<span class="prob-bar" style="width:19px"></span></td><td>15.2</td><td>0.98</td><td class="result-lose">4</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202605010611_done" data-date="2026-02-15" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-02-15 第60回共同通信杯<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">ロブチェン 3着</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202605010611_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202605010611_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ロブチェン</td><td>10.5%<span class="prob-bar" style="width:31px"></span></td><td>4.2</td><td>0.44</td><td class="result-lose">3</td></tr>
+<tr ><td>2</td><td>サノノグレーター</td><td>9.4%<span class="prob-bar" style="width:28px"></span></td><td>10.1</td><td>0.95</td><td class="result-lose">6</td></tr>
+<tr ><td>3</td><td>リアライズシリウ</td><td>7.7%<span class="prob-bar" style="width:23px"></span></td><td>3.7</td><td>0.28</td><td class="result-win">1</td></tr>
+<tr ><td>4</td><td>ガリレア</td><td>6.7%<span class="prob-bar" style="width:20px"></span></td><td>96.6</td><td class="ev-high">6.51</td><td class="result-lose">7</td></tr>
+<tr ><td>5</td><td>イージーライダー</td><td>6.5%<span class="prob-bar" style="width:19px"></span></td><td>138.0</td><td class="ev-high">9.02</td><td class="result-lose">8</td></tr>
+<tr ><td>6</td><td>ラヴェニュー</td><td>6.5%<span class="prob-bar" style="width:19px"></span></td><td>2.8</td><td>0.18</td><td class="result-lose">4</td></tr>
+<tr ><td>7</td><td>ディバインウイン</td><td>6.4%<span class="prob-bar" style="width:19px"></span></td><td>8.4</td><td>0.54</td><td class="result-lose">5</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>イージーライダー</td><td>6.5%<span class="prob-bar" style="width:19px"></span></td><td>138.0</td><td class="ev-high">9.02</td><td class="result-lose">8</td></tr>
+<tr ><td>2</td><td>ガリレア</td><td>6.7%<span class="prob-bar" style="width:20px"></span></td><td>96.6</td><td class="ev-high">6.51</td><td class="result-lose">7</td></tr>
+<tr ><td>3</td><td>サトノヴァンクル</td><td>6.4%<span class="prob-bar" style="width:19px"></span></td><td>38.8</td><td class="ev-high">2.49</td><td class="result-lose">9</td></tr>
+<tr ><td>4</td><td>サノノグレーター</td><td>9.4%<span class="prob-bar" style="width:28px"></span></td><td>10.1</td><td>0.95</td><td class="result-lose">6</td></tr>
+<tr ><td>5</td><td>ディバインウイン</td><td>6.4%<span class="prob-bar" style="width:19px"></span></td><td>8.4</td><td>0.54</td><td class="result-lose">5</td></tr>
+<tr ><td>6</td><td>ロブチェン</td><td>10.5%<span class="prob-bar" style="width:31px"></span></td><td>4.2</td><td>0.44</td><td class="result-lose">3</td></tr>
+<tr ><td>7</td><td>ベレシート</td><td>6.4%<span class="prob-bar" style="width:19px"></span></td><td>6.9</td><td>0.44</td><td class="result-lose">2</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202605010511_done" data-date="2026-02-14" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-02-14 第61回デイリー杯クイーンC<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">ギャラボーグ 9着</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202605010511_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202605010511_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ギャラボーグ</td><td>11.1%<span class="prob-bar" style="width:33px"></span></td><td>2.5</td><td>0.28</td><td class="result-lose">9</td></tr>
+<tr ><td>2</td><td>マルガ</td><td>8.8%<span class="prob-bar" style="width:26px"></span></td><td>13.3</td><td class="ev-high">1.16</td><td class="result-lose">7</td></tr>
+<tr ><td>3</td><td>ドリームコア</td><td>8.2%<span class="prob-bar" style="width:24px"></span></td><td>3.4</td><td>0.28</td><td class="result-win">1</td></tr>
+<tr ><td>4</td><td>ミツカネベネラ</td><td>6.7%<span class="prob-bar" style="width:20px"></span></td><td>50.4</td><td class="ev-high">3.39</td><td class="result-lose">14</td></tr>
+<tr ><td>5</td><td>ヒズマスターピー</td><td>6.4%<span class="prob-bar" style="width:19px"></span></td><td>17.7</td><td class="ev-high">1.13</td><td class="result-lose">3</td></tr>
+<tr ><td>6</td><td>タイムレスキス</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>30.5</td><td class="ev-high">1.87</td><td class="result-lose">12</td></tr>
+<tr ><td>7</td><td>ニシノサリーナ</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>15.8</td><td>0.97</td><td class="result-lose">15</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>フェーダーロータ</td><td>5.3%<span class="prob-bar" style="width:16px"></span></td><td>346.4</td><td class="ev-high">18.50</td><td class="result-lose">16</td></tr>
+<tr ><td>2</td><td>ザバルガド</td><td>6.0%<span class="prob-bar" style="width:18px"></span></td><td>251.3</td><td class="ev-high">15.17</td><td class="result-lose">10</td></tr>
+<tr ><td>3</td><td>ラヴノー</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>183.6</td><td class="ev-high">10.48</td><td class="result-lose">11</td></tr>
+<tr ><td>4</td><td>レディーゴール</td><td>5.6%<span class="prob-bar" style="width:16px"></span></td><td>139.8</td><td class="ev-high">7.84</td><td class="result-lose">8</td></tr>
+<tr ><td>5</td><td>ミツカネベネラ</td><td>6.7%<span class="prob-bar" style="width:20px"></span></td><td>50.4</td><td class="ev-high">3.39</td><td class="result-lose">14</td></tr>
+<tr ><td>6</td><td>タイムレスキス</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>30.5</td><td class="ev-high">1.87</td><td class="result-lose">12</td></tr>
+<tr ><td>7</td><td>ジッピーチューン</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>31.0</td><td class="ev-high">1.78</td><td class="result-lose">2</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202608020411_done" data-date="2026-02-10" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-02-10 第66回きさらぎ賞<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">エムズビギン 2着</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202608020411_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202608020411_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>エムズビギン</td><td>9.8%<span class="prob-bar" style="width:29px"></span></td><td>3.7</td><td>0.36</td><td class="result-lose">2</td></tr>
+<tr ><td>2</td><td>ゾロアストロ</td><td>9.8%<span class="prob-bar" style="width:29px"></span></td><td>3.5</td><td>0.34</td><td class="result-win">1</td></tr>
+<tr ><td>3</td><td>ゴーイントゥスカ</td><td>8.6%<span class="prob-bar" style="width:25px"></span></td><td>4.2</td><td>0.36</td><td class="result-lose">6</td></tr>
+<tr ><td>4</td><td>ショウナンガルフ</td><td>7.1%<span class="prob-bar" style="width:21px"></span></td><td>9.0</td><td>0.64</td><td class="result-lose">9</td></tr>
+<tr ><td>5</td><td>ローベルクランツ</td><td>6.8%<span class="prob-bar" style="width:20px"></span></td><td>10.9</td><td>0.75</td><td class="result-lose">7</td></tr>
+<tr ><td>6</td><td>ストームゲイル</td><td>6.5%<span class="prob-bar" style="width:19px"></span></td><td>16.9</td><td class="ev-high">1.09</td><td class="result-lose">5</td></tr>
+<tr ><td>7</td><td>コレオシークエン</td><td>6.3%<span class="prob-bar" style="width:18px"></span></td><td>19.5</td><td class="ev-high">1.23</td><td class="result-lose">4</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>サトノアイボリー</td><td>6.0%<span class="prob-bar" style="width:18px"></span></td><td>59.5</td><td class="ev-high">3.57</td><td class="result-lose">8</td></tr>
+<tr ><td>2</td><td>コレオシークエン</td><td>6.3%<span class="prob-bar" style="width:18px"></span></td><td>19.5</td><td class="ev-high">1.23</td><td class="result-lose">4</td></tr>
+<tr ><td>3</td><td>ストームゲイル</td><td>6.5%<span class="prob-bar" style="width:19px"></span></td><td>16.9</td><td class="ev-high">1.09</td><td class="result-lose">5</td></tr>
+<tr ><td>4</td><td>ローベルクランツ</td><td>6.8%<span class="prob-bar" style="width:20px"></span></td><td>10.9</td><td>0.75</td><td class="result-lose">7</td></tr>
+<tr ><td>5</td><td>ショウナンガルフ</td><td>7.1%<span class="prob-bar" style="width:21px"></span></td><td>9.0</td><td>0.64</td><td class="result-lose">9</td></tr>
+<tr ><td>6</td><td>ラフターラインズ</td><td>6.0%<span class="prob-bar" style="width:17px"></span></td><td>7.0</td><td>0.42</td><td class="result-lose">3</td></tr>
+<tr ><td>7</td><td>エムズビギン</td><td>9.8%<span class="prob-bar" style="width:29px"></span></td><td>3.7</td><td>0.36</td><td class="result-lose">2</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202605010411_done" data-date="2026-02-10" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-02-10 第76回東京新聞杯<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">オフトレイル 10着</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202605010411_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202605010411_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>オフトレイル</td><td>8.1%<span class="prob-bar" style="width:24px"></span></td><td>9.9</td><td>0.81</td><td class="result-lose">10</td></tr>
+<tr ><td>2</td><td>ラヴァンダ</td><td>7.8%<span class="prob-bar" style="width:23px"></span></td><td>7.5</td><td>0.58</td><td class="result-lose">2</td></tr>
+<tr ><td>3</td><td>ウンブライル</td><td>7.7%<span class="prob-bar" style="width:23px"></span></td><td>25.8</td><td class="ev-high">1.98</td><td class="result-lose">7</td></tr>
+<tr ><td>4</td><td>トロヴァトーレ</td><td>7.6%<span class="prob-bar" style="width:22px"></span></td><td>5.6</td><td>0.42</td><td class="result-win">1</td></tr>
+<tr ><td>5</td><td>ブエナオンダ</td><td>7.5%<span class="prob-bar" style="width:22px"></span></td><td>23.2</td><td class="ev-high">1.74</td><td class="result-lose">15</td></tr>
+<tr ><td>6</td><td>ヤマニンサルバム</td><td>7.1%<span class="prob-bar" style="width:21px"></span></td><td>99.0</td><td class="ev-high">6.99</td><td class="result-lose">16</td></tr>
+<tr ><td>7</td><td>ウォーターリヒト</td><td>6.6%<span class="prob-bar" style="width:19px"></span></td><td>5.8</td><td>0.38</td><td class="result-lose">3</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ヤマニンサルバム</td><td>7.1%<span class="prob-bar" style="width:21px"></span></td><td>99.0</td><td class="ev-high">6.99</td><td class="result-lose">16</td></tr>
+<tr ><td>2</td><td>メイショウチタン</td><td>4.6%<span class="prob-bar" style="width:13px"></span></td><td>97.1</td><td class="ev-high">4.50</td><td class="result-lose">14</td></tr>
+<tr ><td>3</td><td>ウンブライル</td><td>7.7%<span class="prob-bar" style="width:23px"></span></td><td>25.8</td><td class="ev-high">1.98</td><td class="result-lose">7</td></tr>
+<tr ><td>4</td><td>シリウスコルト</td><td>6.3%<span class="prob-bar" style="width:18px"></span></td><td>31.2</td><td class="ev-high">1.95</td><td class="result-lose">5</td></tr>
+<tr ><td>5</td><td>サクラトゥジュー</td><td>5.9%<span class="prob-bar" style="width:17px"></span></td><td>32.8</td><td class="ev-high">1.93</td><td class="result-lose">9</td></tr>
+<tr ><td>6</td><td>ミッキーゴージャ</td><td>6.4%<span class="prob-bar" style="width:19px"></span></td><td>28.8</td><td class="ev-high">1.84</td><td class="result-lose">6</td></tr>
+<tr ><td>7</td><td>ブエナオンダ</td><td>7.5%<span class="prob-bar" style="width:22px"></span></td><td>23.2</td><td class="ev-high">1.74</td><td class="result-lose">15</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202608020211_done" data-date="2026-02-01" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-02-01 第31回シルクロードS<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">ロードフォア 9着</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202608020211_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202608020211_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ロードフォアエー</td><td>8.4%<span class="prob-bar" style="width:25px"></span></td><td>3.3</td><td>0.28</td><td class="result-lose">9</td></tr>
+<tr ><td>2</td><td>エーティーマクフ</td><td>7.4%<span class="prob-bar" style="width:22px"></span></td><td>9.4</td><td>0.70</td><td class="result-lose">8</td></tr>
+<tr ><td>3</td><td>エイシンフェンサ</td><td>7.2%<span class="prob-bar" style="width:21px"></span></td><td>11.0</td><td>0.79</td><td class="result-lose">11</td></tr>
+<tr ><td>4</td><td>カルプスペルシュ</td><td>7.1%<span class="prob-bar" style="width:21px"></span></td><td>5.7</td><td>0.41</td><td class="result-lose">4</td></tr>
+<tr ><td>5</td><td>アルテヴェローチ</td><td>7.0%<span class="prob-bar" style="width:20px"></span></td><td>75.1</td><td class="ev-high">5.26</td><td class="result-lose">13</td></tr>
+<tr ><td>6</td><td>ビッグシーザー</td><td>6.9%<span class="prob-bar" style="width:20px"></span></td><td>13.5</td><td>0.93</td><td class="result-lose">12</td></tr>
+<tr ><td>7</td><td>レイピア</td><td>6.8%<span class="prob-bar" style="width:20px"></span></td><td>12.9</td><td>0.88</td><td class="result-lose">2</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>カリボール</td><td>4.5%<span class="prob-bar" style="width:13px"></span></td><td>159.3</td><td class="ev-high">7.17</td><td class="result-lose">18</td></tr>
+<tr ><td>2</td><td>アルテヴェローチ</td><td>7.0%<span class="prob-bar" style="width:20px"></span></td><td>75.1</td><td class="ev-high">5.26</td><td class="result-lose">13</td></tr>
+<tr ><td>3</td><td>オタルエバー</td><td>4.6%<span class="prob-bar" style="width:13px"></span></td><td>112.3</td><td class="ev-high">5.17</td><td class="result-lose">16</td></tr>
+<tr ><td>4</td><td>フィオライア</td><td>5.4%<span class="prob-bar" style="width:16px"></span></td><td>87.5</td><td class="ev-high">4.71</td><td class="result-win">1</td></tr>
+<tr ><td>5</td><td>エコロレジーナ</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>72.3</td><td class="ev-high">4.42</td><td class="result-lose">17</td></tr>
+<tr ><td>6</td><td>ウインアイオライ</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>62.8</td><td class="ev-high">3.62</td><td class="result-lose">14</td></tr>
+<tr ><td>7</td><td>イコサン</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>51.4</td><td class="ev-high">3.16</td><td class="result-lose">7</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202605010211_done" data-date="2026-02-01" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-02-01 第40回根岸ステークス<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">エンペラーワ 6着</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202605010211_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202605010211_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>エンペラーワケア</td><td>8.7%<span class="prob-bar" style="width:26px"></span></td><td>3.9</td><td>0.34</td><td class="result-lose">6</td></tr>
+<tr ><td>2</td><td>オメガギネス</td><td>8.4%<span class="prob-bar" style="width:25px"></span></td><td>8.9</td><td>0.75</td><td class="result-lose">4</td></tr>
+<tr ><td>3</td><td>フェブランシェ</td><td>8.3%<span class="prob-bar" style="width:24px"></span></td><td>32.8</td><td class="ev-high">2.71</td><td class="result-lose">12</td></tr>
+<tr ><td>4</td><td>インユアパレス</td><td>7.3%<span class="prob-bar" style="width:21px"></span></td><td>3.9</td><td>0.28</td><td class="result-lose">9</td></tr>
+<tr ><td>5</td><td>ウェイワードアク</td><td>7.2%<span class="prob-bar" style="width:21px"></span></td><td>5.0</td><td>0.36</td><td class="result-lose">7</td></tr>
+<tr ><td>6</td><td>ロードフォンス</td><td>6.9%<span class="prob-bar" style="width:20px"></span></td><td>13.2</td><td>0.91</td><td class="result-win">1</td></tr>
+<tr ><td>7</td><td>マピュース</td><td>6.6%<span class="prob-bar" style="width:19px"></span></td><td>25.9</td><td class="ev-high">1.72</td><td class="result-lose">5</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ケイアイドリー</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>284.7</td><td class="ev-high">16.53</td><td class="result-lose">16</td></tr>
+<tr ><td>2</td><td>ネオトキオ</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>207.2</td><td class="ev-high">11.96</td><td class="result-lose">15</td></tr>
+<tr ><td>3</td><td>メイショウカズサ</td><td>5.0%<span class="prob-bar" style="width:14px"></span></td><td>216.1</td><td class="ev-high">10.80</td><td class="result-lose">14</td></tr>
+<tr ><td>4</td><td>バトルクライ</td><td>5.3%<span class="prob-bar" style="width:16px"></span></td><td>150.9</td><td class="ev-high">8.07</td><td class="result-lose">2</td></tr>
+<tr ><td>5</td><td>アルファマム</td><td>5.4%<span class="prob-bar" style="width:16px"></span></td><td>65.0</td><td class="ev-high">3.49</td><td class="result-lose">13</td></tr>
+<tr ><td>6</td><td>フェブランシェ</td><td>8.3%<span class="prob-bar" style="width:24px"></span></td><td>32.8</td><td class="ev-high">2.71</td><td class="result-lose">12</td></tr>
+<tr ><td>7</td><td>チカッパ</td><td>5.3%<span class="prob-bar" style="width:15px"></span></td><td>40.0</td><td class="ev-high">2.10</td><td class="result-lose">8</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202608010911_done" data-date="2026-01-25" data-grade="G2" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-01-25 第31回プロキオンステークス<span class="grade grade-G2">G2</span> <span style="font-size:0.8em;color:#888">テーオーパス 10着 BET</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202608010911_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202608010911_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr class="bet-row"><td>1</td><td>テーオーパスワー BET</td><td>7.3%<span class="prob-bar" style="width:21px"></span></td><td>11.0</td><td>0.80</td><td class="result-lose">10</td></tr>
+<tr ><td>2</td><td>サイモンザナドゥ</td><td>7.1%<span class="prob-bar" style="width:21px"></span></td><td>6.7</td><td>0.48</td><td class="result-lose">9</td></tr>
+<tr ><td>3</td><td>ロードクロンヌ</td><td>6.9%<span class="prob-bar" style="width:20px"></span></td><td>4.4</td><td>0.30</td><td class="result-win">1</td></tr>
+<tr ><td>4</td><td>クラウンプライド</td><td>6.3%<span class="prob-bar" style="width:18px"></span></td><td>49.7</td><td class="ev-high">3.11</td><td class="result-lose">15</td></tr>
+<tr ><td>5</td><td>ルシュヴァルドー</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>12.7</td><td>0.74</td><td class="result-lose">3</td></tr>
+<tr ><td>6</td><td>ハナウマビーチ</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>27.4</td><td class="ev-high">1.60</td><td class="result-lose">12</td></tr>
+<tr ><td>7</td><td>ペイシャエス</td><td>5.6%<span class="prob-bar" style="width:16px"></span></td><td>45.2</td><td class="ev-high">2.53</td><td class="result-lose">8</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>マーブルロック</td><td>4.8%<span class="prob-bar" style="width:14px"></span></td><td>241.3</td><td class="ev-high">11.70</td><td class="result-lose">11</td></tr>
+<tr ><td>2</td><td>マリオロード</td><td>4.5%<span class="prob-bar" style="width:13px"></span></td><td>249.9</td><td class="ev-high">11.17</td><td class="result-lose">16</td></tr>
+<tr ><td>3</td><td>テーオードレフォ</td><td>4.6%<span class="prob-bar" style="width:13px"></span></td><td>131.0</td><td class="ev-high">5.99</td><td class="result-lose">14</td></tr>
+<tr ><td>4</td><td>クラウンプライド</td><td>6.3%<span class="prob-bar" style="width:18px"></span></td><td>49.7</td><td class="ev-high">3.11</td><td class="result-lose">15</td></tr>
+<tr ><td>5</td><td>ペイシャエス</td><td>5.6%<span class="prob-bar" style="width:16px"></span></td><td>45.2</td><td class="ev-high">2.53</td><td class="result-lose">8</td></tr>
+<tr ><td>6</td><td>サンデーファンデ</td><td>5.5%<span class="prob-bar" style="width:16px"></span></td><td>43.4</td><td class="ev-high">2.37</td><td class="result-lose">2</td></tr>
+<tr ><td>7</td><td>ハナウマビーチ</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>27.4</td><td class="ev-high">1.60</td><td class="result-lose">12</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202606010911_done" data-date="2026-01-25" data-grade="G2" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-01-25 第67回アメリカジョッキーC<span class="grade grade-G2">G2</span> <span style="font-size:0.8em;color:#888">ドゥラドーレ 2着 BET</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202606010911_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202606010911_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr class="bet-row"><td>1</td><td>ドゥラドーレス BET</td><td>12.0%<span class="prob-bar" style="width:36px"></span></td><td>3.0</td><td>0.36</td><td class="result-lose">2</td></tr>
+<tr ><td>2</td><td>ショウヘイ</td><td>9.6%<span class="prob-bar" style="width:28px"></span></td><td>5.0</td><td>0.48</td><td class="result-win">1</td></tr>
+<tr ><td>3</td><td>ジョバンニ</td><td>7.3%<span class="prob-bar" style="width:21px"></span></td><td>4.4</td><td>0.32</td><td class="result-lose">7</td></tr>
+<tr ><td>4</td><td>ディマイザキッド</td><td>7.0%<span class="prob-bar" style="width:21px"></span></td><td>8.5</td><td>0.60</td><td class="result-lose">6</td></tr>
+<tr ><td>5</td><td>チャックネイト</td><td>6.8%<span class="prob-bar" style="width:20px"></span></td><td>26.0</td><td class="ev-high">1.76</td><td class="result-lose">13</td></tr>
+<tr ><td>6</td><td>マテンロウレオ</td><td>6.5%<span class="prob-bar" style="width:19px"></span></td><td>11.5</td><td>0.75</td><td class="result-lose">4</td></tr>
+<tr ><td>7</td><td>マイネルエンペラ</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>9.1</td><td>0.52</td><td class="result-lose">11</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>サンストックトン</td><td>4.6%<span class="prob-bar" style="width:13px"></span></td><td>400.8</td><td class="ev-high">18.37</td><td class="result-lose">5</td></tr>
+<tr ><td>2</td><td>ホウオウノーサイ</td><td>4.7%<span class="prob-bar" style="width:14px"></span></td><td>315.3</td><td class="ev-high">14.94</td><td class="result-lose">14</td></tr>
+<tr ><td>3</td><td>マイネルメモリー</td><td>4.7%<span class="prob-bar" style="width:13px"></span></td><td>258.1</td><td class="ev-high">12.04</td><td class="result-lose">15</td></tr>
+<tr ><td>4</td><td>エヒト</td><td>4.4%<span class="prob-bar" style="width:13px"></span></td><td>267.9</td><td class="ev-high">11.81</td><td class="result-lose">3</td></tr>
+<tr ><td>5</td><td>アルビージャ</td><td>5.2%<span class="prob-bar" style="width:15px"></span></td><td>152.2</td><td class="ev-high">7.85</td><td class="result-lose">10</td></tr>
+<tr ><td>6</td><td>アウスヴァール</td><td>4.7%<span class="prob-bar" style="width:14px"></span></td><td>148.4</td><td class="ev-high">7.03</td><td class="result-lose">16</td></tr>
+<tr ><td>7</td><td>ニシノレヴナント</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>64.7</td><td class="ev-high">3.68</td><td class="result-lose">9</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202610010111_done" data-date="2026-01-24" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-01-24 第2回小倉牝馬ステークス<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">&#x2705; ジョスラン</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202610010111_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202610010111_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ジョスラン</td><td>8.5%<span class="prob-bar" style="width:25px"></span></td><td>3.6</td><td>0.31</td><td class="result-win">1</td></tr>
+<tr ><td>2</td><td>ココナッツブラウ</td><td>7.8%<span class="prob-bar" style="width:23px"></span></td><td>3.7</td><td>0.29</td><td class="result-lose">3</td></tr>
+<tr ><td>3</td><td>パレハ</td><td>6.8%<span class="prob-bar" style="width:20px"></span></td><td>9.7</td><td>0.66</td><td class="result-lose">7</td></tr>
+<tr ><td>4</td><td>パルクリチュード</td><td>6.7%<span class="prob-bar" style="width:20px"></span></td><td>96.1</td><td class="ev-high">6.46</td><td class="result-lose">17</td></tr>
+<tr ><td>5</td><td>テレサ</td><td>6.6%<span class="prob-bar" style="width:19px"></span></td><td>8.4</td><td>0.55</td><td class="result-lose">4</td></tr>
+<tr ><td>6</td><td>クリスマスパレー</td><td>6.4%<span class="prob-bar" style="width:19px"></span></td><td>20.1</td><td class="ev-high">1.29</td><td class="result-lose">16</td></tr>
+<tr ><td>7</td><td>ボンドガール</td><td>6.4%<span class="prob-bar" style="width:19px"></span></td><td>17.7</td><td class="ev-high">1.13</td><td class="result-lose">2</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>タクシンイメル</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>325.0</td><td class="ev-high">19.86</td><td class="result-lose">18</td></tr>
+<tr ><td>2</td><td>ウインエーデル</td><td>4.9%<span class="prob-bar" style="width:14px"></span></td><td>157.7</td><td class="ev-high">7.68</td><td class="result-lose">11</td></tr>
+<tr ><td>3</td><td>アンリーロード</td><td>4.9%<span class="prob-bar" style="width:14px"></span></td><td>147.1</td><td class="ev-high">7.23</td><td class="result-lose">12</td></tr>
+<tr ><td>4</td><td>エリカヴィータ</td><td>4.9%<span class="prob-bar" style="width:14px"></span></td><td>138.9</td><td class="ev-high">6.81</td><td class="result-lose">14</td></tr>
+<tr ><td>5</td><td>パルクリチュード</td><td>6.7%<span class="prob-bar" style="width:20px"></span></td><td>96.1</td><td class="ev-high">6.46</td><td class="result-lose">17</td></tr>
+<tr ><td>6</td><td>アレナリア</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>83.5</td><td class="ev-high">5.07</td><td class="result-lose">8</td></tr>
+<tr ><td>7</td><td>ブラウンラチェッ</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>83.9</td><td class="ev-high">4.79</td><td class="result-lose">13</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202608010711_done" data-date="2026-01-18" data-grade="G2" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-01-18 第73回日経新春杯<span class="grade grade-G2">G2</span> <span style="font-size:0.8em;color:#888">シャイニング 8着 BET</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202608010711_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202608010711_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr class="bet-row"><td>1</td><td>シャイニングソー BET</td><td>9.4%<span class="prob-bar" style="width:28px"></span></td><td>6.3</td><td>0.60</td><td class="result-lose">8</td></tr>
+<tr ><td>2</td><td>ゲルチュタール</td><td>8.9%<span class="prob-bar" style="width:26px"></span></td><td>2.3</td><td>0.21</td><td class="result-win">1</td></tr>
+<tr ><td>3</td><td>ファミリータイム</td><td>7.6%<span class="prob-bar" style="width:22px"></span></td><td>25.2</td><td class="ev-high">1.92</td><td class="result-lose">2</td></tr>
+<tr ><td>4</td><td>ヤマニンブークリ</td><td>6.5%<span class="prob-bar" style="width:19px"></span></td><td>11.2</td><td>0.73</td><td class="result-lose">7</td></tr>
+<tr ><td>5</td><td>マイネルクリソー</td><td>6.4%<span class="prob-bar" style="width:19px"></span></td><td>24.5</td><td class="ev-high">1.57</td><td class="result-lose">11</td></tr>
+<tr ><td>6</td><td>サトノグランツ</td><td>6.3%<span class="prob-bar" style="width:19px"></span></td><td>21.1</td><td class="ev-high">1.34</td><td class="result-lose">10</td></tr>
+<tr ><td>7</td><td>ライラック</td><td>6.3%<span class="prob-bar" style="width:18px"></span></td><td>11.5</td><td>0.72</td><td class="result-lose">12</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ドクタードリトル</td><td>4.5%<span class="prob-bar" style="width:13px"></span></td><td>154.7</td><td class="ev-high">6.96</td><td class="result-lose">5</td></tr>
+<tr ><td>2</td><td>マイネルケレリウ</td><td>4.8%<span class="prob-bar" style="width:14px"></span></td><td>83.0</td><td class="ev-high">4.01</td><td class="result-lose">4</td></tr>
+<tr ><td>3</td><td>ファミリータイム</td><td>7.6%<span class="prob-bar" style="width:22px"></span></td><td>25.2</td><td class="ev-high">1.92</td><td class="result-lose">2</td></tr>
+<tr ><td>4</td><td>マイネルクリソー</td><td>6.4%<span class="prob-bar" style="width:19px"></span></td><td>24.5</td><td class="ev-high">1.57</td><td class="result-lose">11</td></tr>
+<tr ><td>5</td><td>サトノグランツ</td><td>6.3%<span class="prob-bar" style="width:19px"></span></td><td>21.1</td><td class="ev-high">1.34</td><td class="result-lose">10</td></tr>
+<tr ><td>6</td><td>リビアングラス</td><td>5.5%<span class="prob-bar" style="width:16px"></span></td><td>21.2</td><td class="ev-high">1.17</td><td class="result-lose">3</td></tr>
+<tr ><td>7</td><td>オールナット</td><td>5.5%<span class="prob-bar" style="width:16px"></span></td><td>15.5</td><td>0.85</td><td class="result-lose">13</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202606010711_done" data-date="2026-01-18" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-01-18 第66回京成杯<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">ソラネルマン 3着</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202606010711_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202606010711_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ソラネルマン</td><td>8.9%<span class="prob-bar" style="width:26px"></span></td><td>3.6</td><td>0.32</td><td class="result-lose">3</td></tr>
+<tr ><td>2</td><td>グリーンエナジー</td><td>7.0%<span class="prob-bar" style="width:21px"></span></td><td>4.3</td><td>0.30</td><td class="result-win">1</td></tr>
+<tr ><td>3</td><td>ショウグンマサム</td><td>6.3%<span class="prob-bar" style="width:18px"></span></td><td>33.9</td><td class="ev-high">2.12</td><td class="result-lose">13</td></tr>
+<tr ><td>4</td><td>マテンロウゲイル</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>11.1</td><td>0.69</td><td class="result-lose">2</td></tr>
+<tr ><td>5</td><td>アクセス</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>4.8</td><td>0.30</td><td class="result-lose">9</td></tr>
+<tr ><td>6</td><td>アメテュストス</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>28.1</td><td class="ev-high">1.74</td><td class="result-lose">8</td></tr>
+<tr ><td>7</td><td>アッカン</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>9.5</td><td>0.59</td><td class="result-lose">15</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ポッドクロス</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>119.1</td><td class="ev-high">6.95</td><td class="result-lose">11</td></tr>
+<tr ><td>2</td><td>ステラスペース</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>76.4</td><td class="ev-high">4.46</td><td class="result-lose">5</td></tr>
+<tr ><td>3</td><td>エリプティクカー</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>62.5</td><td class="ev-high">3.63</td><td class="result-lose">6</td></tr>
+<tr ><td>4</td><td>ブラックハヤテ</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>61.1</td><td class="ev-high">3.55</td><td class="result-lose">7</td></tr>
+<tr ><td>5</td><td>パラディオン</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>51.0</td><td class="ev-high">3.11</td><td class="result-lose">14</td></tr>
+<tr ><td>6</td><td>ショウグンマサム</td><td>6.3%<span class="prob-bar" style="width:18px"></span></td><td>33.9</td><td class="ev-high">2.12</td><td class="result-lose">13</td></tr>
+<tr ><td>7</td><td>タイダルロック</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>29.6</td><td class="ev-high">1.82</td><td class="result-lose">4</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202608010511_done" data-date="2026-01-12" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-01-12 第60回日刊スポシンザン記念<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">モノポリオ 5着</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202608010511_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202608010511_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>モノポリオ</td><td>8.5%<span class="prob-bar" style="width:25px"></span></td><td>4.7</td><td>0.40</td><td class="result-lose">5</td></tr>
+<tr ><td>2</td><td>バルセシート</td><td>7.6%<span class="prob-bar" style="width:22px"></span></td><td>5.0</td><td>0.38</td><td class="result-lose">4</td></tr>
+<tr ><td>3</td><td>ルートサーティー</td><td>7.4%<span class="prob-bar" style="width:22px"></span></td><td>13.6</td><td class="ev-high">1.00</td><td class="result-lose">16</td></tr>
+<tr ><td>4</td><td>ディアダイヤモン</td><td>6.9%<span class="prob-bar" style="width:20px"></span></td><td>8.3</td><td>0.57</td><td class="result-lose">9</td></tr>
+<tr ><td>5</td><td>トミーバローズ</td><td>6.5%<span class="prob-bar" style="width:19px"></span></td><td>20.0</td><td class="ev-high">1.30</td><td class="result-lose">12</td></tr>
+<tr ><td>6</td><td>リアライズブラー</td><td>6.3%<span class="prob-bar" style="width:19px"></span></td><td>24.1</td><td class="ev-high">1.53</td><td class="result-lose">10</td></tr>
+<tr ><td>7</td><td>アルトラムス</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>5.8</td><td>0.36</td><td class="result-lose">3</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>プレダトゥール</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>193.8</td><td class="ev-high">11.19</td><td class="result-lose">14</td></tr>
+<tr ><td>2</td><td>ファニーバニー</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>106.0</td><td class="ev-high">6.08</td><td class="result-lose">8</td></tr>
+<tr ><td>3</td><td>カクウチ</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>98.5</td><td class="ev-high">5.72</td><td class="result-lose">11</td></tr>
+<tr ><td>4</td><td>フレイムスター</td><td>6.2%<span class="prob-bar" style="width:18px"></span></td><td>67.6</td><td class="ev-high">4.16</td><td class="result-lose">15</td></tr>
+<tr ><td>5</td><td>エイズルブルーム</td><td>6.0%<span class="prob-bar" style="width:18px"></span></td><td>53.3</td><td class="ev-high">3.21</td><td class="result-lose">6</td></tr>
+<tr ><td>6</td><td>リアライズブラー</td><td>6.3%<span class="prob-bar" style="width:19px"></span></td><td>24.1</td><td class="ev-high">1.53</td><td class="result-lose">10</td></tr>
+<tr ><td>7</td><td>トミーバローズ</td><td>6.5%<span class="prob-bar" style="width:19px"></span></td><td>20.0</td><td class="ev-high">1.30</td><td class="result-lose">12</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202606010411_done" data-date="2026-01-11" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-01-11 第42回フェアリーステークス<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">&#x2705; ブラックチャ</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202606010411_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202606010411_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ブラックチャリス</td><td>9.8%<span class="prob-bar" style="width:29px"></span></td><td>11.0</td><td class="ev-high">1.08</td><td class="result-win">1</td></tr>
+<tr ><td>2</td><td>ギリーズボール</td><td>8.1%<span class="prob-bar" style="width:24px"></span></td><td>4.2</td><td>0.34</td><td class="result-lose">13</td></tr>
+<tr ><td>3</td><td>トワニ</td><td>7.3%<span class="prob-bar" style="width:21px"></span></td><td>17.4</td><td class="ev-high">1.27</td><td class="result-lose">7</td></tr>
+<tr ><td>4</td><td>サンアントワーヌ</td><td>6.7%<span class="prob-bar" style="width:20px"></span></td><td>5.7</td><td>0.38</td><td class="result-lose">5</td></tr>
+<tr ><td>5</td><td>エゴンウレア</td><td>6.0%<span class="prob-bar" style="width:18px"></span></td><td>157.7</td><td class="ev-high">9.51</td><td class="result-lose">16</td></tr>
+<tr ><td>6</td><td>ハーディジェナー</td><td>6.0%<span class="prob-bar" style="width:18px"></span></td><td>38.3</td><td class="ev-high">2.30</td><td class="result-lose">15</td></tr>
+<tr ><td>7</td><td>リュクスパトロー</td><td>6.0%<span class="prob-bar" style="width:18px"></span></td><td>76.5</td><td class="ev-high">4.60</td><td class="result-lose">12</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>エゴンウレア</td><td>6.0%<span class="prob-bar" style="width:18px"></span></td><td>157.7</td><td class="ev-high">9.51</td><td class="result-lose">16</td></tr>
+<tr ><td>2</td><td>トラスコンガーデ</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>146.6</td><td class="ev-high">8.51</td><td class="result-lose">11</td></tr>
+<tr ><td>3</td><td>リュクスパトロー</td><td>6.0%<span class="prob-bar" style="width:18px"></span></td><td>76.5</td><td class="ev-high">4.60</td><td class="result-lose">12</td></tr>
+<tr ><td>4</td><td>モルニケ</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>58.5</td><td class="ev-high">3.38</td><td class="result-lose">6</td></tr>
+<tr ><td>5</td><td>ハーディジェナー</td><td>6.0%<span class="prob-bar" style="width:18px"></span></td><td>38.3</td><td class="ev-high">2.30</td><td class="result-lose">15</td></tr>
+<tr ><td>6</td><td>レオアジャイル</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>36.0</td><td class="ev-high">2.10</td><td class="result-lose">3</td></tr>
+<tr ><td>7</td><td>ビッグカレンルー</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>30.8</td><td class="ev-high">1.78</td><td class="result-lose">2</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202608010111_done" data-date="2026-01-04" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-01-04 第64回スポニチ賞京都金杯<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">ランスオブカ 5着</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202608010111_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202608010111_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ランスオブカオス</td><td>9.3%<span class="prob-bar" style="width:27px"></span></td><td>2.4</td><td>0.22</td><td class="result-lose">5</td></tr>
+<tr ><td>2</td><td>ブエナオンダ</td><td>7.0%<span class="prob-bar" style="width:20px"></span></td><td>7.8</td><td>0.55</td><td class="result-win">1</td></tr>
+<tr ><td>3</td><td>ヤンキーバローズ</td><td>6.7%<span class="prob-bar" style="width:20px"></span></td><td>15.7</td><td class="ev-high">1.06</td><td class="result-lose">6</td></tr>
+<tr ><td>4</td><td>クルゼイロドスル</td><td>6.7%<span class="prob-bar" style="width:20px"></span></td><td>25.7</td><td class="ev-high">1.71</td><td class="result-lose">7</td></tr>
+<tr ><td>5</td><td>シンフォーエバー</td><td>6.5%<span class="prob-bar" style="width:19px"></span></td><td>38.9</td><td class="ev-high">2.55</td><td class="result-lose">16</td></tr>
+<tr ><td>6</td><td>ガイアメンテ</td><td>6.4%<span class="prob-bar" style="width:19px"></span></td><td>7.5</td><td>0.48</td><td class="result-lose">17</td></tr>
+<tr ><td>7</td><td>キープカルム</td><td>6.4%<span class="prob-bar" style="width:19px"></span></td><td>7.8</td><td>0.50</td><td class="result-lose">9</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ショウナンアデイ</td><td>5.0%<span class="prob-bar" style="width:14px"></span></td><td>137.7</td><td class="ev-high">6.86</td><td class="result-lose">3</td></tr>
+<tr ><td>2</td><td>ラケマーダ</td><td>5.1%<span class="prob-bar" style="width:15px"></span></td><td>113.9</td><td class="ev-high">5.82</td><td class="result-lose">8</td></tr>
+<tr ><td>3</td><td>コレペティトール</td><td>4.7%<span class="prob-bar" style="width:14px"></span></td><td>111.3</td><td class="ev-high">5.25</td><td class="result-lose">14</td></tr>
+<tr ><td>4</td><td>ホウオウラスカー</td><td>5.1%<span class="prob-bar" style="width:15px"></span></td><td>79.6</td><td class="ev-high">4.03</td><td class="result-lose">13</td></tr>
+<tr ><td>5</td><td>マテンロウオリオ</td><td>4.8%<span class="prob-bar" style="width:14px"></span></td><td>77.4</td><td class="ev-high">3.69</td><td class="result-lose">11</td></tr>
+<tr ><td>6</td><td>ヤマニンサンパ</td><td>6.0%<span class="prob-bar" style="width:18px"></span></td><td>48.7</td><td class="ev-high">2.93</td><td class="result-lose">15</td></tr>
+<tr ><td>7</td><td>エアファンディタ</td><td>4.9%<span class="prob-bar" style="width:14px"></span></td><td>55.9</td><td class="ev-high">2.72</td><td class="result-lose">18</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202606010111_done" data-date="2026-01-04" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2026-01-04 第75回日刊スポ賞中山金杯<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">アンゴラブラ 2着</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202606010111_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202606010111_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>アンゴラブラック</td><td>9.6%<span class="prob-bar" style="width:28px"></span></td><td>3.2</td><td>0.31</td><td class="result-lose">2</td></tr>
+<tr ><td>2</td><td>シリウスコルト</td><td>7.0%<span class="prob-bar" style="width:20px"></span></td><td>13.6</td><td>0.95</td><td class="result-lose">13</td></tr>
+<tr ><td>3</td><td>カラマティアノス</td><td>6.5%<span class="prob-bar" style="width:19px"></span></td><td>14.8</td><td>0.97</td><td class="result-win">1</td></tr>
+<tr ><td>4</td><td>ケイアイセナ</td><td>6.4%<span class="prob-bar" style="width:19px"></span></td><td>6.7</td><td>0.43</td><td class="result-lose">12</td></tr>
+<tr ><td>5</td><td>カネラフィーナ</td><td>6.3%<span class="prob-bar" style="width:19px"></span></td><td>4.6</td><td>0.29</td><td class="result-lose">4</td></tr>
+<tr ><td>6</td><td>ピースワンデュッ</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>11.0</td><td>0.67</td><td class="result-lose">5</td></tr>
+<tr ><td>7</td><td>グランディア</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>7.8</td><td>0.47</td><td class="result-lose">3</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ブランデーロック</td><td>5.9%<span class="prob-bar" style="width:17px"></span></td><td>95.9</td><td class="ev-high">5.66</td><td class="result-lose">9</td></tr>
+<tr ><td>2</td><td>リフレーミング</td><td>5.3%<span class="prob-bar" style="width:15px"></span></td><td>98.9</td><td class="ev-high">5.27</td><td class="result-lose">7</td></tr>
+<tr ><td>3</td><td>リカンカブール</td><td>5.0%<span class="prob-bar" style="width:15px"></span></td><td>39.1</td><td class="ev-high">1.96</td><td class="result-lose">6</td></tr>
+<tr ><td>4</td><td>ウエストナウ</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>25.6</td><td class="ev-high">1.47</td><td class="result-lose">11</td></tr>
+<tr ><td>5</td><td>マイネルモーント</td><td>5.1%<span class="prob-bar" style="width:15px"></span></td><td>25.7</td><td class="ev-high">1.31</td><td class="result-lose">8</td></tr>
+<tr ><td>6</td><td>ニシノエージェン</td><td>5.7%<span class="prob-bar" style="width:16px"></span></td><td>22.3</td><td class="ev-high">1.26</td><td class="result-lose">14</td></tr>
+<tr ><td>7</td><td>マイネルオーシャ</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>18.4</td><td class="ev-high">1.07</td><td class="result-lose">10</td></tr>
+</table>
+</div>
+</div></div>
+
 <div class="card race-card-past" data-race="202506050811_done" data-date="2025-12-28" data-grade="G1" style="">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
 <div class="card-title" style="margin:0">2025-12-28 第70回有馬記念(GI)<span class="grade grade-G1">G1</span> <span style="font-size:0.8em;color:#888">レガレイラ 4着 BET</span></div>
@@ -1551,41 +2892,6 @@ function drawChart(vals, dates) {
 </div>
 </div></div>
 
-<div class="card race-card-past" data-race="202508040311_done" data-date="2025-11-15" data-grade="G2" style="">
-<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-11-15 第60回デイリー杯2歳S(GII)<span class="grade grade-G2">G2</span> <span style="font-size:0.8em;color:#888">カヴァレリッ 2着</span></div>
-</div>
-<div class="accordion-body collapsed" style="max-height:500px">
-<div class="tabs" style="margin-top:8px">
-<div class="tab tab-prob active" onclick="switchTab('202508040311_done','prob')">確率Top7</div>
-<div class="tab tab-ev" onclick="switchTab('202508040311_done','ev')">EV Top7</div>
-</div>
-<div class="tab-content content-prob active">
-<table>
-<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
-<tr ><td>1</td><td>カヴァレリッツォ</td><td>17.1%<span class="prob-bar" style="width:51px"></span></td><td>2.6</td><td>0.44</td><td class="result-lose">2</td></tr>
-<tr ><td>2</td><td>アドマイヤクワッ</td><td>12.5%<span class="prob-bar" style="width:37px"></span></td><td>2.6</td><td>0.32</td><td class="result-win">1</td></tr>
-<tr ><td>3</td><td>グッドピース</td><td>8.4%<span class="prob-bar" style="width:25px"></span></td><td>10.8</td><td>0.91</td><td class="result-lose">6</td></tr>
-<tr ><td>4</td><td>キャンディード</td><td>8.3%<span class="prob-bar" style="width:24px"></span></td><td>3.8</td><td>0.31</td><td class="result-lose">8</td></tr>
-<tr ><td>5</td><td>アイガーリー</td><td>6.9%<span class="prob-bar" style="width:20px"></span></td><td>34.0</td><td class="ev-high">2.36</td><td class="result-lose">3</td></tr>
-<tr ><td>6</td><td>エイシンディード</td><td>4.8%<span class="prob-bar" style="width:14px"></span></td><td>22.5</td><td class="ev-high">1.09</td><td class="result-lose">4</td></tr>
-<tr ><td>7</td><td>マイケルバローズ</td><td>4.3%<span class="prob-bar" style="width:12px"></span></td><td>37.2</td><td class="ev-high">1.60</td><td class="result-lose">5</td></tr>
-</table>
-</div>
-<div class="tab-content content-ev">
-<table>
-<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
-<tr ><td>1</td><td>アイガーリー</td><td>6.9%<span class="prob-bar" style="width:20px"></span></td><td>34.0</td><td class="ev-high">2.36</td><td class="result-lose">3</td></tr>
-<tr ><td>2</td><td>マイケルバローズ</td><td>4.3%<span class="prob-bar" style="width:12px"></span></td><td>37.2</td><td class="ev-high">1.60</td><td class="result-lose">5</td></tr>
-<tr ><td>3</td><td>エイシンディード</td><td>4.8%<span class="prob-bar" style="width:14px"></span></td><td>22.5</td><td class="ev-high">1.09</td><td class="result-lose">4</td></tr>
-<tr ><td>4</td><td>グッドピース</td><td>8.4%<span class="prob-bar" style="width:25px"></span></td><td>10.8</td><td>0.91</td><td class="result-lose">6</td></tr>
-<tr ><td>5</td><td>ガリレア</td><td>3.8%<span class="prob-bar" style="width:11px"></span></td><td>19.1</td><td>0.72</td><td class="result-lose">7</td></tr>
-<tr ><td>6</td><td>カヴァレリッツォ</td><td>17.1%<span class="prob-bar" style="width:51px"></span></td><td>2.6</td><td>0.44</td><td class="result-lose">2</td></tr>
-<tr ><td>7</td><td>アドマイヤクワッ</td><td>12.5%<span class="prob-bar" style="width:37px"></span></td><td>2.6</td><td>0.32</td><td class="result-win">1</td></tr>
-</table>
-</div>
-</div></div>
-
 <div class="card race-card-past" data-race="202505050311_done" data-date="2025-11-15" data-grade="G3" style="">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
 <div class="card-title" style="margin:0">2025-11-15 第30回武蔵野ステークス(GIII)<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">コスタノヴァ 2着</span></div>
@@ -1617,6 +2923,41 @@ function drawChart(vals, dates) {
 <tr ><td>5</td><td>ヴァルツァーシャ</td><td>1.3%<span class="prob-bar" style="width:3px"></span></td><td>298.8</td><td class="ev-high">3.94</td><td class="result-lose">6</td></tr>
 <tr ><td>6</td><td>ラタフォレスト</td><td>4.6%<span class="prob-bar" style="width:13px"></span></td><td>61.9</td><td class="ev-high">2.87</td><td class="result-lose">8</td></tr>
 <tr ><td>7</td><td>ロードフォンス</td><td>10.5%<span class="prob-bar" style="width:31px"></span></td><td>23.3</td><td class="ev-high">2.44</td><td class="result-lose">5</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202508040311_done" data-date="2025-11-15" data-grade="G2" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2025-11-15 第60回デイリー杯2歳S(GII)<span class="grade grade-G2">G2</span> <span style="font-size:0.8em;color:#888">カヴァレリッ 2着</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202508040311_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202508040311_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>カヴァレリッツォ</td><td>17.1%<span class="prob-bar" style="width:51px"></span></td><td>2.6</td><td>0.44</td><td class="result-lose">2</td></tr>
+<tr ><td>2</td><td>アドマイヤクワッ</td><td>12.5%<span class="prob-bar" style="width:37px"></span></td><td>2.6</td><td>0.32</td><td class="result-win">1</td></tr>
+<tr ><td>3</td><td>グッドピース</td><td>8.4%<span class="prob-bar" style="width:25px"></span></td><td>10.8</td><td>0.91</td><td class="result-lose">6</td></tr>
+<tr ><td>4</td><td>キャンディード</td><td>8.3%<span class="prob-bar" style="width:24px"></span></td><td>3.8</td><td>0.31</td><td class="result-lose">8</td></tr>
+<tr ><td>5</td><td>アイガーリー</td><td>6.9%<span class="prob-bar" style="width:20px"></span></td><td>34.0</td><td class="ev-high">2.36</td><td class="result-lose">3</td></tr>
+<tr ><td>6</td><td>エイシンディード</td><td>4.8%<span class="prob-bar" style="width:14px"></span></td><td>22.5</td><td class="ev-high">1.09</td><td class="result-lose">4</td></tr>
+<tr ><td>7</td><td>マイケルバローズ</td><td>4.3%<span class="prob-bar" style="width:12px"></span></td><td>37.2</td><td class="ev-high">1.60</td><td class="result-lose">5</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>アイガーリー</td><td>6.9%<span class="prob-bar" style="width:20px"></span></td><td>34.0</td><td class="ev-high">2.36</td><td class="result-lose">3</td></tr>
+<tr ><td>2</td><td>マイケルバローズ</td><td>4.3%<span class="prob-bar" style="width:12px"></span></td><td>37.2</td><td class="ev-high">1.60</td><td class="result-lose">5</td></tr>
+<tr ><td>3</td><td>エイシンディード</td><td>4.8%<span class="prob-bar" style="width:14px"></span></td><td>22.5</td><td class="ev-high">1.09</td><td class="result-lose">4</td></tr>
+<tr ><td>4</td><td>グッドピース</td><td>8.4%<span class="prob-bar" style="width:25px"></span></td><td>10.8</td><td>0.91</td><td class="result-lose">6</td></tr>
+<tr ><td>5</td><td>ガリレア</td><td>3.8%<span class="prob-bar" style="width:11px"></span></td><td>19.1</td><td>0.72</td><td class="result-lose">7</td></tr>
+<tr ><td>6</td><td>カヴァレリッツォ</td><td>17.1%<span class="prob-bar" style="width:51px"></span></td><td>2.6</td><td>0.44</td><td class="result-lose">2</td></tr>
+<tr ><td>7</td><td>アドマイヤクワッ</td><td>12.5%<span class="prob-bar" style="width:37px"></span></td><td>2.6</td><td>0.32</td><td class="result-win">1</td></tr>
 </table>
 </div>
 </div></div>
@@ -2566,41 +3907,6 @@ function drawChart(vals, dates) {
 </div>
 </div></div>
 
-<div class="card race-card-past" data-race="202501020211_done" data-date="2025-08-24" data-grade="G3" style="">
-<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-08-24 第20回キーンランドカップ(GIII)<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">&#x2705; パンジャタワ</span></div>
-</div>
-<div class="accordion-body collapsed" style="max-height:500px">
-<div class="tabs" style="margin-top:8px">
-<div class="tab tab-prob active" onclick="switchTab('202501020211_done','prob')">確率Top7</div>
-<div class="tab tab-ev" onclick="switchTab('202501020211_done','ev')">EV Top7</div>
-</div>
-<div class="tab-content content-prob active">
-<table>
-<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
-<tr ><td>1</td><td>パンジャタワー</td><td>15.5%<span class="prob-bar" style="width:46px"></span></td><td>5.5</td><td>0.85</td><td class="result-win">1</td></tr>
-<tr ><td>2</td><td>ペアポルックス</td><td>14.5%<span class="prob-bar" style="width:43px"></span></td><td>7.3</td><td class="ev-high">1.06</td><td class="result-lose">2</td></tr>
-<tr ><td>3</td><td>レイピア</td><td>9.8%<span class="prob-bar" style="width:29px"></span></td><td>9.7</td><td>0.95</td><td class="result-lose">11</td></tr>
-<tr ><td>4</td><td>ツインクルトーズ</td><td>7.2%<span class="prob-bar" style="width:21px"></span></td><td>176.3</td><td class="ev-high">12.76</td><td class="result-lose">16</td></tr>
-<tr ><td>5</td><td>エトヴプレ</td><td>5.5%<span class="prob-bar" style="width:16px"></span></td><td>52.6</td><td class="ev-high">2.88</td><td class="result-lose">14</td></tr>
-<tr ><td>6</td><td>フィオライア</td><td>4.6%<span class="prob-bar" style="width:13px"></span></td><td>28.5</td><td class="ev-high">1.32</td><td class="result-lose">10</td></tr>
-<tr ><td>7</td><td>カルロヴェローチ</td><td>4.6%<span class="prob-bar" style="width:13px"></span></td><td>19.1</td><td>0.88</td><td class="result-lose">6</td></tr>
-</table>
-</div>
-<div class="tab-content content-ev">
-<table>
-<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
-<tr ><td>1</td><td>ツインクルトーズ</td><td>7.2%<span class="prob-bar" style="width:21px"></span></td><td>176.3</td><td class="ev-high">12.76</td><td class="result-lose">16</td></tr>
-<tr ><td>2</td><td>エトヴプレ</td><td>5.5%<span class="prob-bar" style="width:16px"></span></td><td>52.6</td><td class="ev-high">2.88</td><td class="result-lose">14</td></tr>
-<tr ><td>3</td><td>ジョーメッドヴィ</td><td>2.7%<span class="prob-bar" style="width:8px"></span></td><td>90.5</td><td class="ev-high">2.42</td><td class="result-lose">13</td></tr>
-<tr ><td>4</td><td>フィオライア</td><td>4.6%<span class="prob-bar" style="width:13px"></span></td><td>28.5</td><td class="ev-high">1.32</td><td class="result-lose">10</td></tr>
-<tr ><td>5</td><td>ペアポルックス</td><td>14.5%<span class="prob-bar" style="width:43px"></span></td><td>7.3</td><td class="ev-high">1.06</td><td class="result-lose">2</td></tr>
-<tr ><td>6</td><td>レイピア</td><td>9.8%<span class="prob-bar" style="width:29px"></span></td><td>9.7</td><td>0.95</td><td class="result-lose">11</td></tr>
-<tr ><td>7</td><td>プルパレイ</td><td>1.1%<span class="prob-bar" style="width:3px"></span></td><td>80.4</td><td>0.92</td><td class="result-lose">8</td></tr>
-</table>
-</div>
-</div></div>
-
 <div class="card race-card-past" data-race="202504030211_done" data-date="2025-08-24" data-grade="G3" style="">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
 <div class="card-title" style="margin:0">2025-08-24 第45回新潟2歳ステークス(GIII)<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">リネンタイリ 9着</span></div>
@@ -2632,6 +3938,41 @@ function drawChart(vals, dates) {
 <tr ><td>5</td><td>タイセイボーグ</td><td>5.9%<span class="prob-bar" style="width:17px"></span></td><td>12.7</td><td>0.76</td><td class="result-lose">2</td></tr>
 <tr ><td>6</td><td>サンアントワーヌ</td><td>7.3%<span class="prob-bar" style="width:21px"></span></td><td>8.1</td><td>0.59</td><td class="result-lose">4</td></tr>
 <tr ><td>7</td><td>ヒルデグリム</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>9.2</td><td>0.53</td><td class="result-lose">8</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202501020211_done" data-date="2025-08-24" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2025-08-24 第20回キーンランドカップ(GIII)<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">&#x2705; パンジャタワ</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202501020211_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202501020211_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>パンジャタワー</td><td>15.5%<span class="prob-bar" style="width:46px"></span></td><td>5.5</td><td>0.85</td><td class="result-win">1</td></tr>
+<tr ><td>2</td><td>ペアポルックス</td><td>14.5%<span class="prob-bar" style="width:43px"></span></td><td>7.3</td><td class="ev-high">1.06</td><td class="result-lose">2</td></tr>
+<tr ><td>3</td><td>レイピア</td><td>9.8%<span class="prob-bar" style="width:29px"></span></td><td>9.7</td><td>0.95</td><td class="result-lose">11</td></tr>
+<tr ><td>4</td><td>ツインクルトーズ</td><td>7.2%<span class="prob-bar" style="width:21px"></span></td><td>176.3</td><td class="ev-high">12.76</td><td class="result-lose">16</td></tr>
+<tr ><td>5</td><td>エトヴプレ</td><td>5.5%<span class="prob-bar" style="width:16px"></span></td><td>52.6</td><td class="ev-high">2.88</td><td class="result-lose">14</td></tr>
+<tr ><td>6</td><td>フィオライア</td><td>4.6%<span class="prob-bar" style="width:13px"></span></td><td>28.5</td><td class="ev-high">1.32</td><td class="result-lose">10</td></tr>
+<tr ><td>7</td><td>カルロヴェローチ</td><td>4.6%<span class="prob-bar" style="width:13px"></span></td><td>19.1</td><td>0.88</td><td class="result-lose">6</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ツインクルトーズ</td><td>7.2%<span class="prob-bar" style="width:21px"></span></td><td>176.3</td><td class="ev-high">12.76</td><td class="result-lose">16</td></tr>
+<tr ><td>2</td><td>エトヴプレ</td><td>5.5%<span class="prob-bar" style="width:16px"></span></td><td>52.6</td><td class="ev-high">2.88</td><td class="result-lose">14</td></tr>
+<tr ><td>3</td><td>ジョーメッドヴィ</td><td>2.7%<span class="prob-bar" style="width:8px"></span></td><td>90.5</td><td class="ev-high">2.42</td><td class="result-lose">13</td></tr>
+<tr ><td>4</td><td>フィオライア</td><td>4.6%<span class="prob-bar" style="width:13px"></span></td><td>28.5</td><td class="ev-high">1.32</td><td class="result-lose">10</td></tr>
+<tr ><td>5</td><td>ペアポルックス</td><td>14.5%<span class="prob-bar" style="width:43px"></span></td><td>7.3</td><td class="ev-high">1.06</td><td class="result-lose">2</td></tr>
+<tr ><td>6</td><td>レイピア</td><td>9.8%<span class="prob-bar" style="width:29px"></span></td><td>9.7</td><td>0.95</td><td class="result-lose">11</td></tr>
+<tr ><td>7</td><td>プルパレイ</td><td>1.1%<span class="prob-bar" style="width:3px"></span></td><td>80.4</td><td>0.92</td><td class="result-lose">8</td></tr>
 </table>
 </div>
 </div></div>
@@ -3616,41 +4957,6 @@ function drawChart(vals, dates) {
 </div>
 </div></div>
 
-<div class="card race-card-past" data-race="202508020511_done" data-date="2025-05-10" data-grade="G2" style="">
-<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-05-10 第73回京都新聞杯(GII)<span class="grade grade-G2">G2</span> <span style="font-size:0.8em;color:#888">トッピボーン 4着</span></div>
-</div>
-<div class="accordion-body collapsed" style="max-height:500px">
-<div class="tabs" style="margin-top:8px">
-<div class="tab tab-prob active" onclick="switchTab('202508020511_done','prob')">確率Top7</div>
-<div class="tab tab-ev" onclick="switchTab('202508020511_done','ev')">EV Top7</div>
-</div>
-<div class="tab-content content-prob active">
-<table>
-<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
-<tr ><td>1</td><td>トッピボーン</td><td>8.5%<span class="prob-bar" style="width:25px"></span></td><td>2.4</td><td>0.21</td><td class="result-lose">4</td></tr>
-<tr ><td>2</td><td>オーシンエス</td><td>7.4%<span class="prob-bar" style="width:22px"></span></td><td>182.9</td><td class="ev-high">13.50</td><td class="result-lose">10</td></tr>
-<tr ><td>3</td><td>ショウヘイ</td><td>7.1%<span class="prob-bar" style="width:21px"></span></td><td>10.7</td><td>0.76</td><td class="result-win">1</td></tr>
-<tr ><td>4</td><td>ナグルファル</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>17.3</td><td class="ev-high">1.05</td><td class="result-lose">6</td></tr>
-<tr ><td>5</td><td>コーチェラバレー</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>21.7</td><td class="ev-high">1.24</td><td class="result-lose">7</td></tr>
-<tr ><td>6</td><td>ロットブラータ</td><td>5.1%<span class="prob-bar" style="width:15px"></span></td><td>63.4</td><td class="ev-high">3.25</td><td class="result-lose">8</td></tr>
-<tr ><td>7</td><td>エムズ</td><td>4.9%<span class="prob-bar" style="width:14px"></span></td><td>6.0</td><td>0.29</td><td class="result-lose">2</td></tr>
-</table>
-</div>
-<div class="tab-content content-ev">
-<table>
-<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
-<tr ><td>1</td><td>オーシンエス</td><td>7.4%<span class="prob-bar" style="width:22px"></span></td><td>182.9</td><td class="ev-high">13.50</td><td class="result-lose">10</td></tr>
-<tr ><td>2</td><td>ロットブラータ</td><td>5.1%<span class="prob-bar" style="width:15px"></span></td><td>63.4</td><td class="ev-high">3.25</td><td class="result-lose">8</td></tr>
-<tr ><td>3</td><td>コーチェラバレー</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>21.7</td><td class="ev-high">1.24</td><td class="result-lose">7</td></tr>
-<tr ><td>4</td><td>ナグルファル</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>17.3</td><td class="ev-high">1.05</td><td class="result-lose">6</td></tr>
-<tr ><td>5</td><td>ショウヘイ</td><td>7.1%<span class="prob-bar" style="width:21px"></span></td><td>10.7</td><td>0.76</td><td class="result-win">1</td></tr>
-<tr ><td>6</td><td>デルアヴァー</td><td>3.1%<span class="prob-bar" style="width:9px"></span></td><td>14.4</td><td>0.44</td><td class="result-lose">3</td></tr>
-<tr ><td>7</td><td>ネブラディスク</td><td>3.8%<span class="prob-bar" style="width:11px"></span></td><td>10.6</td><td>0.40</td><td class="result-lose">5</td></tr>
-</table>
-</div>
-</div></div>
-
 <div class="card race-card-past" data-race="202505020511_done" data-date="2025-05-10" data-grade="G3" style="">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
 <div class="card-title" style="margin:0">2025-05-10 第42回エプソムカップ(GIII)<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">ドゥラドーレ 2着</span></div>
@@ -3682,6 +4988,41 @@ function drawChart(vals, dates) {
 <tr ><td>5</td><td>ジューンテイク</td><td>10.4%<span class="prob-bar" style="width:31px"></span></td><td>24.6</td><td class="ev-high">2.55</td><td class="result-lose">16</td></tr>
 <tr ><td>6</td><td>メイショウチタン</td><td>2.0%<span class="prob-bar" style="width:6px"></span></td><td>110.1</td><td class="ev-high">2.25</td><td class="result-lose">18</td></tr>
 <tr ><td>7</td><td>トップナイフ</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>38.2</td><td class="ev-high">2.21</td><td class="result-lose">11</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202508020511_done" data-date="2025-05-10" data-grade="G2" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2025-05-10 第73回京都新聞杯(GII)<span class="grade grade-G2">G2</span> <span style="font-size:0.8em;color:#888">トッピボーン 4着</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202508020511_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202508020511_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>トッピボーン</td><td>8.5%<span class="prob-bar" style="width:25px"></span></td><td>2.4</td><td>0.21</td><td class="result-lose">4</td></tr>
+<tr ><td>2</td><td>オーシンエス</td><td>7.4%<span class="prob-bar" style="width:22px"></span></td><td>182.9</td><td class="ev-high">13.50</td><td class="result-lose">10</td></tr>
+<tr ><td>3</td><td>ショウヘイ</td><td>7.1%<span class="prob-bar" style="width:21px"></span></td><td>10.7</td><td>0.76</td><td class="result-win">1</td></tr>
+<tr ><td>4</td><td>ナグルファル</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>17.3</td><td class="ev-high">1.05</td><td class="result-lose">6</td></tr>
+<tr ><td>5</td><td>コーチェラバレー</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>21.7</td><td class="ev-high">1.24</td><td class="result-lose">7</td></tr>
+<tr ><td>6</td><td>ロットブラータ</td><td>5.1%<span class="prob-bar" style="width:15px"></span></td><td>63.4</td><td class="ev-high">3.25</td><td class="result-lose">8</td></tr>
+<tr ><td>7</td><td>エムズ</td><td>4.9%<span class="prob-bar" style="width:14px"></span></td><td>6.0</td><td>0.29</td><td class="result-lose">2</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>オーシンエス</td><td>7.4%<span class="prob-bar" style="width:22px"></span></td><td>182.9</td><td class="ev-high">13.50</td><td class="result-lose">10</td></tr>
+<tr ><td>2</td><td>ロットブラータ</td><td>5.1%<span class="prob-bar" style="width:15px"></span></td><td>63.4</td><td class="ev-high">3.25</td><td class="result-lose">8</td></tr>
+<tr ><td>3</td><td>コーチェラバレー</td><td>5.7%<span class="prob-bar" style="width:17px"></span></td><td>21.7</td><td class="ev-high">1.24</td><td class="result-lose">7</td></tr>
+<tr ><td>4</td><td>ナグルファル</td><td>6.1%<span class="prob-bar" style="width:18px"></span></td><td>17.3</td><td class="ev-high">1.05</td><td class="result-lose">6</td></tr>
+<tr ><td>5</td><td>ショウヘイ</td><td>7.1%<span class="prob-bar" style="width:21px"></span></td><td>10.7</td><td>0.76</td><td class="result-win">1</td></tr>
+<tr ><td>6</td><td>デルアヴァー</td><td>3.1%<span class="prob-bar" style="width:9px"></span></td><td>14.4</td><td>0.44</td><td class="result-lose">3</td></tr>
+<tr ><td>7</td><td>ネブラディスク</td><td>3.8%<span class="prob-bar" style="width:11px"></span></td><td>10.6</td><td>0.40</td><td class="result-lose">5</td></tr>
 </table>
 </div>
 </div></div>
@@ -4771,41 +6112,6 @@ function drawChart(vals, dates) {
 </div>
 </div></div>
 
-<div class="card race-card-past" data-race="202510011011_done" data-date="2025-02-23" data-grade="G3" style="">
-<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-02-23 第59回小倉大賞典(GIII)<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">ヤマニンウル 10着</span></div>
-</div>
-<div class="accordion-body collapsed" style="max-height:500px">
-<div class="tabs" style="margin-top:8px">
-<div class="tab tab-prob active" onclick="switchTab('202510011011_done','prob')">確率Top7</div>
-<div class="tab tab-ev" onclick="switchTab('202510011011_done','ev')">EV Top7</div>
-</div>
-<div class="tab-content content-prob active">
-<table>
-<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
-<tr ><td>1</td><td>ヤマニンウルス</td><td>30.1%<span class="prob-bar" style="width:90px"></span></td><td>6.4</td><td class="ev-high">1.92</td><td class="result-lose">10</td></tr>
-<tr ><td>2</td><td>コスモブッドレア</td><td>9.0%<span class="prob-bar" style="width:27px"></span></td><td>9.1</td><td>0.82</td><td class="result-lose">9</td></tr>
-<tr ><td>3</td><td>ラケマーダ</td><td>6.9%<span class="prob-bar" style="width:20px"></span></td><td>32.0</td><td class="ev-high">2.20</td><td class="result-lose">3</td></tr>
-<tr ><td>4</td><td>シルトホルン</td><td>6.3%<span class="prob-bar" style="width:18px"></span></td><td>4.4</td><td>0.28</td><td class="result-lose">8</td></tr>
-<tr ><td>5</td><td>ロングラン</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>6.6</td><td>0.38</td><td class="result-win">1</td></tr>
-<tr ><td>6</td><td>エピファニー</td><td>5.0%<span class="prob-bar" style="width:15px"></span></td><td>5.5</td><td>0.28</td><td class="result-lose">5</td></tr>
-<tr ><td>7</td><td>ギャラクシーナイ</td><td>4.7%<span class="prob-bar" style="width:13px"></span></td><td>32.1</td><td class="ev-high">1.50</td><td class="result-lose">12</td></tr>
-</table>
-</div>
-<div class="tab-content content-ev">
-<table>
-<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
-<tr ><td>1</td><td>ラケマーダ</td><td>6.9%<span class="prob-bar" style="width:20px"></span></td><td>32.0</td><td class="ev-high">2.20</td><td class="result-lose">3</td></tr>
-<tr ><td>2</td><td>ヤマニンウルス</td><td>30.1%<span class="prob-bar" style="width:90px"></span></td><td>6.4</td><td class="ev-high">1.92</td><td class="result-lose">10</td></tr>
-<tr ><td>3</td><td>ギャラクシーナイ</td><td>4.7%<span class="prob-bar" style="width:13px"></span></td><td>32.1</td><td class="ev-high">1.50</td><td class="result-lose">12</td></tr>
-<tr ><td>4</td><td>コスモブッドレア</td><td>9.0%<span class="prob-bar" style="width:27px"></span></td><td>9.1</td><td>0.82</td><td class="result-lose">9</td></tr>
-<tr ><td>5</td><td>グランドカリナン</td><td>4.5%<span class="prob-bar" style="width:13px"></span></td><td>17.6</td><td>0.79</td><td class="result-lose">7</td></tr>
-<tr ><td>6</td><td>セルバーグ</td><td>1.9%<span class="prob-bar" style="width:5px"></span></td><td>26.6</td><td>0.50</td><td class="result-lose">4</td></tr>
-<tr ><td>7</td><td>ホウオウプロサン</td><td>4.0%<span class="prob-bar" style="width:12px"></span></td><td>10.3</td><td>0.41</td><td class="result-lose">13</td></tr>
-</table>
-</div>
-</div></div>
-
 <div class="card race-card-past" data-race="202505010811_done" data-date="2025-02-23" data-grade="G1" style="">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
 <div class="card-title" style="margin:0">2025-02-23 フェブラリーS(GI)<span class="grade grade-G1">G1</span> <span style="font-size:0.8em;color:#888">エンペラーワ 5着 BET</span></div>
@@ -4837,6 +6143,41 @@ function drawChart(vals, dates) {
 <tr ><td>5</td><td>メイショウハリオ</td><td>4.3%<span class="prob-bar" style="width:12px"></span></td><td>68.1</td><td class="ev-high">2.93</td><td class="result-lose">6</td></tr>
 <tr ><td>6</td><td>サンデーファンデ</td><td>7.3%<span class="prob-bar" style="width:21px"></span></td><td>30.5</td><td class="ev-high">2.22</td><td class="result-lose">10</td></tr>
 <tr ><td>7</td><td>ドゥラエレーデ</td><td>7.4%<span class="prob-bar" style="width:22px"></span></td><td>29.4</td><td class="ev-high">2.19</td><td class="result-lose">11</td></tr>
+</table>
+</div>
+</div></div>
+
+<div class="card race-card-past" data-race="202510011011_done" data-date="2025-02-23" data-grade="G3" style="">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2025-02-23 第59回小倉大賞典(GIII)<span class="grade grade-G3">G3</span> <span style="font-size:0.8em;color:#888">ヤマニンウル 10着</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:500px">
+<div class="tabs" style="margin-top:8px">
+<div class="tab tab-prob active" onclick="switchTab('202510011011_done','prob')">確率Top7</div>
+<div class="tab tab-ev" onclick="switchTab('202510011011_done','ev')">EV Top7</div>
+</div>
+<div class="tab-content content-prob active">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ヤマニンウルス</td><td>30.1%<span class="prob-bar" style="width:90px"></span></td><td>6.4</td><td class="ev-high">1.92</td><td class="result-lose">10</td></tr>
+<tr ><td>2</td><td>コスモブッドレア</td><td>9.0%<span class="prob-bar" style="width:27px"></span></td><td>9.1</td><td>0.82</td><td class="result-lose">9</td></tr>
+<tr ><td>3</td><td>ラケマーダ</td><td>6.9%<span class="prob-bar" style="width:20px"></span></td><td>32.0</td><td class="ev-high">2.20</td><td class="result-lose">3</td></tr>
+<tr ><td>4</td><td>シルトホルン</td><td>6.3%<span class="prob-bar" style="width:18px"></span></td><td>4.4</td><td>0.28</td><td class="result-lose">8</td></tr>
+<tr ><td>5</td><td>ロングラン</td><td>5.8%<span class="prob-bar" style="width:17px"></span></td><td>6.6</td><td>0.38</td><td class="result-win">1</td></tr>
+<tr ><td>6</td><td>エピファニー</td><td>5.0%<span class="prob-bar" style="width:15px"></span></td><td>5.5</td><td>0.28</td><td class="result-lose">5</td></tr>
+<tr ><td>7</td><td>ギャラクシーナイ</td><td>4.7%<span class="prob-bar" style="width:13px"></span></td><td>32.1</td><td class="ev-high">1.50</td><td class="result-lose">12</td></tr>
+</table>
+</div>
+<div class="tab-content content-ev">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>EV</th><th>着</th></tr>
+<tr ><td>1</td><td>ラケマーダ</td><td>6.9%<span class="prob-bar" style="width:20px"></span></td><td>32.0</td><td class="ev-high">2.20</td><td class="result-lose">3</td></tr>
+<tr ><td>2</td><td>ヤマニンウルス</td><td>30.1%<span class="prob-bar" style="width:90px"></span></td><td>6.4</td><td class="ev-high">1.92</td><td class="result-lose">10</td></tr>
+<tr ><td>3</td><td>ギャラクシーナイ</td><td>4.7%<span class="prob-bar" style="width:13px"></span></td><td>32.1</td><td class="ev-high">1.50</td><td class="result-lose">12</td></tr>
+<tr ><td>4</td><td>コスモブッドレア</td><td>9.0%<span class="prob-bar" style="width:27px"></span></td><td>9.1</td><td>0.82</td><td class="result-lose">9</td></tr>
+<tr ><td>5</td><td>グランドカリナン</td><td>4.5%<span class="prob-bar" style="width:13px"></span></td><td>17.6</td><td>0.79</td><td class="result-lose">7</td></tr>
+<tr ><td>6</td><td>セルバーグ</td><td>1.9%<span class="prob-bar" style="width:5px"></span></td><td>26.6</td><td>0.50</td><td class="result-lose">4</td></tr>
+<tr ><td>7</td><td>ホウオウプロサン</td><td>4.0%<span class="prob-bar" style="width:12px"></span></td><td>10.3</td><td>0.41</td><td class="result-lose">13</td></tr>
 </table>
 </div>
 </div></div>
