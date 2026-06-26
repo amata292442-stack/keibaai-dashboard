@@ -74,7 +74,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 </head>
 <body>
 <h1>KeibaAI V7.5</h1>
-<div class="updated">3着以内予測（残差学習） / 更新: 2026-06-26 14:45</div>
+<div class="updated">3着以内予測（残差学習） / 更新: 2026-06-26 14:53</div>
 
 <div class="card">
 <div class="card-title">カバー率</div>
@@ -85,7 +85,17 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 </div>
 <div id="sn" style="font-size:.75em;color:#888;text-align:center">187レース確定済</div>
 </div>
-<div class="section-title">予測</div><div class="card"><div class="no-data">次回重賞の情報がありません</div></div><div class="section-title">結果</div><div class="filter-bar"><select id="fy" onchange="filterRaces()"><option value="">全年</option><option value="2026">2026年</option><option value="2025">2025年</option></select><select id="fg" onchange="filterRaces()"><option value="">全グレード</option><option value="G1">G1</option><option value="G2">G2</option><option value="G3">G3</option><option value="G1G2">G1+G2</option></select></div>
+<div class="section-title">予測</div>
+<div class="card" style="border-color:#1e3a5a">
+<div class="card-title">2026-06-28 ラジオNIKKEI賞<span class="grade grade-G3">G3</span></div>
+<div class="no-data" style="padding:8px">出馬表確定後に run_weekly.py を実行すると予測が表示されます</div>
+</div>
+
+<div class="card" style="border-color:#1e3a5a">
+<div class="card-title">2026-06-28 函館記念<span class="grade grade-G3">G3</span></div>
+<div class="no-data" style="padding:8px">出馬表確定後に run_weekly.py を実行すると予測が表示されます</div>
+</div>
+<div class="section-title">結果</div><div class="filter-bar"><select id="fy" onchange="filterRaces()"><option value="">全年</option><option value="2026">2026年</option><option value="2025">2025年</option></select><select id="fg" onchange="filterRaces()"><option value="">全グレード</option><option value="G1">G1</option><option value="G2">G2</option><option value="G3">G3</option><option value="G1G2">G1+G2</option></select></div>
 
 <div class="card cov-ok race-card-past" data-date="2026-06-21" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
