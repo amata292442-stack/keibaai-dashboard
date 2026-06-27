@@ -38,7 +38,7 @@ td{padding:6px 4px;border-bottom:1px solid #1e1e1e}
 .filter-bar select{background:#1a1a1a;color:#e0e0e0;border:1px solid #333;border-radius:6px;padding:6px 10px;font-size:.85em;flex:1}
 </style>
 <script>
-var raceData=[{d:"2026-06-21",g:"G3",c:2,hp:65},{d:"2026-06-14",g:"G1",c:3,hp:86},{d:"2026-06-13",g:"G3",c:2,hp:77},{d:"2026-06-07",g:"G1",c:1,hp:72},{d:"2026-05-31",g:"G1",c:2,hp:72},{d:"2026-05-30",g:"G3",c:2,hp:72},{d:"2026-05-24",g:"G1",c:3,hp:72},{d:"2026-05-23",g:"G3",c:2,hp:77},{d:"2026-05-16",g:"G3",c:0,hp:77},{d:"2026-05-10",g:"G1",c:2,hp:65},{d:"2026-05-09",g:"G3",c:2,hp:72},{d:"2026-05-09",g:"G2",c:1,hp:77},{d:"2026-05-03",g:"G1",c:2,hp:86},{d:"2026-05-02",g:"G2",c:1,hp:65},{d:"2026-05-02",g:"G3",c:3,hp:91},{d:"2026-04-26",g:"G2",c:2,hp:65},{d:"2026-04-19",g:"G3",c:1,hp:77},{d:"2026-04-19",g:"G1",c:2,hp:65},{d:"2026-04-18",g:"G3",c:1,hp:72},{d:"2026-04-12",g:"G1",c:2,hp:72},{d:"2026-04-11",g:"G2",c:2,hp:86},{d:"2026-04-11",g:"G2",c:3,hp:86},{d:"2026-04-05",g:"G1",c:3,hp:86},{d:"2026-04-04",g:"G3",c:1,hp:72},{d:"2026-04-04",g:"G3",c:2,hp:86},{d:"2026-03-29",g:"G3",c:1,hp:72},{d:"2026-03-28",g:"G2",c:3,hp:77},{d:"2026-03-28",g:"G3",c:3,hp:91},{d:"2026-03-22",g:"G2",c:2,hp:86},{d:"2026-03-21",g:"G3",c:1,hp:77},{d:"2026-03-21",g:"G3",c:2,hp:86},{d:"2026-03-15",g:"G2",c:1,hp:77},{d:"2026-03-15",g:"G2",c:1,hp:77},{d:"2026-03-08",g:"G2",c:3,hp:91},{d:"2026-03-07",g:"G3",c:1,hp:72},{d:"2026-03-07",g:"G2",c:2,hp:65},{d:"2026-03-01",g:"G2",c:3,hp:77},{d:"2026-02-28",g:"G3",c:2,hp:77},{d:"2026-02-22",g:"G1",c:3,hp:77},{d:"2026-02-21",g:"G3",c:2,hp:77},{d:"2026-02-21",g:"G3",c:2,hp:65},{d:"2026-02-15",g:"G3",c:3,hp:86},{d:"2026-02-15",g:"G2",c:2,hp:91},{d:"2026-02-14",g:"G3",c:1,hp:77},{d:"2026-02-10",g:"G3",c:3,hp:72},{d:"2026-02-10",g:"G3",c:3,hp:86},{d:"2026-02-01",g:"G3",c:1,hp:77},{d:"2026-02-01",g:"G3",c:0,hp:65},{d:"2026-01-25",g:"G2",c:2,hp:77},{d:"2026-01-25",g:"G2",c:1,hp:72},{d:"2026-01-24",g:"G3",c:2,hp:65},{d:"2026-01-18",g:"G3",c:2,hp:77},{d:"2026-01-18",g:"G2",c:1,hp:77},{d:"2026-01-12",g:"G3",c:2,hp:72},{d:"2026-01-11",g:"G3",c:1,hp:77},{d:"2026-01-04",g:"G3",c:2,hp:77},{d:"2026-01-04",g:"G3",c:2,hp:72},{d:"2025-12-28",g:"G1",c:2,hp:77},{d:"2025-12-27",g:"G1",c:1,hp:77},{d:"2025-12-27",g:"G2",c:3,hp:86},{d:"2025-12-21",g:"G1",c:3,hp:86},{d:"2025-12-20",g:"G3",c:1,hp:72},{d:"2025-12-14",g:"G3",c:2,hp:77},{d:"2025-12-14",g:"G1",c:2,hp:72},{d:"2025-12-13",g:"G3",c:2,hp:65},{d:"2025-12-07",g:"G1",c:2,hp:77},{d:"2025-12-06",g:"G2",c:3,hp:77},{d:"2025-12-06",g:"G3",c:2,hp:77},{d:"2025-11-30",g:"G1",c:3,hp:86},{d:"2025-11-30",g:"G3",c:2,hp:65},{d:"2025-11-29",g:"G3",c:1,hp:86},{d:"2025-11-24",g:"G2",c:3,hp:86},{d:"2025-11-23",g:"G1",c:2,hp:86},{d:"2025-11-22",g:"G3",c:2,hp:77},{d:"2025-11-16",g:"G1",c:2,hp:77},{d:"2025-11-15",g:"G3",c:3,hp:77},{d:"2025-11-15",g:"G2",c:2,hp:91},{d:"2025-11-09",g:"G2",c:2,hp:65},{d:"2025-11-09",g:"G3",c:2,hp:77},{d:"2025-11-08",g:"G2",c:1,hp:77},{d:"2025-11-02",g:"G1",c:2,hp:77},{d:"2025-11-01",g:"G3",c:2,hp:77},{d:"2025-10-26",g:"G1",c:2,hp:65},{d:"2025-10-25",g:"G3",c:2,hp:86},{d:"2025-10-19",g:"G1",c:2,hp:72},{d:"2025-10-18",g:"G2",c:3,hp:86},{d:"2025-10-13",g:"G2",c:2,hp:65},{d:"2025-10-12",g:"G2",c:2,hp:77},{d:"2025-10-11",g:"G3",c:2,hp:91},{d:"2025-10-05",g:"G2",c:3,hp:86},{d:"2025-10-05",g:"G2",c:2,hp:72},{d:"2025-09-28",g:"G1",c:1,hp:77},{d:"2025-09-27",g:"G3",c:1,hp:86},{d:"2025-09-21",g:"G2",c:3,hp:86},{d:"2025-09-21",g:"G2",c:3,hp:91},{d:"2025-09-15",g:"G2",c:2,hp:86},{d:"2025-09-14",g:"G2",c:1,hp:72},{d:"2025-09-13",g:"G3",c:3,hp:77},{d:"2025-09-07",g:"G2",c:2,hp:86},{d:"2025-09-07",g:"G2",c:2,hp:77},{d:"2025-09-06",g:"G3",c:2,hp:77},{d:"2025-09-06",g:"G3",c:1,hp:72},{d:"2025-08-31",g:"G3",c:2,hp:77},{d:"2025-08-31",g:"G3",c:2,hp:86},{d:"2025-08-24",g:"G3",c:3,hp:72},{d:"2025-08-24",g:"G3",c:2,hp:86},{d:"2025-08-17",g:"G2",c:1,hp:77},{d:"2025-08-17",g:"G3",c:1,hp:77},{d:"2025-08-10",g:"G3",c:1,hp:72},{d:"2025-08-10",g:"G3",c:3,hp:65},{d:"2025-08-09",g:"G3",c:2,hp:77},{d:"2025-08-03",g:"G3",c:3,hp:77},{d:"2025-08-03",g:"G3",c:2,hp:65},{d:"2025-07-27",g:"G3",c:2,hp:65},{d:"2025-07-27",g:"G3",c:3,hp:77},{d:"2025-07-20",g:"G3",c:2,hp:86},{d:"2025-07-20",g:"G3",c:2,hp:72},{d:"2025-07-13",g:"G3",c:2,hp:77},{d:"2025-07-06",g:"G3",c:2,hp:65},{d:"2025-06-29",g:"G3",c:0,hp:72},{d:"2025-06-29",g:"G3",c:2,hp:72},{d:"2025-06-22",g:"G3",c:3,hp:77},{d:"2025-06-22",g:"G3",c:2,hp:77},{d:"2025-06-15",g:"G1",c:1,hp:65},{d:"2025-06-14",g:"G3",c:2,hp:86},{d:"2025-06-08",g:"G1",c:2,hp:72},{d:"2025-06-01",g:"G1",c:2,hp:72},{d:"2025-06-01",g:"G2",c:1,hp:72},{d:"2025-05-31",g:"G3",c:0,hp:72},{d:"2025-05-25",g:"G1",c:2,hp:72},{d:"2025-05-24",g:"G3",c:2,hp:77},{d:"2025-05-18",g:"G1",c:2,hp:72},{d:"2025-05-17",g:"G3",c:1,hp:72},{d:"2025-05-11",g:"G1",c:1,hp:72},{d:"2025-05-10",g:"G3",c:1,hp:65},{d:"2025-05-10",g:"G2",c:2,hp:86},{d:"2025-05-04",g:"G1",c:2,hp:77},{d:"2025-05-03",g:"G2",c:3,hp:77},{d:"2025-05-03",g:"G3",c:3,hp:91},{d:"2025-04-27",g:"G2",c:1,hp:65},{d:"2025-04-27",g:"G2",c:3,hp:86},{d:"2025-04-26",g:"G2",c:3,hp:86},{d:"2025-04-20",g:"G3",c:1,hp:77},{d:"2025-04-20",g:"G1",c:3,hp:86},{d:"2025-04-19",g:"G3",c:1,hp:86},{d:"2025-04-13",g:"G1",c:3,hp:72},{d:"2025-04-12",g:"G2",c:3,hp:91},{d:"2025-04-12",g:"G2",c:1,hp:77},{d:"2025-04-06",g:"G1",c:2,hp:72},{d:"2025-04-05",g:"G3",c:2,hp:86},{d:"2025-04-05",g:"G3",c:2,hp:86},{d:"2025-03-30",g:"G3",c:2,hp:77},{d:"2025-03-30",g:"G1",c:2,hp:72},{d:"2025-03-29",g:"G2",c:3,hp:86},{d:"2025-03-29",g:"G3",c:2,hp:91},{d:"2025-03-23",g:"G3",c:2,hp:65},{d:"2025-03-23",g:"G2",c:2,hp:86},{d:"2025-03-22",g:"G3",c:3,hp:86},{d:"2025-03-22",g:"G3",c:1,hp:65},{d:"2025-03-16",g:"G2",c:2,hp:77},{d:"2025-03-16",g:"G2",c:2,hp:86},{d:"2025-03-09",g:"G2",c:2,hp:77},{d:"2025-03-08",g:"G3",c:2,hp:72},{d:"2025-03-08",g:"G2",c:1,hp:65},{d:"2025-03-02",g:"G2",c:3,hp:77},{d:"2025-03-02",g:"G2",c:1,hp:77},{d:"2025-03-01",g:"G3",c:2,hp:77},{d:"2025-02-23",g:"G1",c:3,hp:77},{d:"2025-02-23",g:"G3",c:1,hp:72},{d:"2025-02-22",g:"G3",c:1,hp:86},{d:"2025-02-22",g:"G3",c:2,hp:72},{d:"2025-02-16",g:"G3",c:2,hp:86},{d:"2025-02-16",g:"G2",c:1,hp:91},{d:"2025-02-15",g:"G3",c:1,hp:77},{d:"2025-02-09",g:"G3",c:2,hp:77},{d:"2025-02-09",g:"G3",c:3,hp:86},{d:"2025-02-02",g:"G3",c:2,hp:77},{d:"2025-02-02",g:"G3",c:1,hp:77},{d:"2025-01-26",g:"G2",c:2,hp:72},{d:"2025-01-26",g:"G2",c:3,hp:77},{d:"2025-01-25",g:"G3",c:2,hp:65},{d:"2025-01-19",g:"G3",c:0,hp:77},{d:"2025-01-19",g:"G2",c:2,hp:72},{d:"2025-01-13",g:"G3",c:2,hp:77},{d:"2025-01-12",g:"G3",c:2,hp:72},{d:"2025-01-05",g:"G3",c:1,hp:65},{d:"2025-01-05",g:"G3",c:2,hp:72},{d:"2024-12-28",g:"G1",c:1,hp:91},{d:"2024-12-22",g:"G1",c:2,hp:91},{d:"2024-12-21",g:"G2",c:1,hp:91},{d:"2024-12-15",g:"G1",c:2,hp:91},{d:"2024-12-14",g:"G3",c:2,hp:91},{d:"2024-12-08",g:"G3",c:1,hp:91},{d:"2024-12-08",g:"G1",c:1,hp:91},{d:"2024-12-07",g:"G3",c:2,hp:91},{d:"2024-12-01",g:"G1",c:2,hp:91},{d:"2024-11-30",g:"G2",c:1,hp:91},{d:"2024-11-30",g:"G3",c:1,hp:91},{d:"2024-11-24",g:"G1",c:1,hp:91},{d:"2024-11-24",g:"G3",c:2,hp:91},{d:"2024-11-23",g:"G3",c:3,hp:91},{d:"2024-11-17",g:"G1",c:1,hp:91},{d:"2024-11-16",g:"G2",c:3,hp:91},{d:"2024-11-10",g:"G3",c:1,hp:91},{d:"2024-11-10",g:"G1",c:2,hp:91},{d:"2024-11-09",g:"G3",c:3,hp:91},{d:"2024-11-09",g:"G2",c:3,hp:91},{d:"2024-11-03",g:"G2",c:1,hp:91},{d:"2024-11-03",g:"G3",c:1,hp:91},{d:"2024-11-02",g:"G2",c:2,hp:91},{d:"2024-11-02",g:"G3",c:1,hp:91},{d:"2024-10-27",g:"G1",c:1,hp:91},{d:"2024-10-26",g:"G3",c:2,hp:91},{d:"2024-10-26",g:"G2",c:1,hp:91},{d:"2024-10-20",g:"G1",c:2,hp:91},{d:"2024-10-19",g:"G2",c:2,hp:91},{d:"2024-10-14",g:"G2",c:2,hp:91},{d:"2024-10-13",g:"G1",c:3,hp:91},{d:"2024-10-06",g:"G2",c:3,hp:91},{d:"2024-10-06",g:"G2",c:1,hp:91},{d:"2024-10-05",g:"G3",c:3,hp:91},{d:"2024-09-29",g:"G1",c:2,hp:91},{d:"2024-09-28",g:"G3",c:2,hp:91}];
+var raceData=[{d:"2026-06-21",g:"G3",c:2,hp:65},{d:"2026-06-14",g:"G1",c:3,hp:86},{d:"2026-06-13",g:"G3",c:2,hp:77},{d:"2026-06-07",g:"G1",c:1,hp:72},{d:"2026-05-31",g:"G1",c:2,hp:72},{d:"2026-05-30",g:"G3",c:2,hp:72},{d:"2026-05-24",g:"G1",c:3,hp:72},{d:"2026-05-23",g:"G3",c:2,hp:77},{d:"2026-05-16",g:"G3",c:0,hp:77},{d:"2026-05-10",g:"G1",c:2,hp:65},{d:"2026-05-09",g:"G3",c:2,hp:72},{d:"2026-05-09",g:"G2",c:1,hp:77},{d:"2026-05-03",g:"G1",c:2,hp:86},{d:"2026-05-02",g:"G2",c:1,hp:65},{d:"2026-05-02",g:"G3",c:3,hp:91},{d:"2026-04-26",g:"G2",c:2,hp:65},{d:"2026-04-19",g:"G3",c:1,hp:77},{d:"2026-04-19",g:"G1",c:2,hp:65},{d:"2026-04-18",g:"G3",c:1,hp:72},{d:"2026-04-12",g:"G1",c:2,hp:72},{d:"2026-04-11",g:"G2",c:2,hp:86},{d:"2026-04-11",g:"G2",c:3,hp:86},{d:"2026-04-05",g:"G1",c:3,hp:86},{d:"2026-04-04",g:"G3",c:1,hp:72},{d:"2026-04-04",g:"G3",c:2,hp:86},{d:"2026-03-29",g:"G3",c:1,hp:72},{d:"2026-03-28",g:"G2",c:3,hp:77},{d:"2026-03-28",g:"G3",c:3,hp:91},{d:"2026-03-22",g:"G2",c:2,hp:86},{d:"2026-03-21",g:"G3",c:1,hp:77},{d:"2026-03-21",g:"G3",c:2,hp:86},{d:"2026-03-15",g:"G2",c:1,hp:77},{d:"2026-03-15",g:"G2",c:1,hp:77},{d:"2026-03-08",g:"G2",c:3,hp:91},{d:"2026-03-07",g:"G3",c:1,hp:72},{d:"2026-03-07",g:"G2",c:2,hp:65},{d:"2026-03-01",g:"G2",c:3,hp:77},{d:"2026-02-28",g:"G3",c:2,hp:77},{d:"2026-02-22",g:"G1",c:3,hp:77},{d:"2026-02-21",g:"G3",c:2,hp:77},{d:"2026-02-21",g:"G3",c:2,hp:65},{d:"2026-02-15",g:"G3",c:3,hp:86},{d:"2026-02-15",g:"G2",c:2,hp:91},{d:"2026-02-14",g:"G3",c:1,hp:77},{d:"2026-02-10",g:"G3",c:3,hp:72},{d:"2026-02-10",g:"G3",c:3,hp:86},{d:"2026-02-01",g:"G3",c:1,hp:77},{d:"2026-02-01",g:"G3",c:0,hp:65},{d:"2026-01-25",g:"G2",c:2,hp:77},{d:"2026-01-25",g:"G2",c:1,hp:72},{d:"2026-01-24",g:"G3",c:2,hp:65},{d:"2026-01-18",g:"G3",c:2,hp:77},{d:"2026-01-18",g:"G2",c:1,hp:77},{d:"2026-01-12",g:"G3",c:2,hp:72},{d:"2026-01-11",g:"G3",c:1,hp:77},{d:"2026-01-04",g:"G3",c:2,hp:77},{d:"2026-01-04",g:"G3",c:2,hp:72},{d:"2025-12-28",g:"G1",c:2,hp:77},{d:"2025-12-27",g:"G1",c:1,hp:77},{d:"2025-12-27",g:"G2",c:3,hp:86},{d:"2025-12-21",g:"G1",c:3,hp:86},{d:"2025-12-20",g:"G3",c:1,hp:72},{d:"2025-12-14",g:"G3",c:2,hp:77},{d:"2025-12-14",g:"G1",c:2,hp:72},{d:"2025-12-13",g:"G3",c:2,hp:65},{d:"2025-12-07",g:"G1",c:2,hp:77},{d:"2025-12-06",g:"G2",c:3,hp:77},{d:"2025-12-06",g:"G3",c:2,hp:77},{d:"2025-11-30",g:"G1",c:3,hp:86},{d:"2025-11-30",g:"G3",c:2,hp:65},{d:"2025-11-29",g:"G3",c:1,hp:86},{d:"2025-11-24",g:"G2",c:3,hp:86},{d:"2025-11-23",g:"G1",c:2,hp:86},{d:"2025-11-22",g:"G3",c:2,hp:77},{d:"2025-11-16",g:"G1",c:2,hp:77},{d:"2025-11-15",g:"G3",c:3,hp:77},{d:"2025-11-15",g:"G2",c:2,hp:91},{d:"2025-11-09",g:"G2",c:2,hp:65},{d:"2025-11-09",g:"G3",c:2,hp:77},{d:"2025-11-08",g:"G2",c:1,hp:77},{d:"2025-11-02",g:"G1",c:2,hp:77},{d:"2025-11-01",g:"G3",c:2,hp:77},{d:"2025-10-26",g:"G1",c:2,hp:65},{d:"2025-10-25",g:"G3",c:2,hp:86},{d:"2025-10-19",g:"G1",c:2,hp:72},{d:"2025-10-18",g:"G2",c:3,hp:86},{d:"2025-10-13",g:"G2",c:2,hp:65},{d:"2025-10-12",g:"G2",c:2,hp:77},{d:"2025-10-11",g:"G3",c:2,hp:91},{d:"2025-10-05",g:"G2",c:3,hp:86},{d:"2025-10-05",g:"G2",c:2,hp:72},{d:"2025-09-28",g:"G1",c:1,hp:77},{d:"2025-09-27",g:"G3",c:1,hp:86},{d:"2025-09-21",g:"G2",c:3,hp:86},{d:"2025-09-21",g:"G2",c:3,hp:91},{d:"2025-09-15",g:"G2",c:2,hp:86},{d:"2025-09-14",g:"G2",c:1,hp:72},{d:"2025-09-13",g:"G3",c:3,hp:77},{d:"2025-09-07",g:"G2",c:2,hp:86},{d:"2025-09-07",g:"G2",c:2,hp:77},{d:"2025-09-06",g:"G3",c:2,hp:77},{d:"2025-09-06",g:"G3",c:1,hp:72},{d:"2025-08-31",g:"G3",c:2,hp:77},{d:"2025-08-31",g:"G3",c:2,hp:86},{d:"2025-08-24",g:"G3",c:3,hp:72},{d:"2025-08-24",g:"G3",c:2,hp:86},{d:"2025-08-17",g:"G2",c:1,hp:77},{d:"2025-08-17",g:"G3",c:1,hp:77},{d:"2025-08-10",g:"G3",c:1,hp:72},{d:"2025-08-10",g:"G3",c:3,hp:65},{d:"2025-08-09",g:"G3",c:2,hp:77},{d:"2025-08-03",g:"G3",c:3,hp:77},{d:"2025-08-03",g:"G3",c:2,hp:65},{d:"2025-07-27",g:"G3",c:2,hp:65},{d:"2025-07-27",g:"G3",c:3,hp:77},{d:"2025-07-20",g:"G3",c:2,hp:86},{d:"2025-07-20",g:"G3",c:2,hp:72},{d:"2025-07-13",g:"G3",c:2,hp:77},{d:"2025-07-06",g:"G3",c:2,hp:65},{d:"2025-06-29",g:"G3",c:0,hp:72},{d:"2025-06-29",g:"G3",c:2,hp:72},{d:"2025-06-22",g:"G3",c:3,hp:77},{d:"2025-06-22",g:"G3",c:2,hp:77},{d:"2025-06-15",g:"G1",c:1,hp:65},{d:"2025-06-14",g:"G3",c:2,hp:86},{d:"2025-06-08",g:"G1",c:2,hp:72},{d:"2025-06-01",g:"G1",c:2,hp:72},{d:"2025-06-01",g:"G2",c:1,hp:72},{d:"2025-05-31",g:"G3",c:0,hp:72},{d:"2025-05-25",g:"G1",c:2,hp:72},{d:"2025-05-24",g:"G3",c:2,hp:77},{d:"2025-05-18",g:"G1",c:2,hp:72},{d:"2025-05-17",g:"G3",c:1,hp:72},{d:"2025-05-11",g:"G1",c:1,hp:72},{d:"2025-05-10",g:"G3",c:1,hp:65},{d:"2025-05-10",g:"G2",c:2,hp:86},{d:"2025-05-04",g:"G1",c:2,hp:77},{d:"2025-05-03",g:"G2",c:3,hp:77},{d:"2025-05-03",g:"G3",c:3,hp:91},{d:"2025-04-27",g:"G2",c:1,hp:65},{d:"2025-04-27",g:"G2",c:3,hp:86},{d:"2025-04-26",g:"G2",c:3,hp:86},{d:"2025-04-20",g:"G3",c:1,hp:77},{d:"2025-04-20",g:"G1",c:3,hp:86},{d:"2025-04-19",g:"G3",c:1,hp:86},{d:"2025-04-13",g:"G1",c:3,hp:72},{d:"2025-04-12",g:"G2",c:3,hp:91},{d:"2025-04-12",g:"G2",c:1,hp:77},{d:"2025-04-06",g:"G1",c:2,hp:72},{d:"2025-04-05",g:"G3",c:2,hp:86},{d:"2025-04-05",g:"G3",c:2,hp:86},{d:"2025-03-30",g:"G3",c:2,hp:77},{d:"2025-03-30",g:"G1",c:2,hp:72},{d:"2025-03-29",g:"G2",c:3,hp:86},{d:"2025-03-29",g:"G3",c:2,hp:91},{d:"2025-03-23",g:"G3",c:2,hp:65},{d:"2025-03-23",g:"G2",c:2,hp:86},{d:"2025-03-22",g:"G3",c:3,hp:86},{d:"2025-03-22",g:"G3",c:1,hp:65},{d:"2025-03-16",g:"G2",c:2,hp:77},{d:"2025-03-16",g:"G2",c:2,hp:86},{d:"2025-03-09",g:"G2",c:2,hp:77},{d:"2025-03-08",g:"G3",c:2,hp:72},{d:"2025-03-08",g:"G2",c:1,hp:65},{d:"2025-03-02",g:"G2",c:3,hp:77},{d:"2025-03-02",g:"G2",c:1,hp:77},{d:"2025-03-01",g:"G3",c:2,hp:77},{d:"2025-02-23",g:"G1",c:3,hp:77},{d:"2025-02-23",g:"G3",c:1,hp:72},{d:"2025-02-22",g:"G3",c:1,hp:86},{d:"2025-02-22",g:"G3",c:2,hp:72},{d:"2025-02-16",g:"G3",c:2,hp:86},{d:"2025-02-16",g:"G2",c:1,hp:91},{d:"2025-02-15",g:"G3",c:1,hp:77},{d:"2025-02-09",g:"G3",c:2,hp:77},{d:"2025-02-09",g:"G3",c:3,hp:86},{d:"2025-02-02",g:"G3",c:2,hp:77},{d:"2025-02-02",g:"G3",c:1,hp:77},{d:"2025-01-26",g:"G2",c:2,hp:72},{d:"2025-01-26",g:"G2",c:3,hp:77},{d:"2025-01-25",g:"G3",c:2,hp:65},{d:"2025-01-19",g:"G3",c:0,hp:77},{d:"2025-01-19",g:"G2",c:2,hp:72},{d:"2025-01-13",g:"G3",c:2,hp:77},{d:"2025-01-12",g:"G3",c:2,hp:72},{d:"2025-01-05",g:"G3",c:1,hp:65},{d:"2025-01-05",g:"G3",c:2,hp:72},{d:"2024-12-28",g:"G1",c:1,hp:91},{d:"2024-12-22",g:"G1",c:2,hp:91},{d:"2024-12-21",g:"G2",c:1,hp:91},{d:"2024-12-15",g:"G1",c:2,hp:91},{d:"2024-12-14",g:"G3",c:2,hp:91},{d:"2024-12-08",g:"G3",c:1,hp:91},{d:"2024-12-08",g:"G1",c:1,hp:91},{d:"2024-12-07",g:"G3",c:2,hp:91},{d:"2024-12-01",g:"G1",c:2,hp:91},{d:"2024-11-30",g:"G2",c:1,hp:91},{d:"2024-11-30",g:"G3",c:1,hp:91},{d:"2024-11-24",g:"G1",c:1,hp:91},{d:"2024-11-24",g:"G3",c:2,hp:91},{d:"2024-11-23",g:"G3",c:3,hp:91},{d:"2024-11-17",g:"G1",c:1,hp:91},{d:"2024-11-16",g:"G2",c:3,hp:91},{d:"2024-11-10",g:"G3",c:1,hp:91},{d:"2024-11-10",g:"G1",c:2,hp:91},{d:"2024-11-09",g:"G3",c:3,hp:91},{d:"2024-11-09",g:"G2",c:3,hp:91},{d:"2024-11-03",g:"G2",c:1,hp:91},{d:"2024-11-03",g:"G3",c:1,hp:91},{d:"2024-11-02",g:"G2",c:2,hp:91},{d:"2024-11-02",g:"G3",c:1,hp:91},{d:"2024-10-27",g:"G1",c:1,hp:91},{d:"2024-10-26",g:"G3",c:2,hp:91},{d:"2024-10-26",g:"G2",c:1,hp:91},{d:"2024-10-20",g:"G1",c:2,hp:91},{d:"2024-10-19",g:"G2",c:2,hp:91},{d:"2024-10-14",g:"G2",c:2,hp:91},{d:"2024-10-13",g:"G1",c:3,hp:91},{d:"2024-10-06",g:"G2",c:3,hp:91},{d:"2024-10-06",g:"G2",c:1,hp:91},{d:"2024-10-05",g:"G3",c:3,hp:91},{d:"2024-09-29",g:"G1",c:2,hp:91},{d:"2024-09-28",g:"G3",c:2,hp:91},{d:"2024-09-22",g:"G2",c:1,hp:91},{d:"2024-09-22",g:"G2",c:3,hp:91},{d:"2024-09-16",g:"G2",c:3,hp:91},{d:"2024-09-15",g:"G2",c:1,hp:91},{d:"2024-09-08",g:"G3",c:2,hp:91},{d:"2024-09-08",g:"G2",c:2,hp:91},{d:"2024-09-07",g:"G2",c:3,hp:91},{d:"2024-09-01",g:"G3",c:2,hp:91}];
 function filterRaces(){
   var yr=document.getElementById('fy').value;
   var gr=document.getElementById('fg').value;
@@ -74,16 +74,16 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 </head>
 <body>
 <h1>KeibaAI V7.5</h1>
-<div class="updated">3着以内予測（残差学習） / 更新: 2026-06-28 00:18</div>
+<div class="updated">3着以内予測（残差学習） / 更新: 2026-06-28 00:24</div>
 
 <div class="card">
 <div class="card-title">カバー率</div>
 <div class="stats">
 <div class="stat"><div id="s1" class="stat-value">98%</div><div class="stat-label">1頭以上</div></div>
 <div class="stat"><div id="s2" class="stat-value roi-positive">71%</div><div class="stat-label">2頭以上</div></div>
-<div class="stat"><div id="s3" class="stat-value">22%</div><div class="stat-label">3頭全部</div></div>
+<div class="stat"><div id="s3" class="stat-value">23%</div><div class="stat-label">3頭全部</div></div>
 </div>
-<div id="sn" style="font-size:.75em;color:#888;text-align:center">223レース確定済</div>
+<div id="sn" style="font-size:.75em;color:#888;text-align:center">231レース確定済</div>
 </div>
 <div class="section-title">予測</div>
 <div class="card" style="border-color:#1e3a5a">
@@ -3441,6 +3441,126 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 <tr><td>3</td><td>ロコポルティ</td><td>7.2%<span class="prob-bar" style="width:28px"></span></td><td>5.5</td><td>3</td><td class="">5</td></tr>
 <tr><td>4</td><td>ヴァンヤール</td><td>6.7%<span class="prob-bar" style="width:26px"></span></td><td>9.8</td><td>4</td><td class="">8</td></tr>
 <tr><td>5</td><td>ハギノアレグリア</td><td>6.7%<span class="prob-bar" style="width:26px"></span></td><td>10.8</td><td>5</td><td class="result-top3">1</td></tr>
+</table>
+</div></div>
+
+<div class="card cov-ng race-card-past" data-date="2024-09-22" data-grade="G2">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2024-09-22 産経賞オールカマー(GII)<span class="grade grade-G2">G2</span><span class="conf conf-high">Grade S (91%)</span> <span style="font-size:.8em">1/3的中 (レーベン)</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:400px">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th><th>着</th></tr>
+<tr><td>1</td><td>レーベンスティー</td><td>10.5%<span class="prob-bar" style="width:41px"></span></td><td>1.5</td><td>1</td><td class="result-top3">1</td></tr>
+<tr><td>2</td><td>ステラヴェローチ</td><td>7.2%<span class="prob-bar" style="width:28px"></span></td><td>5.3</td><td>2</td><td class="">6</td></tr>
+<tr><td>3</td><td>ID:100734</td><td>6.8%<span class="prob-bar" style="width:27px"></span></td><td>7.9</td><td>3</td><td class="">4</td></tr>
+<tr><td>4</td><td>サリエラ</td><td>6.7%<span class="prob-bar" style="width:26px"></span></td><td>10.0</td><td>4</td><td class="">12</td></tr>
+<tr><td>5</td><td class="edge-pos">ミクソロジー</td><td>6.3%<span class="prob-bar" style="width:25px"></span></td><td>28.7</td><td>5</td><td class="">11</td></tr>
+</table>
+</div></div>
+
+<div class="card cov-ok race-card-past" data-date="2024-09-22" data-grade="G2">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2024-09-22 神戸新聞杯(GII)<span class="grade grade-G2">G2</span><span class="conf conf-high">Grade S (91%)</span> <span style="font-size:.8em">3/3的中 (メイショ, ジューン, ショウナ)</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:400px">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th><th>着</th></tr>
+<tr><td>1</td><td>メリオーレム</td><td>8.3%<span class="prob-bar" style="width:33px"></span></td><td>3.7</td><td>1</td><td class="">5</td></tr>
+<tr><td>2</td><td>メイショウタバル</td><td>7.7%<span class="prob-bar" style="width:30px"></span></td><td>5.4</td><td>2</td><td class="result-top3">1</td></tr>
+<tr><td>3</td><td>ジューンテイク</td><td>7.6%<span class="prob-bar" style="width:30px"></span></td><td>5.9</td><td>3</td><td class="result-top3">2</td></tr>
+<tr><td>4</td><td>ショウナンラプン</td><td>7.3%<span class="prob-bar" style="width:29px"></span></td><td>8.2</td><td>4</td><td class="result-top3">3</td></tr>
+<tr><td>5</td><td>ウエストナウ</td><td>7.3%<span class="prob-bar" style="width:29px"></span></td><td>8.7</td><td>5</td><td class="">11</td></tr>
+</table>
+</div></div>
+
+<div class="card cov-ok race-card-past" data-date="2024-09-16" data-grade="G2">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2024-09-16 朝日セントライト記念(GII)<span class="grade grade-G2">G2</span><span class="conf conf-high">Grade S (91%)</span> <span style="font-size:.8em">3/3的中 (コスモキ, アーバン, エコロヴ)</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:400px">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th><th>着</th></tr>
+<tr><td>1</td><td>コスモキュランダ</td><td>8.9%<span class="prob-bar" style="width:35px"></span></td><td>2.9</td><td>1</td><td class="result-top3">2</td></tr>
+<tr><td>2</td><td>アーバンシック</td><td>8.7%<span class="prob-bar" style="width:34px"></span></td><td>3.1</td><td>2</td><td class="result-top3">1</td></tr>
+<tr><td>3</td><td>エコロヴァルツ</td><td>7.5%<span class="prob-bar" style="width:30px"></span></td><td>6.8</td><td>3</td><td class="result-top3">3</td></tr>
+<tr><td>4</td><td>ID:106595</td><td>7.2%<span class="prob-bar" style="width:28px"></span></td><td>10.3</td><td>4</td><td class="">4</td></tr>
+<tr><td>5</td><td>スティンガーグラ</td><td>7.1%<span class="prob-bar" style="width:28px"></span></td><td>10.7</td><td>5</td><td class="">5</td></tr>
+</table>
+</div></div>
+
+<div class="card cov-ng race-card-past" data-date="2024-09-15" data-grade="G2">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2024-09-15 関西TVローズS(GII)<span class="grade grade-G2">G2</span><span class="conf conf-high">Grade S (91%)</span> <span style="font-size:.8em">1/3的中 (クイーン)</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:400px">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th><th>着</th></tr>
+<tr><td>1</td><td>レガレイラ</td><td>9.9%<span class="prob-bar" style="width:39px"></span></td><td>1.7</td><td>1</td><td class="">5</td></tr>
+<tr><td>2</td><td>クイーンズウォー</td><td>7.3%<span class="prob-bar" style="width:29px"></span></td><td>4.9</td><td>2</td><td class="result-top3">1</td></tr>
+<tr><td>3</td><td>オーロラエックス</td><td>6.8%<span class="prob-bar" style="width:27px"></span></td><td>8.1</td><td>3</td><td class="">9</td></tr>
+<tr><td>4</td><td>タガノエルピーダ</td><td>6.6%<span class="prob-bar" style="width:26px"></span></td><td>12.3</td><td>4</td><td class="">4</td></tr>
+<tr><td>5</td><td>カニキュル</td><td>6.5%<span class="prob-bar" style="width:25px"></span></td><td>17.7</td><td>5</td><td class="">8</td></tr>
+</table>
+</div></div>
+
+<div class="card cov-ok race-card-past" data-date="2024-09-08" data-grade="G3">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2024-09-08 京成杯オータムH(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-high">Grade S (91%)</span> <span style="font-size:.8em">2/3的中 (アスコリ, ?)</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:400px">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th><th>着</th></tr>
+<tr><td>1</td><td>アスコリピチェー</td><td>9.8%<span class="prob-bar" style="width:39px"></span></td><td>1.5</td><td>1</td><td class="result-top3">1</td></tr>
+<tr><td>2</td><td>ID:101609</td><td>6.7%<span class="prob-bar" style="width:26px"></span></td><td>6.0</td><td>2</td><td class="">6</td></tr>
+<tr><td>3</td><td>ID:105087</td><td>6.3%<span class="prob-bar" style="width:25px"></span></td><td>10.7</td><td>3</td><td class="result-top3">3</td></tr>
+<tr><td>4</td><td>キャットファイト</td><td>6.1%<span class="prob-bar" style="width:24px"></span></td><td>14.1</td><td>4</td><td class="">9</td></tr>
+<tr><td>5</td><td>エエヤン</td><td>6.1%<span class="prob-bar" style="width:24px"></span></td><td>14.9</td><td>5</td><td class="">11</td></tr>
+</table>
+</div></div>
+
+<div class="card cov-ok race-card-past" data-date="2024-09-08" data-grade="G2">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2024-09-08 産経賞セントウルS(GII)<span class="grade grade-G2">G2</span><span class="conf conf-high">Grade S (91%)</span> <span style="font-size:.8em">2/3的中 (トウシン, ママコチ)</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:400px">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th><th>着</th></tr>
+<tr><td>1</td><td>ピューロマジック</td><td>6.5%<span class="prob-bar" style="width:25px"></span></td><td>3.9</td><td>1</td><td class="">13</td></tr>
+<tr><td>2</td><td>トウシンマカオ</td><td>6.0%<span class="prob-bar" style="width:23px"></span></td><td>6.4</td><td>2</td><td class="result-top3">1</td></tr>
+<tr><td>3</td><td>ヨシノイースター</td><td>5.9%<span class="prob-bar" style="width:23px"></span></td><td>7.8</td><td>3</td><td class="">8</td></tr>
+<tr><td>4</td><td>ママコチャ</td><td>5.8%<span class="prob-bar" style="width:23px"></span></td><td>8.0</td><td>4</td><td class="result-top3">2</td></tr>
+<tr><td>5</td><td>ダノンスコーピオ</td><td>5.7%<span class="prob-bar" style="width:22px"></span></td><td>9.0</td><td>5</td><td class="">12</td></tr>
+</table>
+</div></div>
+
+<div class="card cov-ok race-card-past" data-date="2024-09-07" data-grade="G2">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2024-09-07 紫苑S(GII)<span class="grade grade-G2">G2</span><span class="conf conf-high">Grade S (91%)</span> <span style="font-size:.8em">3/3的中 (ボンドガ, ミアネー, クリスマ)</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:400px">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th><th>着</th></tr>
+<tr><td>1</td><td>ボンドガール</td><td>9.4%<span class="prob-bar" style="width:37px"></span></td><td>3.0</td><td>1</td><td class="result-top3">3</td></tr>
+<tr><td>2</td><td>エラトー</td><td>8.3%<span class="prob-bar" style="width:33px"></span></td><td>5.2</td><td>2</td><td class="">8</td></tr>
+<tr><td>3</td><td>ミアネーロ</td><td>8.2%<span class="prob-bar" style="width:32px"></span></td><td>5.6</td><td>3</td><td class="result-top3">2</td></tr>
+<tr><td>4</td><td>ホーエリート</td><td>8.1%<span class="prob-bar" style="width:32px"></span></td><td>6.5</td><td>4</td><td class="">6</td></tr>
+<tr><td>5</td><td>クリスマスパレー</td><td>8.0%<span class="prob-bar" style="width:32px"></span></td><td>6.6</td><td>5</td><td class="result-top3">1</td></tr>
+</table>
+</div></div>
+
+<div class="card cov-ok race-card-past" data-date="2024-09-01" data-grade="G3">
+<div class="accordion-header collapsed" onclick="toggleAccordion(this)">
+<div class="card-title" style="margin:0">2024-09-01 小倉2歳S(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-high">Grade S (91%)</span> <span style="font-size:.8em">2/3的中 (エイシン, アーリン)</span></div>
+</div>
+<div class="accordion-body collapsed" style="max-height:400px">
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th><th>着</th></tr>
+<tr><td>1</td><td>エイシンワンド</td><td>8.7%<span class="prob-bar" style="width:34px"></span></td><td>4.1</td><td>1</td><td class="result-top3">1</td></tr>
+<tr><td>2</td><td>アーリントンロウ</td><td>8.5%<span class="prob-bar" style="width:33px"></span></td><td>4.7</td><td>2</td><td class="result-top3">3</td></tr>
+<tr><td>3</td><td>レイピア</td><td>8.4%<span class="prob-bar" style="width:33px"></span></td><td>4.8</td><td>3</td><td class="">4</td></tr>
+<tr><td>4</td><td>ID:104769</td><td>8.2%<span class="prob-bar" style="width:32px"></span></td><td>5.9</td><td>4</td><td class="">6</td></tr>
+<tr><td>5</td><td>ID:110112</td><td>7.8%<span class="prob-bar" style="width:31px"></span></td><td>9.2</td><td>5</td><td class="">10</td></tr>
 </table>
 </div></div>
 </body></html>
