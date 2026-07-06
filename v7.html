@@ -34,6 +34,7 @@ td{padding:6px 4px;border-bottom:1px solid #1e1e1e}
 .cov-ok{border-color:#2a4a2a;background:linear-gradient(135deg,#1a2a1a,#0a1a0a)}.cov-ng{border-color:#4a2a2a}
 .conf{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.7em;font-weight:700;margin-left:6px}
 .conf-high{background:#1b5e20;color:#a5d6a7}.conf-mid{background:#e65100;color:#ffcc80}.conf-low{background:#b71c1c;color:#ef9a9a}
+.rankgap{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.7em;font-weight:700;margin-left:6px;background:#2a2a3a;color:#9fa8da}
 .filter-bar{display:flex;gap:8px;margin-bottom:12px}
 .filter-bar select{background:#1a1a1a;color:#e0e0e0;border:1px solid #333;border-radius:6px;padding:6px 10px;font-size:.85em;flex:1}
 </style>
@@ -74,7 +75,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 </head>
 <body>
 <h1>KeibaAI V7.5</h1>
-<div class="updated">3着以内予測（残差学習） / 更新: 2026-07-05 18:00</div>
+<div class="updated">3着以内予測（残差学習） / 更新: 2026-07-07 00:11</div>
 
 <div class="card">
 <div class="card-title">カバー率</div>
@@ -87,8 +88,123 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 </div>
 <div class="section-title">予測</div>
 <div class="card" style="border-color:#1e3a5a">
-<div class="card-title">2026-07-05 北九州記念<span class="grade grade-G3">G3</span></div>
+<div class="card-title">2026-07-12 七夕賞<span class="grade grade-G3">G3</span></div>
 <div class="no-data" style="padding:8px">出馬表確定後に run_weekly.py を実行すると予測が表示されます</div>
+</div>
+
+<div class="hero">
+<div class="hero-label">Top1 予測</div>
+<div class="hero-horse">ヒルノハンブルク</div>
+<div class="hero-detail">2026-07-05 大沼S<span class="grade "></span></div>
+<div class="hero-detail">3着内確率 <span>11.7%</span> / オッズ <span>3.4倍</span></div>
+</div>
+<div class="card"><div class="card-title">2026-07-05 大沼S<span class="grade "></span><span class="conf conf-mid">Grade B (77%)</span></div>
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th></tr>
+<tr><td>1</td><td>ヒルノハンブルク</td><td>11.7%<span class="prob-bar" style="width:46px"></span></td><td>3.4</td><td>1</td></tr>
+<tr><td>2</td><td>ラタフォレスト</td><td>11.3%<span class="prob-bar" style="width:45px"></span></td><td>5.3</td><td>3</td></tr>
+<tr><td>3</td><td>コトホドサヨウニ</td><td>10.9%<span class="prob-bar" style="width:43px"></span></td><td>5.8</td><td>4</td></tr>
+<tr><td>4</td><td>プロミストジーン</td><td>10.6%<span class="prob-bar" style="width:42px"></span></td><td>5.1</td><td>2</td></tr>
+<tr><td>5</td><td>ワイドブリザード</td><td>9.9%<span class="prob-bar" style="width:39px"></span></td><td>8.1</td><td>5</td></tr>
+</table>
+</div>
+
+<div class="hero">
+<div class="hero-label">Top1 予測</div>
+<div class="hero-horse">ロジアデレード</div>
+<div class="hero-detail">2026-07-05 ジュライS<span class="grade "></span></div>
+<div class="hero-detail">3着内確率 <span>9.1%</span> / オッズ <span>4.2倍</span></div>
+</div>
+<div class="card"><div class="card-title">2026-07-05 ジュライS<span class="grade "></span><span class="conf conf-mid">Grade C (72%)</span></div>
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th></tr>
+<tr><td>1</td><td>ロジアデレード</td><td>9.1%<span class="prob-bar" style="width:36px"></span></td><td>4.2</td><td>1</td></tr>
+<tr><td>2</td><td>メリークリスマス</td><td>8.7%<span class="prob-bar" style="width:34px"></span></td><td>4.9</td><td>2</td></tr>
+<tr><td>3</td><td>シゲルショウグン</td><td>8.7%<span class="prob-bar" style="width:34px"></span></td><td>6.2</td><td>3</td></tr>
+<tr><td>4</td><td>ポッドロゴ</td><td>7.9%<span class="prob-bar" style="width:31px"></span></td><td>8.0</td><td>4</td></tr>
+<tr><td>5</td><td>ミッキーヌチバナ</td><td>7.6%<span class="prob-bar" style="width:30px"></span></td><td>8.7</td><td>5</td></tr>
+</table>
+</div>
+
+<div class="hero">
+<div class="hero-label">Top1 予測</div>
+<div class="hero-horse">フリッカージャブ</div>
+<div class="hero-detail">2026-07-05 北九州記念<span class="grade "></span></div>
+<div class="hero-detail">3着内確率 <span>10.3%</span> / オッズ <span>3.6倍</span></div>
+</div>
+<div class="card"><div class="card-title">2026-07-05 北九州記念<span class="grade "></span><span class="conf conf-mid">Grade C (72%)</span></div>
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th></tr>
+<tr><td>1</td><td>フリッカージャブ</td><td>10.3%<span class="prob-bar" style="width:41px"></span></td><td>3.6</td><td>1</td></tr>
+<tr><td>2</td><td>デアヴェローチェ</td><td>10.0%<span class="prob-bar" style="width:39px"></span></td><td>4.6</td><td>2</td></tr>
+<tr><td>3</td><td>アンクルクロス</td><td>8.8%<span class="prob-bar" style="width:35px"></span></td><td>7.2</td><td>3</td></tr>
+<tr><td>4</td><td>ヤマニンアルリフ</td><td>8.0%<span class="prob-bar" style="width:32px"></span></td><td>11.3</td><td>5</td></tr>
+<tr><td>5</td><td>ヨシノイースター</td><td>7.9%<span class="prob-bar" style="width:31px"></span></td><td>8.9</td><td>4</td></tr>
+</table>
+</div>
+
+<div class="hero">
+<div class="hero-label">Top1 予測</div>
+<div class="hero-horse">サウスバンク</div>
+<div class="hero-detail">2026-07-04 TVh杯<span class="grade "></span></div>
+<div class="hero-detail">3着内確率 <span>9.6%</span> / オッズ <span>2.8倍</span></div>
+</div>
+<div class="card"><div class="card-title">2026-07-04 TVh杯<span class="grade "></span><span class="conf conf-mid">Grade B (77%)</span></div>
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th></tr>
+<tr><td>1</td><td>サウスバンク</td><td>9.6%<span class="prob-bar" style="width:38px"></span></td><td>2.8</td><td>1</td></tr>
+<tr><td>2</td><td>マーブルパレス</td><td>8.3%<span class="prob-bar" style="width:33px"></span></td><td>5.7</td><td>3</td></tr>
+<tr><td>3</td><td>アンジュプロミス</td><td>7.9%<span class="prob-bar" style="width:31px"></span></td><td>5.5</td><td>2</td></tr>
+<tr><td>4</td><td>シカゴスティング</td><td>7.0%<span class="prob-bar" style="width:28px"></span></td><td>10.3</td><td>4</td></tr>
+<tr><td>5</td><td>メルトユアハート</td><td>6.9%<span class="prob-bar" style="width:27px"></span></td><td>11.3</td><td>5</td></tr>
+</table>
+</div>
+
+<div class="hero">
+<div class="hero-label">Top1 予測</div>
+<div class="hero-horse">ゲイルライダー</div>
+<div class="hero-detail">2026-07-04 TUF杯<span class="grade "></span></div>
+<div class="hero-detail">3着内確率 <span>15.1%</span> / オッズ <span>1.6倍</span></div>
+</div>
+<div class="card"><div class="card-title">2026-07-04 TUF杯<span class="grade "></span><span class="conf conf-high">Grade S (91%)</span></div>
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th></tr>
+<tr><td>1</td><td>ゲイルライダー</td><td>15.1%<span class="prob-bar" style="width:60px"></span></td><td>1.6</td><td>1</td></tr>
+<tr><td>2</td><td>テセラリアン</td><td>12.0%<span class="prob-bar" style="width:48px"></span></td><td>6.9</td><td>3</td></tr>
+<tr><td>3</td><td>イリフィ</td><td>11.8%<span class="prob-bar" style="width:47px"></span></td><td>6.3</td><td>2</td></tr>
+<tr><td>4</td><td>カネショウレジェ</td><td>11.2%<span class="prob-bar" style="width:44px"></span></td><td>9.2</td><td>4</td></tr>
+<tr><td>5</td><td class="edge-pos">アイアムユウシュ</td><td>9.8%<span class="prob-bar" style="width:39px"></span></td><td>13.4</td><td>5</td></tr>
+</table>
+</div>
+
+<div class="hero">
+<div class="hero-label">Top1 予測</div>
+<div class="hero-horse">サウンドムーブ</div>
+<div class="hero-detail">2026-07-04 博多S<span class="grade "></span></div>
+<div class="hero-detail">3着内確率 <span>11.7%</span> / オッズ <span>2.2倍</span></div>
+</div>
+<div class="card"><div class="card-title">2026-07-04 博多S<span class="grade "></span><span class="conf conf-high">Grade A (86%)</span></div>
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th></tr>
+<tr><td>1</td><td>サウンドムーブ</td><td>11.7%<span class="prob-bar" style="width:46px"></span></td><td>2.2</td><td>1</td></tr>
+<tr><td>2</td><td>ネブラディスク</td><td>11.5%<span class="prob-bar" style="width:45px"></span></td><td>2.4</td><td>2</td></tr>
+<tr><td>3</td><td>レディーミコノス</td><td>8.2%<span class="prob-bar" style="width:32px"></span></td><td>12.9</td><td>3</td></tr>
+<tr><td>4</td><td>アラタマフェーヴ</td><td>7.9%<span class="prob-bar" style="width:31px"></span></td><td>14.6</td><td>4</td></tr>
+<tr><td>5</td><td>ヴィスマール</td><td>7.3%<span class="prob-bar" style="width:29px"></span></td><td>16.2</td><td>5</td></tr>
+</table>
+</div>
+
+<div class="hero">
+<div class="hero-label">Top1 予測</div>
+<div class="hero-horse">ID:107116</div>
+<div class="hero-detail">2010-02-14 ダイヤモンドS(GIII)<span class="grade grade-G3">G3</span></div>
+<div class="hero-detail">3着内確率 <span>0.0%</span> / オッズ <span>0.0倍</span></div>
+</div>
+<div class="card"><div class="card-title">2010-02-14 ダイヤモンドS(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-?">Grade ? (0%)</span></div>
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th></tr>
+<tr><td>1</td><td>ID:107116</td><td>0.0%<span class="prob-bar" style="width:0px"></span></td><td>0.0</td><td>-</td></tr>
+</table>
 </div>
 <div class="section-title">結果</div><div class="filter-bar"><select id="fy" onchange="filterRaces()"><option value="">全年</option><option value="2026">2026年</option><option value="2025">2025年</option><option value="2024">2024年</option></select><select id="fg" onchange="filterRaces()"><option value="">全グレード</option><option value="G1">G1</option><option value="G2">G2</option><option value="G3">G3</option><option value="G1G2">G1+G2</option></select></div>
 
@@ -109,7 +225,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2026-06-28" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-06-28 ラジオNIKKEI賞(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.8em">2/3的中 (リッツパ, サノノグ)</span></div>
+<div class="card-title" style="margin:0">2026-06-28 ラジオNIKKEI賞(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span><span class="rankgap">市場乖離 +1</span> <span style="font-size:.8em">2/3的中 (リッツパ, サノノグ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -125,7 +241,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2026-06-21" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-06-21 府中牝馬S(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-high">Grade A (86%)</span> <span style="font-size:.8em">1/3的中 (セキトバ)</span></div>
+<div class="card-title" style="margin:0">2026-06-21 府中牝馬S(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-high">Grade A (86%)</span><span class="rankgap">市場乖離 +1</span> <span style="font-size:.8em">1/3的中 (セキトバ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -215,7 +331,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2026-05-31" data-grade="G2">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-05-31 目黒記念(GII)<span class="grade grade-G2">G2</span><span class="conf conf-high">Grade S (91%)</span> <span style="font-size:.8em">2/3的中 (ダノンシ, ファイア)</span></div>
+<div class="card-title" style="margin:0">2026-05-31 目黒記念(GII)<span class="grade grade-G2">G2</span><span class="conf conf-high">Grade S (91%)</span><span class="rankgap">市場乖離 +1</span> <span style="font-size:.8em">2/3的中 (ダノンシ, ファイア)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -410,7 +526,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2026-04-26" data-grade="G2">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-04-26 読売マイラーズC(GII)<span class="grade grade-G2">G2</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.8em">2/3的中 (アドマイ, ベラジオ)</span></div>
+<div class="card-title" style="margin:0">2026-04-26 読売マイラーズC(GII)<span class="grade grade-G2">G2</span><span class="conf conf-low">Grade D (65%)</span><span class="rankgap">市場乖離 +1</span> <span style="font-size:.8em">2/3的中 (アドマイ, ベラジオ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -425,7 +541,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2026-04-25" data-grade="G2">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-04-25 テレビ東京杯青葉賞(GII)<span class="grade grade-G2">G2</span><span class="conf conf-high">Grade A (86%)</span> <span style="font-size:.8em">2/3的中 (タイダル, ゴーイン)</span></div>
+<div class="card-title" style="margin:0">2026-04-25 テレビ東京杯青葉賞(GII)<span class="grade grade-G2">G2</span><span class="conf conf-high">Grade A (86%)</span><span class="rankgap">市場乖離 +2</span> <span style="font-size:.8em">2/3的中 (タイダル, ゴーイン)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -560,7 +676,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2026-04-04" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-04-04 チャーチルダウンズC(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-high">Grade A (86%)</span> <span style="font-size:.8em">2/3的中 (バルセシ, アスクイ)</span></div>
+<div class="card-title" style="margin:0">2026-04-04 チャーチルダウンズC(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-high">Grade A (86%)</span><span class="rankgap">市場乖離 +1</span> <span style="font-size:.8em">2/3的中 (バルセシ, アスクイ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -575,7 +691,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2026-03-29" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-03-29 マーチS(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.8em">1/3的中 (アクショ)</span></div>
+<div class="card-title" style="margin:0">2026-03-29 マーチS(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span><span class="rankgap">市場乖離 +1</span> <span style="font-size:.8em">1/3的中 (アクショ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -590,7 +706,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2026-03-29" data-grade="G1">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-03-29 高松宮記念(GI)<span class="grade grade-G1">G1</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.8em">0/3的中</span></div>
+<div class="card-title" style="margin:0">2026-03-29 高松宮記念(GI)<span class="grade grade-G1">G1</span><span class="conf conf-mid">Grade C (72%)</span><span class="rankgap">市場乖離 +2</span> <span style="font-size:.8em">0/3的中</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -1822,7 +1938,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2025-08-24" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-08-24 キーンランドC(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.8em">3/3的中 (パンジャ, カルプス, ペアポル)</span></div>
+<div class="card-title" style="margin:0">2025-08-24 キーンランドC(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span><span class="rankgap">市場乖離 +1</span> <span style="font-size:.8em">3/3的中 (パンジャ, カルプス, ペアポル)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -2242,7 +2358,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2025-05-17" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-05-17 新潟大賞典(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.8em">1/3的中 (サブマリ)</span></div>
+<div class="card-title" style="margin:0">2025-05-17 新潟大賞典(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span><span class="rankgap">市場乖離 +1</span> <span style="font-size:.8em">1/3的中 (サブマリ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -3742,7 +3858,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2024-08-31" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2024-08-31 札幌2歳S(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-high">Grade A (86%)</span> <span style="font-size:.8em">2/3的中 (ファイア, マジック)</span></div>
+<div class="card-title" style="margin:0">2024-08-31 札幌2歳S(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-high">Grade A (86%)</span><span class="rankgap">市場乖離 +1</span> <span style="font-size:.8em">2/3的中 (ファイア, マジック)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
