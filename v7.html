@@ -31,6 +31,8 @@ td{padding:6px 4px;border-bottom:1px solid #1e1e1e}
 .hero{background:linear-gradient(135deg,#0a1a2a,#0a0a1a);border:1px solid #1e3a5a;border-radius:12px;padding:16px;margin-bottom:12px}
 .hero-label{font-size:.7em;color:#42a5f5;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
 .hero-horse{font-size:1.3em;font-weight:700;color:#fff}.hero-detail{font-size:.85em;color:#aaa;margin-top:4px}.hero-detail span{color:#fff;font-weight:600}
+.hero-diag-label{font-size:.7em;color:#666;text-transform:uppercase;letter-spacing:1px;margin-top:10px;padding-top:8px;border-top:1px solid #1e3a5a}
+.edge-badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.7em;font-weight:700;margin-left:6px;background:#1b3a1b;color:#81c784}
 .cov-ok{border-color:#2a4a2a;background:linear-gradient(135deg,#1a2a1a,#0a1a0a)}.cov-ng{border-color:#4a2a2a}
 .conf{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.7em;font-weight:700;margin-left:6px}
 .conf-high{background:#1b5e20;color:#a5d6a7}.conf-mid{background:#e65100;color:#ffcc80}.conf-low{background:#b71c1c;color:#ef9a9a}
@@ -75,7 +77,8 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 </head>
 <body>
 <h1>KeibaAI V7.5</h1>
-<div class="updated">3着以内予測（残差学習） / 更新: 2026-07-07 00:32</div>
+<div class="updated">3着以内予測（残差学習） / 更新: 2026-07-10 21:43</div>
+<div class="bias-info">Grade S〜D: レースの読みやすさ ／ 市場乖離: AIと市場の順位差(参考情報) ／ 緑文字: 市場より割安と推定</div>
 
 <div class="card">
 <div class="card-title">カバー率</div>
@@ -87,9 +90,118 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 <div id="sn" style="font-size:.75em;color:#888;text-align:center">267レース確定済</div>
 </div>
 <div class="section-title">予測</div>
-<div class="card" style="border-color:#1e3a5a">
-<div class="card-title">2026-07-12 七夕賞<span class="grade grade-G3">G3</span></div>
-<div class="no-data" style="padding:8px">出馬表確定後に run_weekly.py を実行すると予測が表示されます</div>
+<div class="hero">
+<div class="hero-label">Top1 予測</div>
+<div class="hero-horse">レディネス</div>
+<div class="hero-detail">2026-07-12 巴賞<span class="grade "></span></div>
+<div class="hero-detail">3着内確率 <span>9.4%</span> / オッズ <span>4.7倍</span></div>
+<div class="hero-diag-label">診断</div>
+<div class="hero-detail"><span class="conf conf-mid">Grade C (72%)</span></div>
+</div>
+<div class="card"><div class="card-title">2026-07-12 巴賞<span class="grade "></span><span class="conf conf-mid">Grade C (72%)</span></div>
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th></tr>
+<tr><td>1</td><td>レディネス</td><td>9.4%<span class="prob-bar" style="width:37px"></span></td><td>4.7</td><td>1</td></tr>
+<tr><td>2</td><td>リラボニート</td><td>8.7%<span class="prob-bar" style="width:34px"></span></td><td>7.4</td><td>3</td></tr>
+<tr><td>3</td><td>シルトホルン</td><td>8.4%<span class="prob-bar" style="width:33px"></span></td><td>6.3</td><td>2</td></tr>
+<tr><td>4</td><td>ストレイトトーカ</td><td>8.3%<span class="prob-bar" style="width:33px"></span></td><td>7.4</td><td>4</td></tr>
+<tr><td>5</td><td>パレハ</td><td>8.1%<span class="prob-bar" style="width:32px"></span></td><td>9.4</td><td>8</td></tr>
+</table>
+</div>
+
+<div class="hero">
+<div class="hero-label">Top1 予測</div>
+<div class="hero-horse">サヴォーナ</div>
+<div class="hero-detail">2026-07-12 七夕賞<span class="grade "></span></div>
+<div class="hero-detail">3着内確率 <span>8.6%</span> / オッズ <span>5.2倍</span></div>
+<div class="hero-diag-label">診断</div>
+<div class="hero-detail"><span class="conf conf-mid">Grade C (72%)</span><span class="rankgap">市場乖離 +1</span></div>
+</div>
+<div class="card"><div class="card-title">2026-07-12 七夕賞<span class="grade "></span><span class="conf conf-mid">Grade C (72%)</span></div>
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th></tr>
+<tr><td>1</td><td>サヴォーナ</td><td>8.6%<span class="prob-bar" style="width:34px"></span></td><td>5.2</td><td>2</td></tr>
+<tr><td>2</td><td>カラマティアノス</td><td>8.6%<span class="prob-bar" style="width:34px"></span></td><td>4.9</td><td>1</td></tr>
+<tr><td>3</td><td>バトルボーン</td><td>8.0%<span class="prob-bar" style="width:31px"></span></td><td>5.6</td><td>3</td></tr>
+<tr><td>4</td><td>ヤマニンブークリ</td><td>8.0%<span class="prob-bar" style="width:31px"></span></td><td>7.6</td><td>4</td></tr>
+<tr><td>5</td><td>アスクナイスショ</td><td>7.3%<span class="prob-bar" style="width:29px"></span></td><td>8.2</td><td>5</td></tr>
+</table>
+</div>
+
+<div class="hero">
+<div class="hero-label">Top1 予測</div>
+<div class="hero-horse">モックモック</div>
+<div class="hero-detail">2026-07-12 阿蘇S<span class="grade "></span></div>
+<div class="hero-detail">3着内確率 <span>11.8%</span> / オッズ <span>3.3倍</span></div>
+<div class="hero-diag-label">診断</div>
+<div class="hero-detail"><span class="conf conf-mid">Grade B (77%)</span></div>
+</div>
+<div class="card"><div class="card-title">2026-07-12 阿蘇S<span class="grade "></span><span class="conf conf-mid">Grade B (77%)</span></div>
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th></tr>
+<tr><td>1</td><td>モックモック</td><td>11.8%<span class="prob-bar" style="width:47px"></span></td><td>3.3</td><td>1</td></tr>
+<tr><td>2</td><td>モンブランミノル</td><td>11.0%<span class="prob-bar" style="width:44px"></span></td><td>4.3</td><td>2</td></tr>
+<tr><td>3</td><td>レイナデアルシー</td><td>10.8%<span class="prob-bar" style="width:43px"></span></td><td>6.4</td><td>3</td></tr>
+<tr><td>4</td><td>ジンセイ</td><td>10.2%<span class="prob-bar" style="width:40px"></span></td><td>8.3</td><td>4</td></tr>
+<tr><td>5</td><td>ゴッドブルービー</td><td>9.9%<span class="prob-bar" style="width:39px"></span></td><td>8.5</td><td>5</td></tr>
+</table>
+</div>
+
+<div class="hero">
+<div class="hero-label">Top1 予測</div>
+<div class="hero-horse">ダンツファイター</div>
+<div class="hero-detail">2026-07-11 五稜郭S<span class="grade "></span></div>
+<div class="hero-detail">3着内確率 <span>10.4%</span> / オッズ <span>3.6倍</span></div>
+<div class="hero-diag-label">診断</div>
+<div class="hero-detail"><span class="conf conf-mid">Grade B (77%)</span></div>
+</div>
+<div class="card"><div class="card-title">2026-07-11 五稜郭S<span class="grade "></span><span class="conf conf-mid">Grade B (77%)</span></div>
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th></tr>
+<tr><td>1</td><td>ダンツファイター</td><td>10.4%<span class="prob-bar" style="width:41px"></span></td><td>3.6</td><td>1</td></tr>
+<tr><td>2</td><td>カテリーナ</td><td>10.2%<span class="prob-bar" style="width:40px"></span></td><td>5.0</td><td>3</td></tr>
+<tr><td>3</td><td>インパクトシー</td><td>10.1%<span class="prob-bar" style="width:40px"></span></td><td>4.1</td><td>2</td></tr>
+<tr><td>4</td><td>インヴォーグ</td><td>9.4%<span class="prob-bar" style="width:37px"></span></td><td>7.0</td><td>4</td></tr>
+<tr><td>5</td><td>ミッキージュエリ</td><td>8.3%<span class="prob-bar" style="width:33px"></span></td><td>11.6</td><td>5</td></tr>
+</table>
+</div>
+
+<div class="hero">
+<div class="hero-label">Top1 予測</div>
+<div class="hero-horse">クリエープキー</div>
+<div class="hero-detail">2026-07-11 安達太良S<span class="grade "></span></div>
+<div class="hero-detail">3着内確率 <span>14.0%</span> / オッズ <span>3.3倍</span></div>
+<div class="hero-diag-label">診断</div>
+<div class="hero-detail"><span class="conf conf-mid">Grade B (77%)</span></div>
+</div>
+<div class="card"><div class="card-title">2026-07-11 安達太良S<span class="grade "></span><span class="conf conf-mid">Grade B (77%)</span></div>
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th></tr>
+<tr><td>1</td><td>クリエープキー</td><td>14.0%<span class="prob-bar" style="width:56px"></span></td><td>3.3</td><td>1</td></tr>
+<tr><td>2</td><td>レッドアヴァンテ</td><td>13.3%<span class="prob-bar" style="width:53px"></span></td><td>4.6</td><td>2</td></tr>
+<tr><td>3</td><td>カウンターセブン</td><td>12.6%<span class="prob-bar" style="width:50px"></span></td><td>5.3</td><td>3</td></tr>
+<tr><td>4</td><td>マサノカナリア</td><td>12.6%<span class="prob-bar" style="width:50px"></span></td><td>5.9</td><td>4</td></tr>
+<tr><td>5</td><td>ゾンニッヒ</td><td>11.0%<span class="prob-bar" style="width:44px"></span></td><td>8.3</td><td>5</td></tr>
+</table>
+</div>
+
+<div class="hero">
+<div class="hero-label">Top1 予測</div>
+<div class="hero-horse">ハヤテノツバサ</div>
+<div class="hero-detail">2026-07-11 釜山S<span class="grade "></span></div>
+<div class="hero-detail">3着内確率 <span>12.0%</span> / オッズ <span>3.6倍</span></div>
+<div class="hero-diag-label">診断</div>
+<div class="hero-detail"><span class="conf conf-mid">Grade B (77%)</span><span class="rankgap">市場乖離 +1</span></div>
+</div>
+<div class="card"><div class="card-title">2026-07-11 釜山S<span class="grade "></span><span class="conf conf-mid">Grade B (77%)</span></div>
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th></tr>
+<tr><td>1</td><td>ハヤテノツバサ</td><td>12.0%<span class="prob-bar" style="width:47px"></span></td><td>3.6</td><td>2</td></tr>
+<tr><td>2</td><td>アメリカンビキニ</td><td>11.9%<span class="prob-bar" style="width:47px"></span></td><td>3.2</td><td>1</td></tr>
+<tr><td>3</td><td>ヴェロクオーレ</td><td>10.4%<span class="prob-bar" style="width:41px"></span></td><td>7.0</td><td>3</td></tr>
+<tr><td>4</td><td>スノーサイレンス</td><td>9.8%<span class="prob-bar" style="width:39px"></span></td><td>9.4</td><td>4</td></tr>
+<tr><td>5</td><td>メイショウキルギ</td><td>8.8%<span class="prob-bar" style="width:35px"></span></td><td>14.2</td><td>8</td></tr>
+</table>
 </div>
 <div class="section-title">結果</div><div class="filter-bar"><select id="fy" onchange="filterRaces()"><option value="">全年</option><option value="2026">2026年</option><option value="2025">2025年</option><option value="2024">2024年</option></select><select id="fg" onchange="filterRaces()"><option value="">全グレード</option><option value="G1">G1</option><option value="G2">G2</option><option value="G3">G3</option><option value="G1G2">G1+G2</option></select></div>
 
@@ -2693,7 +2805,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2025-03-23" data-grade="G2">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-03-23 第73回阪神大賞典(GII)<span class="grade grade-G2">G2</span><span class="conf conf-high">Grade A (86%)</span> <span style="font-size:.8em">2/3的中 (サンライ, ブローザ)</span></div>
+<div class="card-title" style="margin:0">2025-03-23 阪神大賞典(GII)<span class="grade grade-G2">G2</span><span class="conf conf-high">Grade A (86%)</span> <span style="font-size:.8em">2/3的中 (サンライ, ブローザ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
