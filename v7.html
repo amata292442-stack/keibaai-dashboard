@@ -41,7 +41,7 @@ td{padding:6px 4px;border-bottom:1px solid #1e1e1e}
 .filter-bar select{background:#1a1a1a;color:#e0e0e0;border:1px solid #333;border-radius:6px;padding:6px 10px;font-size:.85em;flex:1}
 </style>
 <script>
-var raceData=[{d:"2026-08-23",g:"",c:3,hp:86},{d:"2026-08-16",g:"",c:1,hp:72},{d:"2026-08-16",g:"",c:3,hp:72},{d:"2026-08-09",g:"",c:3,hp:77},{d:"2026-08-09",g:"",c:2,hp:65},{d:"2026-08-08",g:"",c:2,hp:86},{d:"2026-08-02",g:"",c:2,hp:77},{d:"2026-08-02",g:"",c:1,hp:72},{d:"2026-07-26",g:"",c:1,hp:86},{d:"2026-07-26",g:"",c:3,hp:72},{d:"2026-07-26",g:"",c:2,hp:72},{d:"2026-07-26",g:"",c:1,hp:86},{d:"2026-07-26",g:"",c:3,hp:72},{d:"2026-07-25",g:"",c:2,hp:91},{d:"2026-07-25",g:"",c:2,hp:65},{d:"2026-07-25",g:"",c:2,hp:86},{d:"2026-07-19",g:"",c:2,hp:77},{d:"2026-07-19",g:"",c:2,hp:72},{d:"2026-07-19",g:"",c:1,hp:65},{d:"2026-07-18",g:"",c:3,hp:72},{d:"2026-07-18",g:"",c:1,hp:72},{d:"2026-07-18",g:"",c:1,hp:77},{d:"2026-07-12",g:"",c:1,hp:72},{d:"2026-07-12",g:"",c:1,hp:72},{d:"2026-07-12",g:"",c:1,hp:77},{d:"2026-07-11",g:"",c:2,hp:77},{d:"2026-07-11",g:"",c:2,hp:77},{d:"2026-07-11",g:"",c:2,hp:77},{d:"2026-07-05",g:"",c:2,hp:77},{d:"2026-07-05",g:"",c:2,hp:77},{d:"2026-07-05",g:"G3",c:2,hp:77},{d:"2026-07-04",g:"",c:2,hp:77},{d:"2026-07-04",g:"",c:2,hp:91},{d:"2026-07-04",g:"",c:2,hp:86},{d:"2026-06-28",g:"G3",c:0,hp:72},{d:"2026-06-28",g:"G3",c:2,hp:72},{d:"2026-06-21",g:"G3",c:1,hp:86},{d:"2026-06-21",g:"G3",c:2,hp:65},{d:"2026-06-14",g:"G1",c:3,hp:72},{d:"2026-06-13",g:"G3",c:2,hp:77},{d:"2026-06-07",g:"G1",c:1,hp:72},{d:"2026-05-31",g:"G1",c:2,hp:72},{d:"2026-05-31",g:"G2",c:2,hp:91},{d:"2026-05-30",g:"G3",c:2,hp:72},{d:"2026-05-24",g:"G1",c:3,hp:72},{d:"2026-05-23",g:"G3",c:2,hp:77},{d:"2026-05-17",g:"G1",c:3,hp:72},{d:"2026-05-16",g:"G3",c:0,hp:77},{d:"2026-05-10",g:"G1",c:2,hp:65},{d:"2026-05-09",g:"G3",c:2,hp:72},{d:"2026-05-09",g:"G2",c:1,hp:77},{d:"2026-05-03",g:"G1",c:2,hp:86},{d:"2026-05-02",g:"G2",c:1,hp:65},{d:"2026-05-02",g:"G3",c:3,hp:91},{d:"2026-04-26",g:"G2",c:3,hp:91},{d:"2026-04-26",g:"G2",c:2,hp:65},{d:"2026-04-25",g:"G2",c:2,hp:86},{d:"2026-04-19",g:"G3",c:1,hp:77},{d:"2026-04-19",g:"G1",c:2,hp:65},{d:"2026-04-18",g:"G3",c:1,hp:72},{d:"2026-04-12",g:"G1",c:2,hp:72},{d:"2026-04-11",g:"G2",c:2,hp:86},{d:"2026-04-11",g:"G2",c:3,hp:86},{d:"2026-04-05",g:"G1",c:3,hp:86},{d:"2026-04-04",g:"G3",c:1,hp:72},{d:"2026-04-04",g:"G3",c:2,hp:86},{d:"2026-03-29",g:"G3",c:1,hp:72},{d:"2026-03-29",g:"G1",c:0,hp:72},{d:"2026-03-28",g:"G2",c:3,hp:77},{d:"2026-03-28",g:"G3",c:3,hp:91},{d:"2026-03-22",g:"G3",c:0,hp:72},{d:"2026-03-22",g:"G2",c:2,hp:86},{d:"2026-03-21",g:"G3",c:1,hp:77},{d:"2026-03-21",g:"G3",c:2,hp:86},{d:"2026-03-15",g:"G2",c:1,hp:77},{d:"2026-03-15",g:"G2",c:1,hp:77},{d:"2026-03-08",g:"G2",c:3,hp:91},{d:"2026-03-07",g:"G3",c:1,hp:72},{d:"2026-03-07",g:"G2",c:2,hp:65},{d:"2026-03-01",g:"G2",c:3,hp:77},{d:"2026-03-01",g:"G2",c:2,hp:86},{d:"2026-02-28",g:"G3",c:2,hp:77},{d:"2026-02-22",g:"G1",c:3,hp:77},{d:"2026-02-22",g:"G3",c:2,hp:72},{d:"2026-02-21",g:"G3",c:2,hp:77},{d:"2026-02-21",g:"G3",c:2,hp:65},{d:"2026-02-15",g:"G3",c:3,hp:86},{d:"2026-02-15",g:"G2",c:2,hp:91},{d:"2026-02-14",g:"G3",c:1,hp:77},{d:"2026-02-10",g:"G3",c:3,hp:72},{d:"2026-02-10",g:"G3",c:3,hp:86},{d:"2026-02-01",g:"G3",c:1,hp:77},{d:"2026-02-01",g:"G3",c:0,hp:65},{d:"2026-01-25",g:"G2",c:2,hp:77},{d:"2026-01-25",g:"G2",c:1,hp:72},{d:"2026-01-24",g:"G3",c:2,hp:65},{d:"2026-01-18",g:"G3",c:2,hp:77},{d:"2026-01-18",g:"G2",c:1,hp:77},{d:"2026-01-12",g:"G3",c:2,hp:72},{d:"2026-01-11",g:"G3",c:1,hp:77},{d:"2026-01-04",g:"G3",c:2,hp:77},{d:"2026-01-04",g:"G3",c:2,hp:72},{d:"2025-12-28",g:"G1",c:2,hp:77},{d:"2025-12-27",g:"G1",c:1,hp:77},{d:"2025-12-27",g:"G2",c:3,hp:86},{d:"2025-12-21",g:"G1",c:3,hp:86},{d:"2025-12-20",g:"G3",c:1,hp:72},{d:"2025-12-14",g:"G3",c:2,hp:77},{d:"2025-12-14",g:"G1",c:2,hp:72},{d:"2025-12-13",g:"G3",c:2,hp:65},{d:"2025-12-07",g:"G1",c:2,hp:77},{d:"2025-12-06",g:"G2",c:3,hp:77},{d:"2025-12-06",g:"G3",c:2,hp:77},{d:"2025-11-30",g:"G1",c:3,hp:72},{d:"2025-11-30",g:"G3",c:2,hp:65},{d:"2025-11-29",g:"G3",c:1,hp:86},{d:"2025-11-24",g:"G2",c:3,hp:86},{d:"2025-11-23",g:"G1",c:2,hp:86},{d:"2025-11-22",g:"G3",c:2,hp:77},{d:"2025-11-16",g:"G1",c:2,hp:77},{d:"2025-11-15",g:"G3",c:3,hp:77},{d:"2025-11-15",g:"G2",c:2,hp:91},{d:"2025-11-09",g:"G2",c:2,hp:65},{d:"2025-11-09",g:"G3",c:2,hp:72},{d:"2025-11-08",g:"G2",c:1,hp:77},{d:"2025-11-02",g:"G1",c:2,hp:77},{d:"2025-11-01",g:"G3",c:2,hp:77},{d:"2025-10-26",g:"G1",c:2,hp:65},{d:"2025-10-25",g:"G3",c:2,hp:86},{d:"2025-10-19",g:"G1",c:2,hp:72},{d:"2025-10-18",g:"G2",c:3,hp:86},{d:"2025-10-13",g:"G2",c:2,hp:65},{d:"2025-10-12",g:"G2",c:2,hp:77},{d:"2025-10-11",g:"G3",c:2,hp:91},{d:"2025-10-05",g:"G2",c:3,hp:86},{d:"2025-10-05",g:"G2",c:2,hp:72},{d:"2025-09-28",g:"G1",c:1,hp:77},{d:"2025-09-27",g:"G3",c:1,hp:86},{d:"2025-09-21",g:"G2",c:3,hp:86},{d:"2025-09-21",g:"G2",c:3,hp:91},{d:"2025-09-15",g:"G2",c:2,hp:86},{d:"2025-09-14",g:"G2",c:1,hp:72},{d:"2025-09-13",g:"G3",c:3,hp:77},{d:"2025-09-07",g:"G2",c:2,hp:86},{d:"2025-09-07",g:"G2",c:2,hp:77},{d:"2025-09-06",g:"G3",c:2,hp:77},{d:"2025-09-06",g:"G3",c:1,hp:72},{d:"2025-08-31",g:"G3",c:2,hp:77},{d:"2025-08-31",g:"G3",c:2,hp:86},{d:"2025-08-24",g:"G3",c:3,hp:72},{d:"2025-08-24",g:"G3",c:2,hp:86},{d:"2025-08-17",g:"G2",c:1,hp:77},{d:"2025-08-17",g:"G3",c:1,hp:77},{d:"2025-08-10",g:"G3",c:1,hp:72},{d:"2025-08-10",g:"G3",c:3,hp:65},{d:"2025-08-09",g:"G3",c:2,hp:77},{d:"2025-08-03",g:"G3",c:3,hp:77},{d:"2025-08-03",g:"G3",c:2,hp:65},{d:"2025-07-27",g:"G3",c:2,hp:65},{d:"2025-07-27",g:"G3",c:3,hp:77},{d:"2025-07-20",g:"G3",c:2,hp:86},{d:"2025-07-20",g:"G3",c:2,hp:72},{d:"2025-07-13",g:"G3",c:2,hp:77},{d:"2025-07-06",g:"G3",c:2,hp:65},{d:"2025-06-29",g:"G3",c:0,hp:72},{d:"2025-06-29",g:"G3",c:2,hp:72},{d:"2025-06-22",g:"G3",c:3,hp:77},{d:"2025-06-22",g:"G3",c:2,hp:77},{d:"2025-06-15",g:"G1",c:1,hp:65},{d:"2025-06-14",g:"G3",c:2,hp:86},{d:"2025-06-08",g:"G1",c:2,hp:72},{d:"2025-06-01",g:"G1",c:2,hp:72},{d:"2025-06-01",g:"G2",c:1,hp:65},{d:"2025-05-31",g:"G3",c:0,hp:72},{d:"2025-05-25",g:"G1",c:2,hp:72},{d:"2025-05-24",g:"G3",c:2,hp:77},{d:"2025-05-18",g:"G1",c:2,hp:72},{d:"2025-05-17",g:"G3",c:1,hp:72},{d:"2025-05-11",g:"G1",c:1,hp:72},{d:"2025-05-10",g:"G3",c:1,hp:65},{d:"2025-05-10",g:"G2",c:2,hp:86},{d:"2025-05-04",g:"G1",c:2,hp:77},{d:"2025-05-03",g:"G2",c:3,hp:77},{d:"2025-05-03",g:"G3",c:3,hp:91},{d:"2025-04-27",g:"G2",c:1,hp:65},{d:"2025-04-27",g:"G2",c:3,hp:86},{d:"2025-04-26",g:"G2",c:3,hp:86},{d:"2025-04-20",g:"G3",c:1,hp:72},{d:"2025-04-20",g:"G1",c:3,hp:86},{d:"2025-04-19",g:"G3",c:1,hp:86},{d:"2025-04-13",g:"G1",c:3,hp:72},{d:"2025-04-12",g:"G2",c:3,hp:91},{d:"2025-04-12",g:"G2",c:1,hp:77},{d:"2025-04-06",g:"G1",c:2,hp:72},{d:"2025-04-05",g:"G3",c:2,hp:86},{d:"2025-04-05",g:"G3",c:2,hp:86},{d:"2025-03-30",g:"G3",c:2,hp:77},{d:"2025-03-30",g:"G1",c:2,hp:72},{d:"2025-03-29",g:"G2",c:3,hp:86},{d:"2025-03-29",g:"G3",c:2,hp:91},{d:"2025-03-23",g:"G3",c:2,hp:65},{d:"2025-03-23",g:"G2",c:2,hp:86},{d:"2025-03-22",g:"G3",c:3,hp:86},{d:"2025-03-22",g:"G3",c:1,hp:65},{d:"2025-03-16",g:"G2",c:2,hp:77},{d:"2025-03-16",g:"G2",c:2,hp:86},{d:"2025-03-09",g:"G2",c:2,hp:77},{d:"2025-03-08",g:"G3",c:2,hp:72},{d:"2025-03-08",g:"G2",c:1,hp:65},{d:"2025-03-02",g:"G2",c:3,hp:77},{d:"2025-03-02",g:"G2",c:1,hp:77},{d:"2025-03-01",g:"G3",c:2,hp:77},{d:"2025-02-23",g:"G1",c:3,hp:77},{d:"2025-02-23",g:"G3",c:1,hp:72},{d:"2025-02-22",g:"G3",c:1,hp:86},{d:"2025-02-22",g:"G3",c:2,hp:72},{d:"2025-02-16",g:"G3",c:2,hp:86},{d:"2025-02-16",g:"G2",c:1,hp:91},{d:"2025-02-15",g:"G3",c:1,hp:77},{d:"2025-02-09",g:"G3",c:2,hp:77},{d:"2025-02-09",g:"G3",c:3,hp:86},{d:"2025-02-02",g:"G3",c:2,hp:77},{d:"2025-02-02",g:"G3",c:1,hp:77},{d:"2025-01-26",g:"G2",c:2,hp:72},{d:"2025-01-26",g:"G2",c:3,hp:77},{d:"2025-01-25",g:"G3",c:2,hp:65},{d:"2025-01-19",g:"G3",c:0,hp:77},{d:"2025-01-19",g:"G2",c:2,hp:72},{d:"2025-01-13",g:"G3",c:2,hp:77},{d:"2025-01-12",g:"G3",c:2,hp:72},{d:"2025-01-05",g:"G3",c:1,hp:65},{d:"2025-01-05",g:"G3",c:2,hp:72},{d:"2024-12-28",g:"G1",c:1,hp:86},{d:"2024-12-22",g:"G1",c:2,hp:77},{d:"2024-12-21",g:"G2",c:1,hp:65},{d:"2024-12-15",g:"G1",c:2,hp:77},{d:"2024-12-14",g:"G3",c:2,hp:77},{d:"2024-12-08",g:"G3",c:1,hp:77},{d:"2024-12-08",g:"G1",c:1,hp:65},{d:"2024-12-07",g:"G3",c:2,hp:65},{d:"2024-12-01",g:"G1",c:2,hp:77},{d:"2024-11-30",g:"G2",c:1,hp:77},{d:"2024-11-30",g:"G3",c:1,hp:72},{d:"2024-11-24",g:"G1",c:1,hp:77},{d:"2024-11-24",g:"G3",c:2,hp:65},{d:"2024-11-23",g:"G3",c:3,hp:91},{d:"2024-11-17",g:"G1",c:1,hp:72},{d:"2024-11-16",g:"G2",c:3,hp:91},{d:"2024-11-10",g:"G3",c:1,hp:72},{d:"2024-11-10",g:"G1",c:2,hp:72},{d:"2024-11-09",g:"G3",c:3,hp:86},{d:"2024-11-09",g:"G2",c:3,hp:91},{d:"2024-11-03",g:"G2",c:1,hp:77},{d:"2024-11-03",g:"G3",c:1,hp:77},{d:"2024-11-02",g:"G2",c:2,hp:77},{d:"2024-11-02",g:"G3",c:1,hp:72},{d:"2024-10-27",g:"G1",c:1,hp:86},{d:"2024-10-26",g:"G3",c:2,hp:86},{d:"2024-10-26",g:"G2",c:1,hp:65},{d:"2024-10-20",g:"G1",c:2,hp:72},{d:"2024-10-19",g:"G2",c:2,hp:72},{d:"2024-10-14",g:"G2",c:2,hp:77},{d:"2024-10-13",g:"G1",c:3,hp:77},{d:"2024-10-06",g:"G2",c:3,hp:77},{d:"2024-10-06",g:"G2",c:1,hp:86},{d:"2024-10-05",g:"G3",c:3,hp:91},{d:"2024-09-29",g:"G1",c:2,hp:77},{d:"2024-09-28",g:"G3",c:2,hp:77},{d:"2024-09-22",g:"G2",c:1,hp:86},{d:"2024-09-22",g:"G2",c:3,hp:72},{d:"2024-09-16",g:"G2",c:3,hp:86},{d:"2024-09-15",g:"G2",c:1,hp:86},{d:"2024-09-08",g:"G3",c:2,hp:86},{d:"2024-09-08",g:"G2",c:2,hp:65},{d:"2024-09-07",g:"G2",c:3,hp:77},{d:"2024-09-01",g:"G3",c:2,hp:86},{d:"2024-09-01",g:"G3",c:2,hp:77},{d:"2024-08-31",g:"G3",c:2,hp:86},{d:"2024-08-25",g:"G3",c:1,hp:77},{d:"2024-08-25",g:"G3",c:2,hp:86},{d:"2024-08-18",g:"G2",c:3,hp:91},{d:"2024-08-18",g:"G3",c:2,hp:65},{d:"2024-08-11",g:"G3",c:2,hp:65},{d:"2024-08-11",g:"G3",c:3,hp:77},{d:"2024-08-04",g:"G3",c:2,hp:77},{d:"2024-08-04",g:"G3",c:1,hp:77},{d:"2024-07-28",g:"G3",c:2,hp:77},{d:"2024-07-28",g:"G3",c:2,hp:65},{d:"2024-07-21",g:"G3",c:3,hp:77},{d:"2024-07-14",g:"G3",c:2,hp:72},{d:"2024-07-13",g:"G3",c:2,hp:77},{d:"2024-07-07",g:"G3",c:2,hp:72},{d:"2024-07-07",g:"G3",c:2,hp:86},{d:"2024-06-30",g:"G3",c:2,hp:72},{d:"2024-06-30",g:"G3",c:1,hp:65}];
+var raceData=[{d:"2026-08-23",g:"",c:3,hp:86},{d:"2026-08-16",g:"",c:1,hp:65},{d:"2026-08-16",g:"",c:3,hp:65},{d:"2026-08-09",g:"",c:3,hp:77},{d:"2026-08-09",g:"",c:2,hp:65},{d:"2026-08-08",g:"",c:2,hp:86},{d:"2026-08-02",g:"",c:2,hp:77},{d:"2026-08-02",g:"",c:1,hp:72},{d:"2026-07-26",g:"",c:1,hp:86},{d:"2026-07-26",g:"",c:3,hp:65},{d:"2026-07-26",g:"",c:2,hp:65},{d:"2026-07-26",g:"",c:1,hp:86},{d:"2026-07-26",g:"",c:3,hp:65},{d:"2026-07-25",g:"",c:2,hp:91},{d:"2026-07-25",g:"",c:2,hp:65},{d:"2026-07-25",g:"",c:2,hp:86},{d:"2026-07-19",g:"",c:2,hp:77},{d:"2026-07-19",g:"",c:2,hp:65},{d:"2026-07-19",g:"",c:1,hp:65},{d:"2026-07-18",g:"",c:3,hp:65},{d:"2026-07-18",g:"",c:1,hp:65},{d:"2026-07-18",g:"",c:1,hp:77},{d:"2026-07-12",g:"",c:1,hp:65},{d:"2026-07-12",g:"",c:1,hp:65},{d:"2026-07-12",g:"",c:1,hp:77},{d:"2026-07-11",g:"",c:2,hp:77},{d:"2026-07-11",g:"",c:2,hp:77},{d:"2026-07-11",g:"",c:2,hp:77},{d:"2026-07-05",g:"",c:2,hp:77},{d:"2026-07-05",g:"",c:2,hp:77},{d:"2026-07-05",g:"G3",c:2,hp:77},{d:"2026-07-04",g:"",c:2,hp:77},{d:"2026-07-04",g:"",c:2,hp:91},{d:"2026-07-04",g:"",c:2,hp:86},{d:"2026-06-28",g:"G3",c:0,hp:65},{d:"2026-06-28",g:"G3",c:2,hp:65},{d:"2026-06-21",g:"G3",c:1,hp:86},{d:"2026-06-21",g:"G3",c:2,hp:65},{d:"2026-06-14",g:"G1",c:3,hp:72},{d:"2026-06-13",g:"G3",c:2,hp:77},{d:"2026-06-07",g:"G1",c:1,hp:72},{d:"2026-05-31",g:"G1",c:2,hp:72},{d:"2026-05-31",g:"G2",c:2,hp:91},{d:"2026-05-30",g:"G3",c:2,hp:65},{d:"2026-05-24",g:"G1",c:3,hp:72},{d:"2026-05-23",g:"G3",c:2,hp:77},{d:"2026-05-17",g:"G1",c:3,hp:72},{d:"2026-05-16",g:"G3",c:0,hp:77},{d:"2026-05-10",g:"G1",c:2,hp:65},{d:"2026-05-09",g:"G3",c:2,hp:72},{d:"2026-05-09",g:"G2",c:1,hp:77},{d:"2026-05-03",g:"G1",c:2,hp:86},{d:"2026-05-02",g:"G2",c:1,hp:65},{d:"2026-05-02",g:"G3",c:3,hp:91},{d:"2026-04-26",g:"G2",c:3,hp:91},{d:"2026-04-26",g:"G2",c:2,hp:65},{d:"2026-04-25",g:"G2",c:2,hp:86},{d:"2026-04-19",g:"G3",c:1,hp:77},{d:"2026-04-19",g:"G1",c:2,hp:65},{d:"2026-04-18",g:"G3",c:1,hp:65},{d:"2026-04-12",g:"G1",c:2,hp:72},{d:"2026-04-11",g:"G2",c:2,hp:86},{d:"2026-04-11",g:"G2",c:3,hp:86},{d:"2026-04-05",g:"G1",c:3,hp:86},{d:"2026-04-04",g:"G3",c:1,hp:65},{d:"2026-04-04",g:"G3",c:2,hp:86},{d:"2026-03-29",g:"G3",c:1,hp:65},{d:"2026-03-29",g:"G1",c:0,hp:72},{d:"2026-03-28",g:"G2",c:3,hp:77},{d:"2026-03-28",g:"G3",c:3,hp:91},{d:"2026-03-22",g:"G3",c:0,hp:72},{d:"2026-03-22",g:"G2",c:2,hp:86},{d:"2026-03-21",g:"G3",c:1,hp:77},{d:"2026-03-21",g:"G3",c:2,hp:86},{d:"2026-03-15",g:"G2",c:1,hp:77},{d:"2026-03-15",g:"G2",c:1,hp:77},{d:"2026-03-08",g:"G2",c:3,hp:91},{d:"2026-03-07",g:"G3",c:1,hp:65},{d:"2026-03-07",g:"G2",c:2,hp:65},{d:"2026-03-01",g:"G2",c:3,hp:77},{d:"2026-03-01",g:"G2",c:2,hp:86},{d:"2026-02-28",g:"G3",c:2,hp:77},{d:"2026-02-22",g:"G1",c:3,hp:77},{d:"2026-02-22",g:"G3",c:2,hp:65},{d:"2026-02-21",g:"G3",c:2,hp:77},{d:"2026-02-21",g:"G3",c:2,hp:65},{d:"2026-02-15",g:"G3",c:3,hp:86},{d:"2026-02-15",g:"G2",c:2,hp:91},{d:"2026-02-14",g:"G3",c:1,hp:77},{d:"2026-02-10",g:"G3",c:3,hp:65},{d:"2026-02-10",g:"G3",c:3,hp:86},{d:"2026-02-01",g:"G3",c:1,hp:77},{d:"2026-02-01",g:"G3",c:0,hp:65},{d:"2026-01-25",g:"G2",c:2,hp:77},{d:"2026-01-25",g:"G2",c:1,hp:65},{d:"2026-01-24",g:"G3",c:2,hp:65},{d:"2026-01-18",g:"G3",c:2,hp:77},{d:"2026-01-18",g:"G2",c:1,hp:77},{d:"2026-01-12",g:"G3",c:2,hp:65},{d:"2026-01-11",g:"G3",c:1,hp:77},{d:"2026-01-04",g:"G3",c:2,hp:77},{d:"2026-01-04",g:"G3",c:2,hp:72},{d:"2025-12-28",g:"G1",c:2,hp:77},{d:"2025-12-27",g:"G1",c:1,hp:77},{d:"2025-12-27",g:"G2",c:3,hp:86},{d:"2025-12-21",g:"G1",c:3,hp:86},{d:"2025-12-20",g:"G3",c:1,hp:65},{d:"2025-12-14",g:"G3",c:2,hp:77},{d:"2025-12-14",g:"G1",c:2,hp:72},{d:"2025-12-13",g:"G3",c:2,hp:65},{d:"2025-12-07",g:"G1",c:2,hp:77},{d:"2025-12-06",g:"G2",c:3,hp:77},{d:"2025-12-06",g:"G3",c:2,hp:77},{d:"2025-11-30",g:"G1",c:3,hp:72},{d:"2025-11-30",g:"G3",c:2,hp:65},{d:"2025-11-29",g:"G3",c:1,hp:86},{d:"2025-11-24",g:"G2",c:3,hp:86},{d:"2025-11-23",g:"G1",c:2,hp:86},{d:"2025-11-22",g:"G3",c:2,hp:77},{d:"2025-11-16",g:"G1",c:2,hp:77},{d:"2025-11-15",g:"G3",c:3,hp:77},{d:"2025-11-15",g:"G2",c:2,hp:91},{d:"2025-11-09",g:"G2",c:2,hp:65},{d:"2025-11-09",g:"G3",c:2,hp:65},{d:"2025-11-08",g:"G2",c:1,hp:77},{d:"2025-11-02",g:"G1",c:2,hp:77},{d:"2025-11-01",g:"G3",c:2,hp:77},{d:"2025-10-26",g:"G1",c:2,hp:65},{d:"2025-10-25",g:"G3",c:2,hp:86},{d:"2025-10-19",g:"G1",c:2,hp:72},{d:"2025-10-18",g:"G2",c:3,hp:86},{d:"2025-10-13",g:"G2",c:2,hp:65},{d:"2025-10-12",g:"G2",c:2,hp:77},{d:"2025-10-11",g:"G3",c:2,hp:91},{d:"2025-10-05",g:"G2",c:3,hp:86},{d:"2025-10-05",g:"G2",c:2,hp:72},{d:"2025-09-28",g:"G1",c:1,hp:77},{d:"2025-09-27",g:"G3",c:1,hp:86},{d:"2025-09-21",g:"G2",c:3,hp:86},{d:"2025-09-21",g:"G2",c:3,hp:91},{d:"2025-09-15",g:"G2",c:2,hp:86},{d:"2025-09-14",g:"G2",c:1,hp:72},{d:"2025-09-13",g:"G3",c:3,hp:77},{d:"2025-09-07",g:"G2",c:2,hp:86},{d:"2025-09-07",g:"G2",c:2,hp:77},{d:"2025-09-06",g:"G3",c:2,hp:77},{d:"2025-09-06",g:"G3",c:1,hp:65},{d:"2025-08-31",g:"G3",c:2,hp:77},{d:"2025-08-31",g:"G3",c:2,hp:86},{d:"2025-08-24",g:"G3",c:3,hp:65},{d:"2025-08-24",g:"G3",c:2,hp:86},{d:"2025-08-17",g:"G2",c:1,hp:77},{d:"2025-08-17",g:"G3",c:1,hp:77},{d:"2025-08-10",g:"G3",c:1,hp:65},{d:"2025-08-10",g:"G3",c:3,hp:65},{d:"2025-08-09",g:"G3",c:2,hp:77},{d:"2025-08-03",g:"G3",c:3,hp:77},{d:"2025-08-03",g:"G3",c:2,hp:65},{d:"2025-07-27",g:"G3",c:2,hp:65},{d:"2025-07-27",g:"G3",c:3,hp:77},{d:"2025-07-20",g:"G3",c:2,hp:86},{d:"2025-07-20",g:"G3",c:2,hp:65},{d:"2025-07-13",g:"G3",c:2,hp:77},{d:"2025-07-06",g:"G3",c:2,hp:65},{d:"2025-06-29",g:"G3",c:0,hp:65},{d:"2025-06-29",g:"G3",c:2,hp:65},{d:"2025-06-22",g:"G3",c:3,hp:77},{d:"2025-06-22",g:"G3",c:2,hp:77},{d:"2025-06-15",g:"G1",c:1,hp:65},{d:"2025-06-14",g:"G3",c:2,hp:86},{d:"2025-06-08",g:"G1",c:2,hp:72},{d:"2025-06-01",g:"G1",c:2,hp:72},{d:"2025-06-01",g:"G2",c:1,hp:65},{d:"2025-05-31",g:"G3",c:0,hp:65},{d:"2025-05-25",g:"G1",c:2,hp:72},{d:"2025-05-24",g:"G3",c:2,hp:77},{d:"2025-05-18",g:"G1",c:2,hp:72},{d:"2025-05-17",g:"G3",c:1,hp:65},{d:"2025-05-11",g:"G1",c:1,hp:72},{d:"2025-05-10",g:"G3",c:1,hp:65},{d:"2025-05-10",g:"G2",c:2,hp:86},{d:"2025-05-04",g:"G1",c:2,hp:77},{d:"2025-05-03",g:"G2",c:3,hp:77},{d:"2025-05-03",g:"G3",c:3,hp:91},{d:"2025-04-27",g:"G2",c:1,hp:65},{d:"2025-04-27",g:"G2",c:3,hp:86},{d:"2025-04-26",g:"G2",c:3,hp:86},{d:"2025-04-20",g:"G3",c:1,hp:65},{d:"2025-04-20",g:"G1",c:3,hp:86},{d:"2025-04-19",g:"G3",c:1,hp:86},{d:"2025-04-13",g:"G1",c:3,hp:72},{d:"2025-04-12",g:"G2",c:3,hp:91},{d:"2025-04-12",g:"G2",c:1,hp:77},{d:"2025-04-06",g:"G1",c:2,hp:65},{d:"2025-04-05",g:"G3",c:2,hp:86},{d:"2025-04-05",g:"G3",c:2,hp:86},{d:"2025-03-30",g:"G3",c:2,hp:77},{d:"2025-03-30",g:"G1",c:2,hp:72},{d:"2025-03-29",g:"G2",c:3,hp:86},{d:"2025-03-29",g:"G3",c:2,hp:91},{d:"2025-03-23",g:"G3",c:2,hp:65},{d:"2025-03-23",g:"G2",c:2,hp:86},{d:"2025-03-22",g:"G3",c:3,hp:86},{d:"2025-03-22",g:"G3",c:1,hp:65},{d:"2025-03-16",g:"G2",c:2,hp:77},{d:"2025-03-16",g:"G2",c:2,hp:86},{d:"2025-03-09",g:"G2",c:2,hp:77},{d:"2025-03-08",g:"G3",c:2,hp:65},{d:"2025-03-08",g:"G2",c:1,hp:65},{d:"2025-03-02",g:"G2",c:3,hp:77},{d:"2025-03-02",g:"G2",c:1,hp:77},{d:"2025-03-01",g:"G3",c:2,hp:77},{d:"2025-02-23",g:"G1",c:3,hp:77},{d:"2025-02-23",g:"G3",c:1,hp:65},{d:"2025-02-22",g:"G3",c:1,hp:86},{d:"2025-02-22",g:"G3",c:2,hp:72},{d:"2025-02-16",g:"G3",c:2,hp:86},{d:"2025-02-16",g:"G2",c:1,hp:91},{d:"2025-02-15",g:"G3",c:1,hp:77},{d:"2025-02-09",g:"G3",c:2,hp:77},{d:"2025-02-09",g:"G3",c:3,hp:86},{d:"2025-02-02",g:"G3",c:2,hp:77},{d:"2025-02-02",g:"G3",c:1,hp:77},{d:"2025-01-26",g:"G2",c:2,hp:72},{d:"2025-01-26",g:"G2",c:3,hp:77},{d:"2025-01-25",g:"G3",c:2,hp:65},{d:"2025-01-19",g:"G3",c:0,hp:77},{d:"2025-01-19",g:"G2",c:2,hp:65},{d:"2025-01-13",g:"G3",c:2,hp:77},{d:"2025-01-12",g:"G3",c:2,hp:65},{d:"2025-01-05",g:"G3",c:1,hp:65},{d:"2025-01-05",g:"G3",c:2,hp:65},{d:"2024-12-28",g:"G1",c:1,hp:86},{d:"2024-12-22",g:"G1",c:2,hp:77},{d:"2024-12-21",g:"G2",c:1,hp:65},{d:"2024-12-15",g:"G1",c:2,hp:77},{d:"2024-12-14",g:"G3",c:2,hp:77},{d:"2024-12-08",g:"G3",c:1,hp:77},{d:"2024-12-08",g:"G1",c:1,hp:65},{d:"2024-12-07",g:"G3",c:2,hp:65},{d:"2024-12-01",g:"G1",c:2,hp:77},{d:"2024-11-30",g:"G2",c:1,hp:77},{d:"2024-11-30",g:"G3",c:1,hp:65},{d:"2024-11-24",g:"G1",c:1,hp:77},{d:"2024-11-24",g:"G3",c:2,hp:65},{d:"2024-11-23",g:"G3",c:3,hp:91},{d:"2024-11-17",g:"G1",c:1,hp:72},{d:"2024-11-16",g:"G2",c:3,hp:91},{d:"2024-11-10",g:"G3",c:1,hp:65},{d:"2024-11-10",g:"G1",c:2,hp:72},{d:"2024-11-09",g:"G3",c:3,hp:86},{d:"2024-11-09",g:"G2",c:3,hp:91},{d:"2024-11-03",g:"G2",c:1,hp:77},{d:"2024-11-03",g:"G3",c:1,hp:77},{d:"2024-11-02",g:"G2",c:2,hp:77},{d:"2024-11-02",g:"G3",c:1,hp:65},{d:"2024-10-27",g:"G1",c:1,hp:86},{d:"2024-10-26",g:"G3",c:2,hp:86},{d:"2024-10-26",g:"G2",c:1,hp:65},{d:"2024-10-20",g:"G1",c:2,hp:72},{d:"2024-10-19",g:"G2",c:2,hp:72},{d:"2024-10-14",g:"G2",c:2,hp:77},{d:"2024-10-13",g:"G1",c:3,hp:77},{d:"2024-10-06",g:"G2",c:3,hp:77},{d:"2024-10-06",g:"G2",c:1,hp:86},{d:"2024-10-05",g:"G3",c:3,hp:91},{d:"2024-09-29",g:"G1",c:2,hp:77},{d:"2024-09-28",g:"G3",c:2,hp:77},{d:"2024-09-22",g:"G2",c:1,hp:86},{d:"2024-09-22",g:"G2",c:3,hp:65},{d:"2024-09-16",g:"G2",c:3,hp:86},{d:"2024-09-15",g:"G2",c:1,hp:86},{d:"2024-09-08",g:"G3",c:2,hp:86},{d:"2024-09-08",g:"G2",c:2,hp:65},{d:"2024-09-07",g:"G2",c:3,hp:77},{d:"2024-09-01",g:"G3",c:2,hp:86},{d:"2024-09-01",g:"G3",c:2,hp:77},{d:"2024-08-31",g:"G3",c:2,hp:86},{d:"2024-08-25",g:"G3",c:1,hp:77},{d:"2024-08-25",g:"G3",c:2,hp:86},{d:"2024-08-18",g:"G2",c:3,hp:91},{d:"2024-08-18",g:"G3",c:2,hp:65},{d:"2024-08-11",g:"G3",c:2,hp:65},{d:"2024-08-11",g:"G3",c:3,hp:77},{d:"2024-08-04",g:"G3",c:2,hp:77},{d:"2024-08-04",g:"G3",c:1,hp:77},{d:"2024-07-28",g:"G3",c:2,hp:77},{d:"2024-07-28",g:"G3",c:2,hp:65},{d:"2024-07-21",g:"G3",c:3,hp:77},{d:"2024-07-14",g:"G3",c:2,hp:65},{d:"2024-07-13",g:"G3",c:2,hp:77},{d:"2024-07-07",g:"G3",c:2,hp:65},{d:"2024-07-07",g:"G3",c:2,hp:86},{d:"2024-06-30",g:"G3",c:2,hp:65},{d:"2024-06-30",g:"G3",c:1,hp:65}];
 function filterRaces(){
   var yr=document.getElementById('fy').value;
   var gr=document.getElementById('fg').value;
@@ -77,7 +77,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 </head>
 <body>
 <h1>KeibaAI V7.5</h1>
-<div class="updated">3着以内予測（残差学習） / 更新: 2026-08-23 18:00</div>
+<div class="updated">3着以内予測（残差学習） / 更新: 2026-08-28 01:05</div>
 <div class="bias-info">Grade S〜D: レースの読みやすさ ／ 市場乖離: AIと市場の順位差(参考情報) ／ 緑文字: 市場より割安と推定</div>
 
 <div class="card">
@@ -91,7 +91,12 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 </div>
 <div class="section-title">予測</div>
 <div class="card" style="border-color:#1e3a5a">
-<div class="card-title">2026-08-23 キーンランドカップ<span class="grade grade-G3">G3</span></div>
+<div class="card-title">2026-08-30 新潟記念<span class="grade grade-G3">G3</span></div>
+<div class="no-data" style="padding:8px">出馬表確定後に run_weekly.py を実行すると予測が表示されます</div>
+</div>
+
+<div class="card" style="border-color:#1e3a5a">
+<div class="card-title">2026-08-30 中京2歳ステークス<span class="grade grade-G3">G3</span></div>
 <div class="no-data" style="padding:8px">出馬表確定後に run_weekly.py を実行すると予測が表示されます</div>
 </div>
 <div class="section-title">結果</div><div class="filter-bar"><select id="fy" onchange="filterRaces()"><option value="">全年</option><option value="2026">2026年</option><option value="2025">2025年</option><option value="2024">2024年</option></select><select id="fg" onchange="filterRaces()"><option value="">全グレード</option><option value="G1">G1</option><option value="G2">G2</option><option value="G3">G3</option><option value="G1G2">G1+G2</option></select></div>
@@ -113,7 +118,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2026-08-16" data-grade="">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-08-16 札幌記念<span class="grade "></span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.8em">1/3的中 (サクラフ)</span></div>
+<div class="card-title" style="margin:0">2026-08-16 札幌記念<span class="grade "></span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.8em">1/3的中 (サクラフ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -128,7 +133,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2026-08-16" data-grade="">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-08-16 中京記念<span class="grade "></span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.8em">3/3的中 (サトノシ, ラヴァン, ミニトラ)</span></div>
+<div class="card-title" style="margin:0">2026-08-16 中京記念<span class="grade "></span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.8em">3/3的中 (サトノシ, ラヴァン, ミニトラ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -233,7 +238,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2026-07-26" data-grade="">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-07-26 関屋記念<span class="grade "></span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">3/3的中 (アンパド, ファーヴ, クランフ)</span></div>
+<div class="card-title" style="margin:0">2026-07-26 関屋記念<span class="grade "></span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">3/3的中 (アンパド, ファーヴ, クランフ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -248,7 +253,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2026-07-26" data-grade="">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-07-26 3歳以上1勝クラス<span class="grade "></span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.8em">2/3的中 (シャンク, パレスド)</span></div>
+<div class="card-title" style="margin:0">2026-07-26 3歳以上1勝クラス<span class="grade "></span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.8em">2/3的中 (シャンク, パレスド)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -278,7 +283,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2026-07-26" data-grade="">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-07-26 3歳以上1勝クラス<span class="grade "></span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.8em">3/3的中 (シャンパ, バースデ, ロケベン)</span></div>
+<div class="card-title" style="margin:0">2026-07-26 3歳以上1勝クラス<span class="grade "></span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.8em">3/3的中 (シャンパ, バースデ, ロケベン)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -353,7 +358,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2026-07-19" data-grade="">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-07-19 福島テレビ賞<span class="grade "></span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.8em">2/3的中 (ガビーズ, ファムエ)</span></div>
+<div class="card-title" style="margin:0">2026-07-19 福島テレビ賞<span class="grade "></span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.8em">2/3的中 (ガビーズ, ファムエ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -383,7 +388,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2026-07-18" data-grade="">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-07-18 マリーンS<span class="grade "></span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.8em">3/3的中 (ウェイワ, レヴォン, ヒルノハ)</span></div>
+<div class="card-title" style="margin:0">2026-07-18 マリーンS<span class="grade "></span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.8em">3/3的中 (ウェイワ, レヴォン, ヒルノハ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -398,7 +403,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2026-07-18" data-grade="">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-07-18 阿武隈S<span class="grade "></span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.8em">1/3的中 (ミラビリ)</span></div>
+<div class="card-title" style="margin:0">2026-07-18 阿武隈S<span class="grade "></span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.8em">1/3的中 (ミラビリ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -428,7 +433,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2026-07-12" data-grade="">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-07-12 巴賞<span class="grade "></span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (シルトホ)</span></div>
+<div class="card-title" style="margin:0">2026-07-12 巴賞<span class="grade "></span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (シルトホ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -443,7 +448,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2026-07-12" data-grade="">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-07-12 七夕賞<span class="grade "></span><span class="conf conf-mid">Grade C (72%)</span><span class="rankgap">市場乖離 +1</span> <span style="font-size:.8em">1/3的中 (アスクナ)</span></div>
+<div class="card-title" style="margin:0">2026-07-12 七夕賞<span class="grade "></span><span class="conf conf-low">Grade D (65%)</span><span class="rankgap">市場乖離 +1</span> <span style="font-size:.8em">1/3的中 (アスクナ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -608,7 +613,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2026-06-28" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-06-28 函館記念(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">0/3的中</span></div>
+<div class="card-title" style="margin:0">2026-06-28 函館記念(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">0/3的中</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -623,7 +628,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2026-06-28" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-06-28 ラジオNIKKEI賞(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span><span class="rankgap">市場乖離 +1</span> <span style="font-size:.8em">2/3的中 (リッツパ, サノノグ)</span></div>
+<div class="card-title" style="margin:0">2026-06-28 ラジオNIKKEI賞(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span><span class="rankgap">市場乖離 +1</span> <span style="font-size:.8em">2/3的中 (リッツパ, サノノグ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -744,7 +749,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2026-05-30" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-05-30 葵S(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (タマモイ, デアヴェ)</span></div>
+<div class="card-title" style="margin:0">2026-05-30 葵S(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (タマモイ, デアヴェ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -984,7 +989,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2026-04-18" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-04-18 アンタレスS(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (ムルソー)</span></div>
+<div class="card-title" style="margin:0">2026-04-18 アンタレスS(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (ムルソー)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -1059,7 +1064,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2026-04-04" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-04-04 ダービー卿チャレンジ(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (ファーヴ)</span></div>
+<div class="card-title" style="margin:0">2026-04-04 ダービー卿チャレンジ(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (ファーヴ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -1089,7 +1094,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2026-03-29" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-03-29 マーチS(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span><span class="rankgap">市場乖離 +1</span> <span style="font-size:.8em">1/3的中 (アクショ)</span></div>
+<div class="card-title" style="margin:0">2026-03-29 マーチS(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span><span class="rankgap">市場乖離 +1</span> <span style="font-size:.8em">1/3的中 (アクショ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -1254,7 +1259,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2026-03-07" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-03-07 中山牝馬S(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (パラディ)</span></div>
+<div class="card-title" style="margin:0">2026-03-07 中山牝馬S(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (パラディ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -1344,7 +1349,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2026-02-22" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-02-22 小倉大賞典(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (ケイアイ, タガノデ)</span></div>
+<div class="card-title" style="margin:0">2026-02-22 小倉大賞典(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (ケイアイ, タガノデ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -1434,7 +1439,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2026-02-10" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-02-10 東京新聞杯(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">3/3的中 (トロヴァ, ウォータ, ラヴァン)</span></div>
+<div class="card-title" style="margin:0">2026-02-10 東京新聞杯(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">3/3的中 (トロヴァ, ウォータ, ラヴァン)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -1509,7 +1514,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2026-01-25" data-grade="G2">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-01-25 プロキオンS(GII)<span class="grade grade-G2">G2</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (ロードク)</span></div>
+<div class="card-title" style="margin:0">2026-01-25 プロキオンS(GII)<span class="grade grade-G2">G2</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (ロードク)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -1570,7 +1575,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2026-01-12" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2026-01-12 日刊スポシンザン記念(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (アルトラ, サウンド)</span></div>
+<div class="card-title" style="margin:0">2026-01-12 日刊スポシンザン記念(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (アルトラ, サウンド)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -1690,7 +1695,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2025-12-20" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-12-20 ターコイズS(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (ドロップ)</span></div>
+<div class="card-title" style="margin:0">2025-12-20 ターコイズS(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (ドロップ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -1946,7 +1951,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2025-11-09" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-11-09 みやこS(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (ダブルハ, ロードク)</span></div>
+<div class="card-title" style="margin:0">2025-11-09 みやこS(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (ダブルハ, ロードク)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -2291,7 +2296,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2025-09-06" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-09-06 京成杯オータムH(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (コントラ)</span></div>
+<div class="card-title" style="margin:0">2025-09-06 京成杯オータムH(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (コントラ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -2336,7 +2341,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2025-08-24" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-08-24 キーンランドC(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span><span class="rankgap">市場乖離 +1</span> <span style="font-size:.8em">3/3的中 (パンジャ, カルプス, ペアポル)</span></div>
+<div class="card-title" style="margin:0">2025-08-24 キーンランドC(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span><span class="rankgap">市場乖離 +1</span> <span style="font-size:.8em">3/3的中 (パンジャ, カルプス, ペアポル)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -2396,7 +2401,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2025-08-10" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-08-10 レパードS(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (ドンイン)</span></div>
+<div class="card-title" style="margin:0">2025-08-10 レパードS(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (ドンイン)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -2516,7 +2521,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2025-07-20" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-07-20 小倉記念(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (ディープ, シェイク)</span></div>
+<div class="card-title" style="margin:0">2025-07-20 小倉記念(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (ディープ, シェイク)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -2561,7 +2566,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2025-06-29" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-06-29 函館記念(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">0/3的中</span></div>
+<div class="card-title" style="margin:0">2025-06-29 函館記念(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">0/3的中</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -2576,7 +2581,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2025-06-29" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-06-29 ラジオNIKKEI賞(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (センツブ, エキサイ)</span></div>
+<div class="card-title" style="margin:0">2025-06-29 ラジオNIKKEI賞(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (センツブ, エキサイ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -2696,7 +2701,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2025-05-31" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-05-31 葵S(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">0/3的中</span></div>
+<div class="card-title" style="margin:0">2025-05-31 葵S(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">0/3的中</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -2756,7 +2761,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2025-05-17" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-05-17 新潟大賞典(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span><span class="rankgap">市場乖離 +1</span> <span style="font-size:.8em">1/3的中 (サブマリ)</span></div>
+<div class="card-title" style="margin:0">2025-05-17 新潟大賞典(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span><span class="rankgap">市場乖離 +1</span> <span style="font-size:.8em">1/3的中 (サブマリ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -2906,7 +2911,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2025-04-20" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-04-20 福島牝馬S(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (アドマイ)</span></div>
+<div class="card-title" style="margin:0">2025-04-20 福島牝馬S(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (アドマイ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -2996,7 +3001,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2025-04-06" data-grade="G1">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-04-06 大阪杯(GI)<span class="grade grade-G1">G1</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (ベラジオ, ロードデ)</span></div>
+<div class="card-title" style="margin:0">2025-04-06 大阪杯(GI)<span class="grade grade-G1">G1</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (ベラジオ, ロードデ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -3206,7 +3211,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2025-03-08" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-03-08 中山牝馬S(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (クリスマ, シランケ)</span></div>
+<div class="card-title" style="margin:0">2025-03-08 中山牝馬S(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (クリスマ, シランケ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -3296,7 +3301,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2025-02-23" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-02-23 小倉大賞典(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (ロングラ)</span></div>
+<div class="card-title" style="margin:0">2025-02-23 小倉大賞典(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (ロングラ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -3506,7 +3511,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2025-01-19" data-grade="G2">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-01-19 日経新春杯(GII)<span class="grade grade-G2">G2</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (ショウナ, ロードデ)</span></div>
+<div class="card-title" style="margin:0">2025-01-19 日経新春杯(GII)<span class="grade grade-G2">G2</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (ショウナ, ロードデ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -3536,7 +3541,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2025-01-12" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-01-12 フェアリーS(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (エリカエ, ティラト)</span></div>
+<div class="card-title" style="margin:0">2025-01-12 フェアリーS(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (エリカエ, ティラト)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -3566,7 +3571,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2025-01-05" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2025-01-05 スポニチ賞京都金杯(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (ロジリオ, ウォータ)</span></div>
+<div class="card-title" style="margin:0">2025-01-05 スポニチ賞京都金杯(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (ロジリオ, ウォータ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -3731,7 +3736,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2024-11-30" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2024-11-30 チャレンジC(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (ラヴェル)</span></div>
+<div class="card-title" style="margin:0">2024-11-30 チャレンジC(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (ラヴェル)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -3821,7 +3826,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2024-11-10" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2024-11-10 福島記念(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (ダンディ)</span></div>
+<div class="card-title" style="margin:0">2024-11-10 福島記念(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (ダンディ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -3926,7 +3931,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ng race-card-past" data-date="2024-11-02" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2024-11-02 KBSファンタジーS(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (ダンツエ)</span></div>
+<div class="card-title" style="margin:0">2024-11-02 KBSファンタジーS(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">1/3的中 (ダンツエ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -4136,7 +4141,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2024-09-22" data-grade="G2">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2024-09-22 神戸新聞杯(GII)<span class="grade grade-G2">G2</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">3/3的中 (メイショ, ジューン, ショウナ)</span></div>
+<div class="card-title" style="margin:0">2024-09-22 神戸新聞杯(GII)<span class="grade grade-G2">G2</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">3/3的中 (メイショ, ジューン, ショウナ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -4436,7 +4441,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2024-07-14" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2024-07-14 函館記念(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (ホウオウ, グランデ)</span></div>
+<div class="card-title" style="margin:0">2024-07-14 函館記念(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (ホウオウ, グランデ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -4466,7 +4471,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2024-07-07" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2024-07-07 七夕賞(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (キングズ, レッドラ)</span></div>
+<div class="card-title" style="margin:0">2024-07-07 七夕賞(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (キングズ, レッドラ)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
@@ -4496,7 +4501,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 
 <div class="card cov-ok race-card-past" data-date="2024-06-30" data-grade="G3">
 <div class="accordion-header collapsed" onclick="toggleAccordion(this)">
-<div class="card-title" style="margin:0">2024-06-30 ラジオNIKKEI賞(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-mid">Grade C (72%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (シリウス, ヤマニン)</span></div>
+<div class="card-title" style="margin:0">2024-06-30 ラジオNIKKEI賞(GIII)<span class="grade grade-G3">G3</span><span class="conf conf-low">Grade D (65%)</span> <span style="font-size:.72em;opacity:.65">(確定オッズ参考)</span> <span style="font-size:.8em">2/3的中 (シリウス, ヤマニン)</span></div>
 </div>
 <div class="accordion-body collapsed" style="max-height:400px">
 <table>
