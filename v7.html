@@ -77,7 +77,7 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 </head>
 <body>
 <h1>KeibaAI V7.5</h1>
-<div class="updated">3着以内予測（残差学習） / 更新: 2026-08-28 01:05</div>
+<div class="updated">3着以内予測（残差学習） / 更新: 2026-08-28 21:08</div>
 <div class="bias-info">Grade S〜D: レースの読みやすさ ／ 市場乖離: AIと市場の順位差(参考情報) ／ 緑文字: 市場より割安と推定</div>
 
 <div class="card">
@@ -90,14 +90,42 @@ function toggleAccordion(el){el.classList.toggle('collapsed');el.nextElementSibl
 <div id="sn" style="font-size:.75em;color:#888;text-align:center">295レース確定済</div>
 </div>
 <div class="section-title">予測</div>
-<div class="card" style="border-color:#1e3a5a">
-<div class="card-title">2026-08-30 新潟記念<span class="grade grade-G3">G3</span></div>
-<div class="no-data" style="padding:8px">出馬表確定後に run_weekly.py を実行すると予測が表示されます</div>
+<div class="hero">
+<div class="hero-label">Top1 予測</div>
+<div class="hero-horse">ロデオドライブ</div>
+<div class="hero-detail">2026-08-30 新潟記念<span class="grade "></span></div>
+<div class="hero-detail">3着内確率 <span>13.3%</span> / オッズ <span>2.5倍</span></div>
+<div class="hero-diag-label">診断</div>
+<div class="hero-detail"><span class="conf conf-high">Grade A (86%)</span></div>
+</div>
+<div class="card"><div class="card-title">2026-08-30 新潟記念<span class="grade "></span><span class="conf conf-high">Grade A (86%)</span></div>
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th></tr>
+<tr><td>1</td><td>ロデオドライブ</td><td>13.3%<span class="prob-bar" style="width:53px"></span></td><td>2.5</td><td>1</td></tr>
+<tr><td>2</td><td>ダノンシーマ</td><td>12.8%<span class="prob-bar" style="width:51px"></span></td><td>3.1</td><td>2</td></tr>
+<tr><td>3</td><td>ゾロアストロ</td><td>11.5%<span class="prob-bar" style="width:45px"></span></td><td>5.3</td><td>3</td></tr>
+<tr><td>4</td><td class="edge-pos">ドゥレッツァ</td><td>9.2%<span class="prob-bar" style="width:36px"></span></td><td>14.1</td><td>4</td></tr>
+<tr><td>5</td><td class="edge-pos">ステレンボッシュ</td><td>8.8%<span class="prob-bar" style="width:35px"></span></td><td>15.4</td><td>5</td></tr>
+</table>
 </div>
 
-<div class="card" style="border-color:#1e3a5a">
-<div class="card-title">2026-08-30 中京2歳ステークス<span class="grade grade-G3">G3</span></div>
-<div class="no-data" style="padding:8px">出馬表確定後に run_weekly.py を実行すると予測が表示されます</div>
+<div class="hero">
+<div class="hero-label">Top1 予測</div>
+<div class="hero-horse">ジーティーマイカ</div>
+<div class="hero-detail">2026-08-30 中京2歳S<span class="grade "></span></div>
+<div class="hero-detail">3着内確率 <span>17.6%</span> / オッズ <span>1.4倍</span></div>
+<div class="hero-diag-label">診断</div>
+<div class="hero-detail"><span class="conf conf-high">Grade S (91%)</span></div>
+</div>
+<div class="card"><div class="card-title">2026-08-30 中京2歳S<span class="grade "></span><span class="conf conf-high">Grade S (91%)</span></div>
+<table>
+<tr><th>#</th><th>馬名</th><th>確率</th><th>オッズ</th><th>人気</th></tr>
+<tr><td>1</td><td>ジーティーマイカ</td><td>17.6%<span class="prob-bar" style="width:70px"></span></td><td>1.4</td><td>1</td></tr>
+<tr><td>2</td><td>サンタンジェロ</td><td>13.6%<span class="prob-bar" style="width:54px"></span></td><td>7.0</td><td>4</td></tr>
+<tr><td>3</td><td>ビスケットサンド</td><td>13.6%<span class="prob-bar" style="width:54px"></span></td><td>5.9</td><td>2</td></tr>
+<tr><td>4</td><td>シスキンブルーム</td><td>13.1%<span class="prob-bar" style="width:52px"></span></td><td>6.9</td><td>3</td></tr>
+<tr><td>5</td><td class="edge-pos">バクソウシャチョ</td><td>10.0%<span class="prob-bar" style="width:39px"></span></td><td>25.6</td><td>5</td></tr>
+</table>
 </div>
 <div class="section-title">結果</div><div class="filter-bar"><select id="fy" onchange="filterRaces()"><option value="">全年</option><option value="2026">2026年</option><option value="2025">2025年</option><option value="2024">2024年</option></select><select id="fg" onchange="filterRaces()"><option value="">全グレード</option><option value="G1">G1</option><option value="G2">G2</option><option value="G3">G3</option><option value="G1G2">G1+G2</option></select></div>
 
